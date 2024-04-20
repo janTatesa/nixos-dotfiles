@@ -1,0 +1,44 @@
+.iconWrapper_fc4f04, /*inbox icon*/
+.divider_fc4f04, /* useless line in channell description*/
+.buttonContainer_f9f2ca, /*hover menu*/
+[aria-label="Show Member List"], /*possible via keyboard shortcut*/
+.searchBar_f0963d, /*button that just activates quick switcher which is just ctrl k*/
+.separator_a0, /*usseless lines in settings*/
+.tagsDivider_c1668f, /*useless line in forum post creation*/
+.channel_c91bad[aria-posinset="2"], /*nitro*/
+.channel_c91bad:not([aria-posinset]), /*shop*/
+.repliedMessageClickableSpine_f9f2ca, /*useless line on replied messages*/
+.sectionDivider_c43953, /*useless line*/
+[role=separator], /*useless lines in right click menus*/
+[href="https://support.discord.com"], /*help icon*/
+.channelAppLauncher_df39bd, /*apps icon*/
+.buttons_d0696b, /*message buttons (they all have keyboard shortcuts)*/
+.container_c75f85, /* server boosts */
+.wrapper_fea3ef.guilds_a4d4d9 /*server icons*/ {
+  display: none !important;
+} 
+
+.divider_a6d69a {/*useless line in forum tags*/
+  background-color: transparent !important;
+}
+
+* {
+  border: none !important;
+} 
+
+*:before {
+  box-shadow: none !important;
+}
+
+.sidebar_a4d4d9 {
+  border-radius: 8px !important; 
+  margin: 5px 5px 5px 5px !important;
+} 
+
+.layer_d4b6c5.baseLayer_d4b6c5 { 
+  background-color: var(--background-primary); 
+}
+
+:root {
+  --shadow-ledge: none !important;
+}
