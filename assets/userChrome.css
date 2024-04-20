@@ -1,0 +1,20 @@
+.chromeclass-extrachrome.sidebar-splitter,
+#TabsToolbar, 
+#back-button,
+#pageActionButton,
+#forward-button, #sidebar-header, #page-action-buttons > :not(#urlbar-zoom-button), 
+#urlbar-go-button {
+  display: none !important;
+}
+
+* {
+  box-shadow: none !important;
+  border-width: 2px !important;
+}
+
+:root {
+  --toolbarbutton-border-radius: 8px !important;
+  --tab-border-radius: 8px !important;
+  --arrowpanel-border-radius: 8px !important;
+  --tabs-navbar-separator-color: transparent !important;
+}

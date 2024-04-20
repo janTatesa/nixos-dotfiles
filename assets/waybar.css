@@ -1,0 +1,44 @@
+* {
+  border: none;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#workspaces button {
+  padding-left: 4px;
+  padding-right: 4px;
+
+  color: @text;
+  box-shadow: none; /* Remove predefined box-shadow */
+  text-shadow: none; /* Remove predefined text-shadow */
+  background: none; /* Remove predefined background color (white) */
+  transition: none; /* Disable predefined animations */
+}
+
+#workspaces button.hidden {
+  color: @text;
+}
+
+#workspaces button.visible {
+  color: @accent;
+}
+
+#workspaces button.urgent {
+  color: @urgent;
+}
+
+#custom-waybar-mpris, #mode, #workspaces, #clock, #language, #indicators {
+  border-radius: 8px;
+  background-color: @background;
+  color: @text;
+  border: 2px solid @accent;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
