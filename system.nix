@@ -16,9 +16,9 @@
     wireless.iwd.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [80 25565];
+      allowedTCPPorts = [8080 25565];
       allowedUDPPorts = [
-        80
+        8080
         25565
       ];
     };
