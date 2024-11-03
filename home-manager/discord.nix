@@ -14,7 +14,7 @@
         openasar = {
           setup = true;
           cmdPreset = "balanced";
-          css = "${builtins.readFile catppuccin-discord} ${builtins.readFile ./discord.css} *{font-family: Ubuntu !important;}";
+          css = "${builtins.readFile catppuccin-discord} ${builtins.readFile ./discord.css} *, *::before{font-family: Ubuntu !important;}";
         };
         chromiumSwitches = {};
         MINIMIZE_TO_TRAY = false;

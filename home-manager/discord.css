@@ -12,7 +12,7 @@
 [role=separator], /*useless lines in right click menus*/
 [href="https://support.discord.com"], /*help icon*/
 .channelAppLauncher_df39bd, /*apps icon*/
-.buttons_d0696b, /*message buttons (they all have keyboard shortcuts)*/
+.buttons_bdf0de, /*message buttons (they all have keyboard shortcuts)*/
 .container_c75f85, /* server boosts */
 .wrapper_fea3ef.guilds_a4d4d9 /*server icons*/ {
   display: none !important;
