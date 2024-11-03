@@ -4,6 +4,7 @@
   ...
 }: {
   boot = {
+    kernelPackages = pkgs.linuxKernel.kernels.linux_zen;
     initrd.luks.devices."luks-f223570a-d11c-4439-b7bf-834144b782ee".device = "/dev/disk/by-uuid/f223570a-d11c-4439-b7bf-834144b782ee";
     loader = {
       systemd-boot.enable = true;
@@ -27,6 +28,8 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
   services = {
+    gvfs.enable = true;
+    udisks2.enable = true;
     power-profiles-daemon.enable = false;
     tlp.enable = true;
     pipewire = {
