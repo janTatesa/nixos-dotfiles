@@ -14,9 +14,6 @@ if sys.argv[1] == "check_login": # add locky.py check_login || exit to your .zpr
 subprocess.run(["systemctl", sys.argv[1]]) # depends if you pass suspend or hibernate
 if sys.argv[1] == "suspend":
     subprocess.run("swaylock")
-subprocess.run(["swaylock"])
 while check_time():    
     subprocess.run(["systemctl", "hibernate"])
-    subprocess.run(["swaylock"])
-
     
