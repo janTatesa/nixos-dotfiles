@@ -4,7 +4,7 @@
   ...
 }: {
   boot = {
-    kernelPackages = pkgs.linuxKernel.kernels.linux_zen;
+    kernelPackages = pkgs.linuxPackages_zen;
     initrd.luks.devices."luks-f223570a-d11c-4439-b7bf-834144b782ee".device = "/dev/disk/by-uuid/f223570a-d11c-4439-b7bf-834144b782ee";
     loader = {
       systemd-boot.enable = true;
