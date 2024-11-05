@@ -1,8 +1,9 @@
 #!/bin/zsh
 cd ~/nixos
 nix flake update
+sudo nix-collect-garbage --delete-older-than 1d
 sudo nixos-rebuild switch &>/tmp/nixos-switch.log || (
- cat /tmp/nixos-switch.log | rq --color always error && false)
+ cat /tmp/nixos-switch.log | rg --color always error && false)
 gen=$(nixos-rebuild list-generations | grep current)
 git commit -am "$gen"
 git push
