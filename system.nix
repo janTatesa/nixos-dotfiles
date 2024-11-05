@@ -82,7 +82,7 @@
       };
     };
     services = {
-      services.lock = {
+      lock = {
         script = "${pkgs.writeScriptBin "lock" ''${builtins.readFile ./scripts/lock.py}''}/bin/lock hibernate";
         serviceConfig = {
           Type = "oneshot";
