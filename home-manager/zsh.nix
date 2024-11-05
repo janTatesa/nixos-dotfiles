@@ -8,7 +8,8 @@
       enable = true;
       dotDir = ".config/zsh";
       history.path = "/dev/null";
-      initExtra = "${pkgs.fortune}/bin/fortune; carapace --style 'carapace.Description=#b4befe'";
+      profileExtra = "lock check_login";
+      initExtra = "${pkgs.fortune}/bin/fortune art computers cookie debian definitions education food law linux literature love magic medicine miscellaneous news paradoxum people pets platitudes politics riddles science tao wisdom work; carapace --style 'carapace.Description=#b4befe'";
       syntaxHighlighting.enable = true;
       shellAliases = {
         # Coreutils

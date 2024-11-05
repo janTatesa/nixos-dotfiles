@@ -28,8 +28,7 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
   services = {
-    gvfs.enable = true;
-    udisks2.enable = true;
+    atd.enable = true;
     power-profiles-daemon.enable = false;
     tlp.enable = true;
     pipewire = {
