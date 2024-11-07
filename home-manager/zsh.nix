@@ -3,15 +3,13 @@
   lib,
   ...
 }: {
-  home.file.".config/carapace".source = ./carapace;
   programs = {
     zsh = {
       enable = true;
       dotDir = ".config/zsh";
       history.path = "/dev/null";
       profileExtra = "lock check_login || exit";
-      initExtra = "${pkgs.fortune}/bin/fortune art computers cookie debian definitions education food law linux literature love magic medicine miscellaneous news paradoxum people pets platitudes politics riddles science tao wisdom work; cat ~/.config/carapace | while read line; do; carapace --style carapace.line;done
-";
+      initExtra = "${pkgs.fortune}/bin/fortune art computers cookie debian definitions education food law linux literature love magic medicine miscellaneous news paradoxum people pets platitudes politics riddles science tao wisdom work";
       syntaxHighlighting.enable = true;
       shellAliases = {
         # Coreutils
