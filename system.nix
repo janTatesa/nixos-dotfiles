@@ -31,6 +31,17 @@
     atd.enable = true;
     power-profiles-daemon.enable = false;
     tlp.enable = true;
+    resolved = {
+      enable = true;
+      dnsovertls = "true";
+      domains = [
+        "193.110.81.0#dns0.eu"
+        "2a0f:fc80::#dns0.eu"
+        "185.253.5.0#dns0.eu"
+        "2a0f:fc81::#dns0.eu"
+      ];
+    };
+
     pipewire = {
       enable = true;
       alsa = {
