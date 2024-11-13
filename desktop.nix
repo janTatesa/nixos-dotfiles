@@ -25,7 +25,9 @@
       enable = true;
       wrapperFeatures.gtk = true;
       extraSessionCommands = ''
-        source /home/tadeas/.zshenv
+        export QT_QPA_PLATFORMTHEME="kvantum"
+        export QT_SCALE_FACTOR="2"
+        export QT_STYLE_OVERRIDE="kvantum"
       '';
       extraPackages = with pkgs; [
         libnotify
