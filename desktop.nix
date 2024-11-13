@@ -14,19 +14,19 @@
       subpixel.rgba = "rgb";
     };
   };
-  xdg = {
-    mime.defaultApplications."inode/directory" = ["foot.desktop"];
-    portal = {
-      enable = true;
-      extraPortals = with pkgs; [xdg-desktop-portal-wlr xdg-desktop-portal-gtk];
-      config.common.default = "*";
-    };
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [xdg-desktop-portal-wlr xdg-desktop-portal-gtk];
+    config.common.default = "*";
   };
   services.gnome.gnome-keyring.enable = true;
   programs = {
     sway = {
       enable = true;
       wrapperFeatures.gtk = true;
+      extraSessionCommands = ''
+        source /home/tadeas/.zshenv
+      '';
       extraPackages = with pkgs; [
         libnotify
         swaybg
