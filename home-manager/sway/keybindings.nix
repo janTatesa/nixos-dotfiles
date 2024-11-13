@@ -23,8 +23,8 @@ in {
     "Mod4+f" = "fullscreen";
     "Mod4+Shift+c" = "reload";
     "Mod4+Shift+e" = "exit";
-    "Mod4+Shift+s" = "exec lock suspend";
-    "Mod4+Shift+i" = "exec lock hibernate";
+    "Mod4+Shift+s" = "exec sh ''systemctl suspend; swaylock''";
+    "Mod4+Shift+i" = "exec systemctl hibernate";
     "Mod4+Shift+r" = "exec systemctl reboot";
     #librewolf
     "Mod4+1" = "workspace number 1";

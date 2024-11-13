@@ -32,9 +32,15 @@
   };
 
   users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
+  programs = {
+    zsh.enable = true;
+    adb.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = [pkgs.libusb];
+    };
+  };
   services = {
-    atd.enable = true;
     power-profiles-daemon.enable = false;
     tlp.enable = true;
     resolved = {
@@ -84,29 +90,11 @@
     };
   };
 
-  systemd = {
-    timers.lock = {
-      wantedBy = ["timers.target"];
-      timerConfig = {
-        OnCalendar = "*-*-* 21:00:00";
-        Unit = "lock";
-      };
-    };
-    services = {
-      lock = {
-        script = "${pkgs.writeScriptBin "lock" ''${builtins.readFile ./scripts/lock.py}''}/bin/lock hibernate";
-        serviceConfig = {
-          Type = "oneshot";
-          User = "tadeas";
-        };
-      };
-      bing-wallpaper-server = {
-        script = "${
-          bing-wallpaper-server.packages.${pkgs.system}.bing-wallpaper-server
-        }/bin/bing-wallpaper-server 10000 /tmp/image.jpg";
-        wantedBy = ["multi-user.target"];
-        enable = true;
-      };
-    };
+  systemd.services.bing-wallpaper-server = {
+    script = "${
+      bing-wallpaper-server.packages.${pkgs.systemd}.bing-wallpaper-server
+    }/bin/bing-wallpaper-server 10000 /tmp/image.jpg";
+    wantedBy = ["multi-user.target"];
+    enable = true;
   };
 }

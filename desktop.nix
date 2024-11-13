@@ -14,10 +14,13 @@
       subpixel.rgba = "rgb";
     };
   };
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [xdg-desktop-portal-wlr xdg-desktop-portal-gtk];
-    config.common.default = "*";
+  xdg = {
+    mime.defaultApplications."inode/directory" = ["foot.desktop"];
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [xdg-desktop-portal-wlr xdg-desktop-portal-gtk];
+      config.common.default = "*";
+    };
   };
   services.gnome.gnome-keyring.enable = true;
   programs = {
