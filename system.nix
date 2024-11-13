@@ -92,7 +92,7 @@
 
   systemd.services.bing-wallpaper-server = {
     script = "${
-      bing-wallpaper-server.packages.${pkgs.systemd}.bing-wallpaper-server
+      bing-wallpaper-server.packages.${pkgs.system}.bing-wallpaper-server
     }/bin/bing-wallpaper-server 10000 /tmp/image.jpg";
     wantedBy = ["multi-user.target"];
     enable = true;
