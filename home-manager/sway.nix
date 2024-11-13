@@ -1,5 +1,20 @@
-{lib, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [./sway/keybindings.nix];
+  home.packages = with pkgs; [
+    libnotify
+    swaybg
+    grim
+    brightnessctl
+    slurp
+    cliphist
+    pamixer
+    playerctl
+    wl-clipboard
+  ];
   wayland.windowManager.sway = {
     enable = true;
     wrapperFeatures.gtk = true;

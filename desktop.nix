@@ -21,26 +21,6 @@
   };
   services.gnome.gnome-keyring.enable = true;
   programs = {
-    sway = {
-      enable = true;
-      wrapperFeatures.gtk = true;
-      extraSessionCommands = ''
-        export QT_QPA_PLATFORMTHEME="kvantum"
-        export QT_SCALE_FACTOR="2"
-        export QT_STYLE_OVERRIDE="kvantum"
-      '';
-      extraPackages = with pkgs; [
-        libnotify
-        swaybg
-        grim
-        brightnessctl
-        slurp
-        cliphist
-        pamixer
-        playerctl
-        wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
-      ];
-    };
     seahorse.enable = true;
     dconf.enable = true;
   };

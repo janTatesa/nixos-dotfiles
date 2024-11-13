@@ -35,10 +35,6 @@
   programs = {
     zsh.enable = true;
     adb.enable = true;
-    nix-ld = {
-      enable = true;
-      libraries = [pkgs.libusb];
-    };
   };
   services = {
     power-profiles-daemon.enable = false;
