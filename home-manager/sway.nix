@@ -3,6 +3,11 @@
   wayland.windowManager.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+    extraSessionCommands = ''
+      export QT_QPA_PLATFORMTHEME="kvantum"
+      export QT_SCALE_FACTOR="2"
+      export QT_STYLE_OVERRIDE="kvantum"
+    '';
     config = {
       defaultWorkspace = "workspace number 1";
       bars = [{command = "waybar";}];
