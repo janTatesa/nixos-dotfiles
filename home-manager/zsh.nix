@@ -51,8 +51,6 @@
       icons = true;
       extraOptions = ["--no-permissions" "--no-user"];
     };
-
-    yazi.enable = true;
     zoxide.enable = true;
     carapace.enable = true;
   };
