@@ -32,9 +32,9 @@
       };
       assigns."2" = [{class = "discord";}];
       startup = [
-        {command = "librewolf";}
-        {command = "discord";}
         {command = "wl-paste --watch cliphist store";}
+        {command = "librewolf";}
+        {command = "vesktop";}
       ];
       floating = {
         titlebar = false;
