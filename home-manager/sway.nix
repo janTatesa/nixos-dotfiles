@@ -30,7 +30,7 @@
       input."type:keyboard" = {
         xkb_layout = "us,sk(qwerty)";
       };
-      assigns."2" = [{class = "discord";}];
+      assigns."2" = [{class = "vesktop";}];
       startup = [
         {command = "wl-paste --watch cliphist store";}
         {command = "librewolf";}

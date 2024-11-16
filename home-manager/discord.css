@@ -42,3 +42,7 @@
 :root {
   --shadow-ledge: none !important;
 }
+
+.barWithAppLauncherButton_cf58b5 {
+  right: 16px !important;
+}

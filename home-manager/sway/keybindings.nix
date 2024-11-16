@@ -23,7 +23,7 @@ in {
     "Mod4+f" = "fullscreen";
     "Mod4+Shift+c" = "reload";
     "Mod4+Shift+e" = "exit";
-    "Mod4+Shift+s" = "exec sh ''systemctl suspend; swaylock''";
+    "Mod4+Shift+s" = "exec sh ''swaylock; systemctl suspend''";
     "Mod4+Shift+i" = "exec systemctl hibernate";
     "Mod4+Shift+r" = "exec systemctl reboot";
     #librewolf
