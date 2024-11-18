@@ -36,7 +36,6 @@
     zsh.enable = true;
     adb.enable = true;
     nix-ld.enable = true;
-    kdeconnect.enable = true;
   };
   services = {
     power-profiles-daemon.enable = false;
