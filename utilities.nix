@@ -28,5 +28,6 @@
     mutt
     minecraft-server
     prismlauncher
+    heimdall
   ];
 }
