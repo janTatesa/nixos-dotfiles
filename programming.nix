@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  unstable,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     bacon
     cargo-make
@@ -17,5 +21,6 @@
     python311Packages.python-lsp-server
     rustup
     thonny
+    unstable.dioxus-cli
   ];
 }
