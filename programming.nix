@@ -21,7 +21,5 @@
     python311Packages.python-lsp-server
     rustup
     thonny
-    unstable.dioxus-cli
-    unstable.wasm-bindgen-cli
   ];
 }
