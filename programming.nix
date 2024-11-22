@@ -22,5 +22,6 @@
     rustup
     thonny
     unstable.dioxus-cli
+    unstable.wasm-bindgen-cli
   ];
 }
