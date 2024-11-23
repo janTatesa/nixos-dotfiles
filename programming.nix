@@ -21,6 +21,6 @@
     python311Packages.python-lsp-server
     rustup
     thonny
-    devbox
+    cargo-leptos
   ];
 }
