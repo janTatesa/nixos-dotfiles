@@ -21,6 +21,7 @@
     trashy
     (pkgs.writeShellScriptBin "nrb" ''${builtins.readFile ./scripts/update}'')
     (pkgs.writeShellScriptBin "school-notes" ''${builtins.readFile ./scripts/school-notes.sh}'')
+    (pkgs.writeShellScriptBin "send-mail" ''${builtins.readFile ./scripts/school-notes.sh}'')
     obsidian
     unstable.impala
     cool-retro-term

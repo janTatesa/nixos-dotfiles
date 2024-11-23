@@ -1,0 +1,1 @@
+echo "" | mutt uradnikova@gmail.com -a /tmp/school/$1
