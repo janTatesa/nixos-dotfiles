@@ -1,5 +1,5 @@
 cd ~/nixos
 git add .
 nix flake update
-sudo nix-collect-garbage
+sudo nix-collect-garbage --delete-older-than 14d
 sudo nixos-rebuild switch && gen=$(nixos-rebuild list-generations | grep current) && git commit -am "$gen" && git push

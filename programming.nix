@@ -22,6 +22,6 @@
     rustup
     thonny
     cargo-leptos
-    devbox
+    unstable.wasm-bindgen-cli
   ];
 }
