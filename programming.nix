@@ -22,6 +22,7 @@
     rustup
     thonny
     cargo-leptos
+    cargo-generate
     unstable.wasm-bindgen-cli
   ];
 }

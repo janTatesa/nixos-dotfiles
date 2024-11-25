@@ -14,6 +14,8 @@
 .channelAppLauncher_df39bd, /*apps icon*/
 .buttons_bdf0de, /*message buttons (they all have keyboard shortcuts)*/
 .container_c75f85, /* server boosts */
+.search_a46bef:not(.open_a46bef), /*non focused search bar*/
+.ddrArrows_ad95dc, /*annoying arrows*/
 .wrapper_fea3ef.guilds_a4d4d9 /*server icons*/ {
   display: none !important;
 } 
