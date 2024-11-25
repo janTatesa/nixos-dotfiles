@@ -24,5 +24,6 @@
     unstable.cargo-leptos
     cargo-generate
     unstable.wasm-bindgen-cli
+    sass
   ];
 }
