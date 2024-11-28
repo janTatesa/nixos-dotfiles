@@ -23,13 +23,9 @@
     };
   };
 
-  home = {
-    file."${config.gtk.gtk2.configLocation}".force = true;
-    sessionVariables.QT_SCALE_FACTOR = 2;
-    pointerCursor = {
-      size = 22;
-      gtk.enable = true;
-    };
+  home.pointerCursor = {
+    size = 22;
+    gtk.enable = true;
   };
   # For gtk4
   xdg.configFile = {

@@ -17,10 +17,9 @@
     wireless.iwd.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [8081 25565];
+      allowedTCPPorts = [8080 25565];
       allowedUDPPorts = [
         8080
-        8081
         25565
       ];
     };
@@ -32,9 +31,8 @@
     ];
   };
 
-  users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.nushell;
   programs = {
-    zsh.enable = true;
     adb.enable = true;
     nix-ld.enable = true;
   };
