@@ -34,19 +34,9 @@
       };
     };
 
-    fzf = {
+    skim = {
       enable = true;
       fileWidgetCommand = "rg --files";
-      colors = {
-        spinner = lib.mkForce "#b4befe";
-        hl = lib.mkForce "#b4befe";
-        header = lib.mkForce "#b4befe";
-        info = lib.mkForce "#b4befe";
-        pointer = lib.mkForce "#b4befe";
-        marker = lib.mkForce "#b4befe";
-        prompt = lib.mkForce "#b4befe";
-        "hl+" = lib.mkForce "#b4befe";
-      };
     };
 
     eza = {
