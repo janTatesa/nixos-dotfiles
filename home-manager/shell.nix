@@ -51,7 +51,7 @@
   };
   xdg.configFile = {
     "cz.toml".source = (pkgs.formats.toml {}).generate "cz.toml" {
-      style = [
+      tools.commitizen.style = [
         ["qmark" "fg:#b4befe bold"]
         ["question" "bold"]
         ["answer" "fg:#b4befe bold"]
