@@ -29,4 +29,5 @@
     minecraft-server
     prismlauncher
   ];
+  programs.steam.enable = true;
 }
