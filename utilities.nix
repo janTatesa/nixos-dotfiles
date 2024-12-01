@@ -23,12 +23,10 @@
     (pkgs.writeShellScriptBin "school-notes" ''${builtins.readFile ./scripts/school-notes.sh}'')
     (pkgs.writeShellScriptBin "send-mail" ''${builtins.readFile ./scripts/school-notes.sh}'')
     obsidian
-    unstable.impala
     cool-retro-term
     libsecret
     mutt
     minecraft-server
     prismlauncher
-    heimdall
   ];
 }

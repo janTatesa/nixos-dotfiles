@@ -6,7 +6,7 @@ then
     grim $FILENAME || exit
 elif [ "$1" = region ]
 then
-    grim -g "$(slurp -b 11111b80 -c b4befe)" $FILENAME || exit
+    grim -g "$(slurp -b 11111b80 -c cba6f7)" $FILENAME || exit
 else
     grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" $FILENAME || exit
 fi

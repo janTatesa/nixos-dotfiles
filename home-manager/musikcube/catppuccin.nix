@@ -5,7 +5,7 @@
       palette = 235;
     };
     banner_background = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 66;
     };
     banner_foreground = {
@@ -13,7 +13,7 @@
       palette = 229;
     };
     button_background_active = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 142;
     };
     button_background_normal = {
@@ -33,7 +33,7 @@
       palette = 132;
     };
     footer_foreground = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 229;
     };
     foreground = {
@@ -41,7 +41,7 @@
       palette = 229;
     };
     frame_focused = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 167;
     };
     frame_important = {
@@ -65,7 +65,7 @@
       palette = 214;
     };
     list_header_highlighted_background = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 214;
     };
     list_header_highlighted_foreground = {
@@ -73,7 +73,7 @@
       palette = 237;
     };
     list_item_active_background = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 109;
     };
     list_item_active_foreground = {
@@ -81,7 +81,7 @@
       palette = 235;
     };
     list_item_active_highlighted_background = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 66;
     };
     list_item_active_highlighted_foreground = {
@@ -101,15 +101,15 @@
       palette = 239;
     };
     overlay_border = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 109;
     };
     overlay_focused_border = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 167;
     };
     overlay_focused_text = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 167;
     };
     overlay_foreground = {
@@ -133,7 +133,7 @@
       palette = 229;
     };
     text_active = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 142;
     };
     text_disabled = {
@@ -145,7 +145,7 @@
       palette = 167;
     };
     text_focused = {
-      hex = "#b4befe";
+      hex = "#cba6f7";
       palette = 167;
     };
     text_hidden = {

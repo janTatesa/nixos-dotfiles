@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./catppuccin.nix
     ./desktop.nix
     ./hardware-configuration.nix
     ./nixpkgs.nix

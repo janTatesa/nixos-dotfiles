@@ -20,7 +20,6 @@
     python3
     python311Packages.python-lsp-server
     rustup
-    thonny
     unstable.cargo-leptos
     cargo-generate
     unstable.wasm-bindgen-cli

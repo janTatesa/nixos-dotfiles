@@ -1,9 +1,9 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     pkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -42,6 +42,7 @@
         catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.home-manager
         {
+          catppuccin.enable = true;
           home-manager = {
             extraSpecialArgs = {
               inherit catppuccin-discord;
@@ -51,7 +52,7 @@
             };
 
             useGlobalPkgs = true;
-            users.tadeas.imports = [./home-manager.nix catppuccin.homeManagerModules.catppuccin];
+            users.tatesa.imports = [./home-manager.nix catppuccin.homeManagerModules.catppuccin];
           };
         }
       ];

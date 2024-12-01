@@ -12,8 +12,8 @@
         modules-center = ["clock"];
         modules-right = ["sway/mode" "sway/language" "custom/waybar-mpris"];
         network = {
-          interface = "wlan0";
-          format-wifi = "<span color='#b4befe'>   {signalStrength}%</span> {essid}";
+          interface = "wlp0s20f3";
+          format-wifi = "<span color='#cba6f7'>   {signalStrength}%</span> {essid}";
           format-disconnected = "<span color='#f38ba8'>󰖪 </span>No Network";
           tooltip = false;
         };
@@ -60,12 +60,12 @@
         };
         backlight = {
           device = "intel_backlight";
-          format = "<span color='#b4befe'>{icon}</span> {percent}%";
+          format = "<span color='#cba6f7'>{icon}</span> {percent}%";
           format-icons = ["" "" "" "" "" "" "" "" ""];
           disable-scroll = true;
         };
         pulseaudio = {
-          format = "<span color='#b4befe'>{icon}</span> {volume}%";
+          format = "<span color='#cba6f7'>{icon}</span> {volume}%";
           format-muted = "<span color='#f38ba8'>󰖁</span> {volume}%";
           tooltip = false;
           format-icons.default = ["󰕿" "󰕿" "󰖀" "󰖀" "󰖀" "󰕾" "󰕾" "󰕾"];
@@ -73,9 +73,9 @@
         };
         battery = {
           tooltip = false;
-          format = "<span color='#b4befe'>{icon}</span>   {capacity}%";
+          format = "<span color='#cba6f7'>{icon}</span>   {capacity}%";
           format-icons = ["" "" "" "" "" "" "" "" "" ""];
-          format-charging = "<span color='#b4befe'>{icon}   Charging</span> {capacity}%";
+          format-charging = "<span color='#cba6f7'>{icon}   Charging</span> {capacity}%";
         };
       };
     };

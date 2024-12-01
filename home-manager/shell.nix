@@ -40,7 +40,7 @@
 
     eza = {
       enable = true;
-      icons = true;
+      icons = "auto";
       extraOptions = ["--no-permissions" "--no-user"];
     };
 
@@ -50,7 +50,7 @@
   };
   xdg.configFile."carapace/styles.json".text = builtins.toJSON {
     carapace = {
-      Description = "#b4befe";
+      Description = "#cba6f7";
       Highlight = "#a6e3a1";
       Highlight10 = "#a6e3a1";
       Highlight12 = "#89b4fa";
@@ -60,7 +60,7 @@
       Highlight9 = "#94e2d5";
       KLogLevelDebug = "#585b70";
       KeywordUnknown = "#585b70";
-      Usage = "#b4befe";
+      Usage = "#cba6f7";
     };
   };
 }

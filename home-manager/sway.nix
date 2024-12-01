@@ -49,16 +49,16 @@
         background = "1e1e2e";
         focused = {
           background = "1e1e2e";
-          border = "b4befe";
-          childBorder = "b4befe";
-          indicator = "b4befe";
+          border = "cba6f7";
+          childBorder = "cba6f7";
+          indicator = "cba6f7";
           text = "cdd6f4";
         };
         focusedInactive = {
           background = "1e1e2e";
-          border = "b4befe";
-          childBorder = "b4befe";
-          indicator = "b4befe";
+          border = "cba6f7";
+          childBorder = "cba6f7";
+          indicator = "cba6f7";
           text = "cdd6f4";
         };
         unfocused = {
@@ -82,7 +82,7 @@
   services = {
     mako = {
       enable = true;
-      borderColor = lib.mkForce "#b4befe";
+      borderColor = lib.mkForce "#cba6f7";
       borderSize = 2;
       borderRadius = 20;
       width = 1000;
@@ -106,8 +106,8 @@
     settings = {
       font = "Ubuntu";
       font-size = 24;
-      ring-color = lib.mkForce "b4befe";
-      ring-ver-color = lib.mkForce "b4befe";
+      ring-color = lib.mkForce "cba6f7";
+      ring-ver-color = lib.mkForce "cba6f7";
       indicator-idle-visible = false;
       indicator-radius = 100;
       show-failed-attempts = true;

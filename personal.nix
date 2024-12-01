@@ -17,9 +17,9 @@
       LC_TIME = "en_US.UTF-8";
     };
   }; # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.tadeas = {
+  users.users.tatesa = {
     isNormalUser = true;
-    description = "Tadeas Uradnik";
+    description = "Tatesa Uradnik";
     extraGroups = ["networkmanager" "wheel" "input" "video" "dialout"];
   };
   programs.msmtp = {
@@ -33,8 +33,8 @@
       from = user;
     };
   };
-  home-manager.users.tadeas.programs.git = {
-    userName = "Tadeas Uradnik";
-    userEmail = "taduradnik@gmail.com";
+  home-manager.users.tatesa.programs.git = {
+    userName = "Tatesa Uradnik";
+    userEmail = "taduradnik@proton.me";
   };
 }

@@ -1,5 +1,5 @@
 {...}: {
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
   imports = [
     ./home-manager/atuin.nix
     ./home-manager/catppuccin.nix

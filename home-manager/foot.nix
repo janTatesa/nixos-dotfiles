@@ -4,8 +4,8 @@
     settings = {
       main.font = "UbuntuMono Nerd Font:size=22";
       colors = {
-        regular6 = lib.mkForce "b4befe";
-        bright6 = lib.mkForce "b4befe";
+        regular6 = lib.mkForce "cba6f7";
+        bright6 = lib.mkForce "cba6f7";
       };
     };
   };

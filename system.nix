@@ -1,11 +1,7 @@
-{
-  bing-wallpaper-server,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   boot = {
     kernelPackages = pkgs.linuxPackages_zen;
-    initrd.luks.devices."luks-f223570a-d11c-4439-b7bf-834144b782ee".device = "/dev/disk/by-uuid/f223570a-d11c-4439-b7bf-834144b782ee";
+    initrd.luks.devices."luks-e0d73758-e24a-4c66-b33b-5f5ec6dafc9a".device = "/dev/disk/by-uuid/e0d73758-e24a-4c66-b33b-5f5ec6dafc9a";
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
@@ -14,7 +10,7 @@
   };
   networking = {
     hostName = "nixos";
-    wireless.iwd.enable = true;
+    networkmanager.enable = true;
     firewall = {
       enable = true;
       allowedTCPPorts = [8080 25565];
@@ -39,6 +35,7 @@
   services = {
     power-profiles-daemon.enable = false;
     tlp.enable = true;
+
     resolved = {
       enable = true;
       dnsovertls = "true";
@@ -62,7 +59,7 @@
 
         initial_session = {
           command = "sway";
-          user = "tadeas";
+          user = "tatesa";
         };
       };
     };
@@ -86,11 +83,11 @@
     };
   };
 
-  systemd.services.bing-wallpaper-server = {
-    script = "${
-      bing-wallpaper-server.packages.${pkgs.system}.bing-wallpaper-server
-    }/bin/bing-wallpaper-server 10000 /tmp/image.jpg";
-    wantedBy = ["multi-user.target"];
-    enable = true;
-  };
+  # systemd.services.bing-wallpaper-server = {
+  #   script = "${
+  #     bing-wallpaper-server.packages.${pkgs.system}.bing-wallpaper-server
+  #   }/bin/bing-wallpaper-server 10000 /tmp/image.jpg";
+  #   wantedBy = ["multi-user.target"];
+  #   enable = true;
+  # };
 }

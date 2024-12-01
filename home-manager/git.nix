@@ -1,8 +1,6 @@
 {...}: {
   programs.git = {
     enable = true;
-    userName = "Tadeas Uradnik";
-    userEmail = "taduradnik@gmail.com";
     extraConfig = {
       push.autoSetupRemote = true;
       pull.rebase = false;
