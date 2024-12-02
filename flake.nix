@@ -8,16 +8,11 @@
     };
 
     catppuccin-discord = {
-      url = "https://catppuccin.github.io/discord/dist/catppuccin-mocha-lavender.theme.css";
+      url = "https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css";
       flake = false;
     };
 
     catppuccin.url = "github:catppuccin/nix";
-
-    bing-wallpaper-server = {
-      url = "github:TadoTheMiner/bing-wallpaper-server?rev=7d2145b588cf996470678d76ce7974d00d5eb8a7";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -25,14 +20,15 @@
     home-manager,
     catppuccin-discord,
     catppuccin,
-    bing-wallpaper-server,
     pkgs-unstable,
     ...
-  }: {
+  }: let
+    personal_info = import ./personal.nix;
+  in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
       specialArgs = {
-        inherit bing-wallpaper-server;
+        inherit personal_info;
         unstable = import pkgs-unstable {
           inherit system;
         };
@@ -45,6 +41,7 @@
           catppuccin.enable = true;
           home-manager = {
             extraSpecialArgs = {
+              inherit personal_info;
               inherit catppuccin-discord;
               unstable = import pkgs-unstable {
                 inherit system;

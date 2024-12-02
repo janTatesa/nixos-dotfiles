@@ -6,9 +6,9 @@
   gtk = {
     enable = true;
     theme = {
-      name = "catppuccin-mocha-lavender-standard";
+      name = "catppuccin-mocha-mauve-standard";
       package = pkgs.catppuccin-gtk.override {
-        accents = ["lavender"];
+        accents = ["mauve"];
         variant = "mocha";
       };
     };
@@ -23,9 +23,12 @@
     };
   };
 
-  home.pointerCursor = {
-    size = 22;
-    gtk.enable = true;
+  home = {
+    sessionVariables.QT_SCALE_FACTOR = "2";
+    pointerCursor = {
+      size = 22;
+      gtk.enable = true;
+    };
   };
   # For gtk4
   xdg.configFile = {

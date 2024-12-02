@@ -2,7 +2,7 @@
   programs.helix.settings.editor = {
     mouse = false;
     color-modes = true;
-    shell = ["zsh" "-c"];
+    shell = ["nu" "-c"];
     soft-wrap.enable = true;
     gutters.line-numbers.min-width = 2;
     auto-save.focus-lost = true;

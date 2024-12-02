@@ -1,9 +1,6 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   programs = {
+    tealdeer.enable = true;
     nushell = {
       enable = true;
       configFile.source = ./nushell.nu;
@@ -32,12 +29,10 @@
         nsh = "nix-shell --command nu -p";
       };
     };
-
-    skim = {
+    fzf = {
       enable = true;
       fileWidgetCommand = "rg --files";
     };
-
     eza = {
       enable = true;
       icons = "auto";
@@ -48,6 +43,7 @@
     zoxide.enable = true;
     carapace.enable = true;
   };
+
   xdg.configFile."carapace/styles.json".text = builtins.toJSON {
     carapace = {
       Description = "#cba6f7";

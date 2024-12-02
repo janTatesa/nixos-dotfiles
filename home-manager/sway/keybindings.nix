@@ -1,12 +1,12 @@
 {pkgs, ...}: let
-  screenshot = pkgs.writeShellScriptBin "screenshot" ''${builtins.readFile ../../scripts/screenshot}'' + /bin/screenshot;
+  screenshot = pkgs.writeShellScriptBin "screenshot" ''${builtins.readFile ../../scripts/screenshot.sh}'' + /bin/screenshot;
 in {
   wayland.windowManager.sway.config.keybindings = {
     "Mod4+Print" = "exec ${screenshot} window";
     "Print" = "exec ${screenshot} region";
     "Shift+Print" = "exec ${screenshot} fullscreen";
     "Mod4+p" = "exec cliphist list | fuzzel -d | cliphist decode | wl-copy";
-    "Mod4+Return" = "exec foot";
+    "Mod4+Return" = "exec kitty";
     "Mod4+Shift+q" = "kill";
     "Mod4+d" = "exec fuzzel | xargs swaymsg exec --";
 
@@ -23,7 +23,7 @@ in {
     "Mod4+f" = "fullscreen";
     "Mod4+Shift+c" = "reload";
     "Mod4+Shift+e" = "exit";
-    "Mod4+Shift+s" = "exec sh ''swaylock; systemctl suspend''";
+    "Mod4+Shift+s" = "exec swaylock; systemctl suspend";
     "Mod4+Shift+i" = "exec systemctl hibernate";
     "Mod4+Shift+r" = "exec systemctl reboot";
     #librewolf

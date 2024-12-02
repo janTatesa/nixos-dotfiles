@@ -78,7 +78,7 @@ let dark_theme = {
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
-    show_banner: true # true or false to enable or disable the welcome banner at startup
+    show_banner: false # true or false to enable or disable the welcome banner at startup
 
     ls: {
         use_ls_colors: true # use the LS_COLORS environment variable to colorize output
@@ -739,14 +739,14 @@ $env.config = {
         }
         {
             name: delete_one_word_forward
-            modifier: alt
+            modifier: control
             keycode: delete
             mode: emacs
             event: { edit: deleteword }
         }
         {
             name: delete_one_word_backward
-            modifier: alt
+            modifier: control
             keycode: backspace
             mode: emacs
             event: { edit: backspaceword }
@@ -806,22 +806,31 @@ $env.config = {
             modifier: control_shift
             keycode: char_x
             mode: emacs
-            event: { edit: cutselection }
-            # event: { edit: cutselectionsystem }
+            event: { edit: cutselectionsystem }
         }
-        # {
-        #     name: paste_system
-        #     modifier: control_shift
-        #     keycode: char_v
-        #     mode: emacs
-        #     event: { edit: pastesystem }
-        # }
+        {
+            name: paste_system
+            modifier: control_shift
+            keycode: char_v
+            mode: emacs
+            event: { edit: pastesystem }
+        }
         {
             name: select_all
             modifier: control_shift
             keycode: char_a
             mode: emacs
             event: { edit: selectall }
+        }
+        {
+            name: 'fzf'
+            modifier: CONTROL
+            keycode: char_t
+            mode: [emacs vi_normal]
+            event: [{
+                send: ExecuteHostCommand
+                cmd: "commandline edit (fzf)"
+            }]
         }
     ]
 }

@@ -1,4 +1,5 @@
 {
+  config,
   lib,
   pkgs,
   ...
@@ -18,10 +19,9 @@
   wayland.windowManager.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+    checkConfig = false;
     extraSessionCommands = ''
-      export QT_QPA_PLATFORMTHEME="kvantum"
-      export QT_SCALE_FACTOR="2"
-      export QT_STYLE_OVERRIDE="kvantum"
+      . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"
     '';
     config = {
       defaultWorkspace = "workspace number 1";
@@ -45,38 +45,7 @@
         border = 5;
       };
       gaps.smartBorders = "on";
-      colors = {
-        background = "1e1e2e";
-        focused = {
-          background = "1e1e2e";
-          border = "cba6f7";
-          childBorder = "cba6f7";
-          indicator = "cba6f7";
-          text = "cdd6f4";
-        };
-        focusedInactive = {
-          background = "1e1e2e";
-          border = "cba6f7";
-          childBorder = "cba6f7";
-          indicator = "cba6f7";
-          text = "cdd6f4";
-        };
-        unfocused = {
-          background = "1e1e2e";
-          border = "00000000";
-          childBorder = "1e1e2e";
-          indicator = "1e1e2e";
-          text = "cdd6f4";
-        };
-
-        urgent = {
-          background = "1e1e2e";
-          border = "f38ba8";
-          childBorder = "1e1e2e";
-          indicator = "1e1e2e";
-          text = "cdd6f4";
-        };
-      };
+      colors = import ./sway/colors.nix;
     };
   };
   services = {
@@ -87,7 +56,7 @@
       borderRadius = 20;
       width = 1000;
       height = 500;
-      font = "Ubuntu 20";
+      font = "Noto Sans 20";
       defaultTimeout = 10000;
     };
     swayidle = {
@@ -104,7 +73,7 @@
   programs.swaylock = {
     enable = true;
     settings = {
-      font = "Ubuntu";
+      font = "Noto Sans";
       font-size = 24;
       ring-color = lib.mkForce "cba6f7";
       ring-ver-color = lib.mkForce "cba6f7";
