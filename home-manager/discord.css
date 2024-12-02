@@ -28,7 +28,7 @@
   border: none !important;
 } 
 
-*:before {
+*:before, .header_b385c8 {
   box-shadow: none !important;
 }
 

@@ -828,7 +828,7 @@ $env.config = {
             mode: [emacs vi_normal]
             event: [{
                 send: ExecuteHostCommand
-                cmd: "commandline edit (fzf)"
+                cmd: "commandline edit -i (fzf)"
             }]
         }
     ]

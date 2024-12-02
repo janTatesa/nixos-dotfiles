@@ -16,12 +16,12 @@
       };
       git_branch.format = "[on $branch(:$remote_branch)]($style)";
       directory = {
-        style = "lavender";
+        style = "mauve";
         truncation_length = 4;
         read_only = " rdonly";
       };
       character = {
-        success_symbol = "[>](lavender)";
+        success_symbol = "[>](mauve)";
         error_symbol = "[>](red)";
       };
     };
