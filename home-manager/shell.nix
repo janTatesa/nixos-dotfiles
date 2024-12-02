@@ -30,6 +30,7 @@
       };
     };
     fzf = {
+      catppuccin.enable = true;
       enable = true;
       fileWidgetCommand = "rg --files";
     };

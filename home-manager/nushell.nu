@@ -739,14 +739,14 @@ $env.config = {
         }
         {
             name: delete_one_word_forward
-            modifier: control
+            modifier: alt
             keycode: delete
             mode: emacs
             event: { edit: deleteword }
         }
         {
             name: delete_one_word_backward
-            modifier: control
+            modifier: alt
             keycode: backspace
             mode: emacs
             event: { edit: backspaceword }
