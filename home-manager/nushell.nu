@@ -824,7 +824,7 @@ $env.config = {
         }
         {
             name: 'fzf'
-            modifier: CONTROL
+            modifier: control
             keycode: char_t
             mode: [emacs vi_normal]
             event: [{
