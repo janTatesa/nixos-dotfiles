@@ -32,7 +32,7 @@
     fzf = {
       catppuccin.enable = true;
       enable = true;
-      fileWidgetCommand = "rg --files";
+      defaultCommand = "rg --files";
     };
     eza = {
       enable = true;
