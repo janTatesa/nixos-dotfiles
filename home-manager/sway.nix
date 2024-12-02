@@ -56,7 +56,7 @@
       borderRadius = 20;
       width = 1000;
       height = 500;
-      font = "Noto Sans 20";
+      font = "Rubik 20";
       defaultTimeout = 10000;
     };
     swayidle = {
@@ -73,7 +73,7 @@
   programs.swaylock = {
     enable = true;
     settings = {
-      font = "Noto Sans";
+      font = "Rubik";
       font-size = 24;
       ring-color = lib.mkForce "cba6f7";
       ring-ver-color = lib.mkForce "cba6f7";

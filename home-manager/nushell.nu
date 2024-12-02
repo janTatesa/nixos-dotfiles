@@ -799,21 +799,20 @@ $env.config = {
             keycode: char_c
             mode: emacs
             event: { edit: copyselection }
-            # event: { edit: copyselectionsystem }
         }
         {
             name: cut_selection
             modifier: control_shift
             keycode: char_x
             mode: emacs
-            event: { edit: cutselectionsystem }
+            event: { edit: cutselection }
         }
         {
-            name: paste_system
+            name: paste
             modifier: control_shift
             keycode: char_v
             mode: emacs
-            event: { edit: pastesystem }
+            event: { edit: paste }
         }
         {
             name: select_all

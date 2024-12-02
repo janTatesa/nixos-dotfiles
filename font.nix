@@ -2,14 +2,14 @@
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
-      noto-fonts
-      fira-code
+      rubik
+      (nerdfonts.override {fonts = ["FiraCode"];})
     ];
     fontconfig = {
       defaultFonts = {
-        serif = ["Noto Sans"];
-        sansSerif = ["Noto Sans"];
-        monospace = ["JetBrainsMono Nerd Font"];
+        serif = ["Rubik"];
+        sansSerif = ["Rubik"];
+        monospace = ["FiraCode Nerd Font"];
       };
       subpixel.rgba = "rgb";
     };
