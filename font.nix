@@ -8,7 +8,7 @@
     fontconfig.defaultFonts = {
       serif = ["Rubik"];
       sansSerif = ["Rubik"];
-      monospace = ["JetBrainsMono Nerd Font"];
+      monospace = ["JetBrainsMono Nerd Font Mono"];
     };
   };
 }

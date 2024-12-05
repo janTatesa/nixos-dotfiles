@@ -1,6 +1,6 @@
 * {
   border: none;
-  font-family: 'Rubik', 'JetBrainsMono Nerd Font';
+  font-family: 'sans-serif', 'monospace';
   font-size: 26px;
 }
 window#waybar {

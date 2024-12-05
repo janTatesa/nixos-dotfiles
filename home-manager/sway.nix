@@ -53,10 +53,10 @@
       enable = true;
       borderColor = lib.mkForce "#cba6f7";
       borderSize = 2;
-      borderRadius = 20;
+      borderRadius = 8;
       width = 1000;
       height = 500;
-      font = "Rubik 20";
+      font = "sans-serif 20";
       defaultTimeout = 10000;
     };
     swayidle = {
@@ -73,8 +73,8 @@
   programs.swaylock = {
     enable = true;
     settings = {
-      font = "Rubik";
-      font-size = 24;
+      font = "sans-serif";
+      font-size = 22;
       ring-color = lib.mkForce "cba6f7";
       ring-ver-color = lib.mkForce "cba6f7";
       indicator-idle-visible = false;
