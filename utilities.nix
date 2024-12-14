@@ -18,5 +18,6 @@
     obsidian
     libsecret
     mutt
+    mtpfs
   ];
 }

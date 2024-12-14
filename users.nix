@@ -8,7 +8,7 @@
     users.${personal_info.login} = {
       isNormalUser = true;
       description = personal_info.name;
-      extraGroups = ["networkmanager" "wheel" "input" "video" "dialout"];
+      extraGroups = ["networkmanager" "wheel" "input" "video" "dialout" "plugdev"];
     };
   };
 
@@ -27,18 +27,21 @@
     };
   };
 
-  security.sudo = {
-    enable = true;
-    extraRules = [
-      {
-        commands = [
-          {
-            command = "/run/current-system/sw/bin/nix*";
-            options = ["NOPASSWD"];
-          }
-        ];
-        groups = ["wheel"];
-      }
-    ];
+  security = {
+    pam.services.swaylock = {};
+    sudo = {
+      enable = true;
+      extraRules = [
+        {
+          commands = [
+            {
+              command = "/run/current-system/sw/bin/nix*";
+              options = ["NOPASSWD"];
+            }
+          ];
+          groups = ["wheel"];
+        }
+      ];
+    };
   };
 }

@@ -1,8 +1,4 @@
-{
-  pkgs,
-  unstable,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     bacon
     cargo-make
@@ -20,9 +16,7 @@
     python3
     python311Packages.python-lsp-server
     rustup
-    unstable.cargo-leptos
-    cargo-generate
-    unstable.wasm-bindgen-cli
+    devbox
     sass
   ];
 }

@@ -13,8 +13,8 @@
         modules-right = ["sway/mode" "sway/language" "custom/waybar-mpris"];
         network = {
           interface = "wlp0s20f3";
-          format-wifi = "<span color='#cba6f7'>   {signalStrength}%</span> {essid}";
-          format-disconnected = "<span color='#f38ba8'>󰖪 </span>No Network";
+          format-wifi = "<span color='#cba6f7'>{signalStrength}%</span> {essid}";
+          format-disconnected = "<span color='#f38ba8'>󰖪</span>No Network";
           tooltip = false;
         };
 
