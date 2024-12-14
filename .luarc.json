@@ -1,7 +1,0 @@
-{
-    "diagnostics.globals": [
-        "client",
-        "vim",
-        "bufnr"
-    ]
-}

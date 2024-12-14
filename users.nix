@@ -5,6 +5,7 @@
 }: {
   users = {
     defaultUserShell = pkgs.nushell;
+    groups.plugdev = {};
     users.${personal_info.login} = {
       isNormalUser = true;
       description = personal_info.name;
