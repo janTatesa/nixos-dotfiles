@@ -17,7 +17,10 @@
           format-disconnected = "<span color='#f38ba8'>󰖪</span>No Network";
           tooltip = false;
         };
-        "group/indicators".modules = ["network" "battery" "backlight" "pulseaudio"];
+        "group/indicators" = {
+          modules = ["network" "battery" "backlight" "pulseaudio"];
+          layout = "horizontal";
+        };
         "sway/workspaces" = {
           disable-scroll = true;
           sort-by-number = true;
