@@ -8,7 +8,7 @@
         position = "top";
         output = ["eDP-1"];
         margin-bottom = 10;
-        modules-left = ["sway/workspaces" "network" "battery" "backlight" "pulseaudio"];
+        modules-left = ["sway/workspaces" "group/indicators"];
         modules-center = ["clock"];
         modules-right = ["sway/mode" "sway/language" "custom/waybar-mpris"];
         network = {
@@ -17,7 +17,7 @@
           format-disconnected = "<span color='#f38ba8'>󰖪</span>No Network";
           tooltip = false;
         };
-
+        "group/indicators".modules = ["network" "battery" "backlight" "pulseaudio"];
         "sway/workspaces" = {
           disable-scroll = true;
           sort-by-number = true;
@@ -73,9 +73,9 @@
         };
         battery = {
           tooltip = false;
-          format = "<span color='#cba6f7'>{icon}</span>   {capacity}%";
+          format = "<span color='#cba6f7'>{icon}</span> {capacity}%";
           format-icons = ["" "" "" "" "" "" "" "" "" ""];
-          format-charging = "<span color='#cba6f7'>{icon}   Charging</span> {capacity}%";
+          format-charging = "<span color='#cba6f7'>{icon} Charging</span> {capacity}%";
         };
       };
     };
