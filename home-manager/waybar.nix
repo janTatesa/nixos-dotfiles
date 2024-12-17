@@ -12,8 +12,8 @@
       modules-right = ["sway/mode" "sway/language" "custom/waybar-mpris"];
       network = {
         interface = "wlp0s20f3";
-        format-wifi = "<span color='#cba6f7'>{signalStrength}%</span> {essid}";
-        format-disconnected = "<span color='#f38ba8'>󰖪</span>No Network";
+        format-wifi = "<span color='#cba6f7'> {signalStrength}%</span> {essid}";
+        format-disconnected = "<span color='#f38ba8'>󰖪 </span>No Network";
         tooltip = false;
       };
       "group/indicators" = {
@@ -62,20 +62,20 @@
       };
       backlight = {
         device = "intel_backlight";
-        format = "<span color='#cba6f7'>{icon}</span> {percent}%";
+        format = "<span color='#cba6f7'>{icon}</span>  {percent}%";
         format-icons = ["" "" "" "" "" "" "" "" ""];
         disable-scroll = true;
       };
       pulseaudio = {
-        format = "<span color='#cba6f7'>{icon}</span> {volume}%";
-        format-muted = "<span color='#f38ba8'>󰖁</span> {volume}%";
+        format = "<span color='#cba6f7'>{icon}</span>  {volume}%";
+        format-muted = "<span color='#f38ba8'>󰖁</span>  {volume}%";
         tooltip = false;
         format-icons.default = ["󰕿" "󰕿" "󰖀" "󰖀" "󰖀" "󰕾" "󰕾" "󰕾"];
         disable-scroll = true;
       };
       battery = {
         tooltip = false;
-        format = "<span color='#cba6f7'>{icon}</span> {capacity}%";
+        format = "<span color='#cba6f7'>{icon}</span>  {capacity}%";
         format-icons = ["" "" "" "" "" "" "" "" "" ""];
         format-charging = "<span color='#cba6f7'>{icon} Charging</span> {capacity}%";
       };
