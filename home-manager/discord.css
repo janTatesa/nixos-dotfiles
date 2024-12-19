@@ -1,4 +1,5 @@
-.iconWrapper_fc4f04, /*inbox icon*/
+.iconWrapper_fc4f04:not([aria-label="Pinned Messages"]), /* some icons*/
+.icon_fc4f04, /*pinned icon*/
 .divider_fc4f04, /* useless line in channell description*/
 .buttonContainer_f9f2ca, /*hover menu*/
 [aria-label="Show Member List"], /*possible via keyboard shortcut*/
@@ -16,6 +17,8 @@
 .container_c75f85, /* server boosts */
 .search_a46bef:not(.open_a46bef), /*non focused search bar*/
 .ddrArrows_ad95dc, /*annoying arrows*/
+.separator_b11c5e, /*useless line when replying someone*/
+.guildIconV2Container_ed9816, /*annoying button*/
 .wrapper_fea3ef.guilds_a4d4d9 /*server icons*/ {
   display: none !important;
 } 
