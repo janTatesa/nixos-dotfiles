@@ -19,6 +19,5 @@
     libsecret
     mutt
     mtpfs
-    lutris
   ];
 }

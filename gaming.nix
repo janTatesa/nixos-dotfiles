@@ -3,5 +3,7 @@
   environment.systemPackages = with pkgs; [
     minecraft-server
     prismlauncher
+    lutris
+    wine64
   ];
 }
