@@ -12,7 +12,7 @@
       modules-right = ["sway/mode" "sway/language" "custom/waybar-mpris"];
       network = {
         interface = "wlp0s20f3";
-        format-wifi = "<span color='#cba6f7'>{icon} {signalStrength}%</span> {essid}";
+        format-wifi = "<span color='#cba6f7'>{icon}  {signalStrength}%</span> {essid}";
         format-icons = ["󰤟" "󰤢" "󰤥" "󰤨"];
 
         format-disconnected = "<span color='#f38ba8'>󰤮</span> No Network";
@@ -69,8 +69,7 @@
         disable-scroll = true;
       };
       pulseaudio = {
-        format = "<span color='#cba6f7'>{icon}</span>  
-        {volume}%";
+        format = "<span color='#cba6f7'>{icon}</span> {volume}%";
         format-muted = "<span color='#f38ba8'>󰖁</span> {volume}%";
         tooltip = false;
         format-icons.default = ["󰕿" "󰕿" "󰖀" "󰖀" "󰖀" "󰕾" "󰕾" "󰕾"];
