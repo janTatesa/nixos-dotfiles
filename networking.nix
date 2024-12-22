@@ -18,8 +18,11 @@
     ];
   };
 
-  services.resolved = {
-    enable = true;
-    dnsovertls = "true";
+  services = {
+    resolved = {
+      enable = true;
+      dnsovertls = "true";
+    };
+    tailscale.enable = true;
   };
 }
