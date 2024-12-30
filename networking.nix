@@ -23,6 +23,6 @@
       enable = true;
       dnsovertls = "true";
     };
-    tailscale.enable = true;
+    # tailscale.enable = true;
   };
 }
