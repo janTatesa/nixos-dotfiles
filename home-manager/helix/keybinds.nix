@@ -1,10 +1,10 @@
 {...}: {
   programs.helix.settings.keys = {
     normal = {
-      left = "sh printf \"Use h\"";
-      down = "sh printf \"Use j\"";
-      up = "sh printf \"Use k\"";
-      right = "sh printf \"Use l\"";
+      left = "no_op";
+      down = "no_op";
+      up = "no_op";
+      right = "no_op";
 
       C-right = "move_next_word_start";
       C-left = "move_prev_word_end";
@@ -17,10 +17,10 @@
     };
 
     select = {
-      left = "sh printf \"Use h\"";
-      down = "sh printf \"Use j\"";
-      up = "sh printf \"Use k\"";
-      right = "sh printf \"Use l\"";
+      left = "no_op";
+      down = "no_op";
+      up = "no_op";
+      right = "no_op";
 
       C-right = "extend_next_word_start";
       C-left = "extend_prev_word_end";
