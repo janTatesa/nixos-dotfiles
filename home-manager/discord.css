@@ -1,5 +1,5 @@
-[aria-label="Mute"]
-[aria-label="Deafen"]
+[aria-label="Mute"],
+[aria-label="Deafen"],
 .iconWrapper_fc4f04:not([aria-label="Pinned Messages"]),
 .divider_fc4f04, /* useless line in channell description*/
 .buttonContainer_f9f2ca, /*hover menu*/
