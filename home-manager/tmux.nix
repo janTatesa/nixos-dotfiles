@@ -4,6 +4,6 @@
     keyMode = "vi";
     terminal = "screen-256color";
     extraConfig = builtins.readFile ./tmux.conf;
-    catppuccin.enable = false;
   };
+  catppuccin.tmux.enable = false;
 }

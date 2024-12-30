@@ -1,7 +1,7 @@
 {
   catppuccin = {
     enable = true;
-    pointerCursor = {
+    cursors = {
       enable = true;
       accent = "dark";
     };

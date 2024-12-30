@@ -1,10 +1,11 @@
 {...}: {
+  catppuccin.fuzzel.enable = false;
+
   programs.fuzzel = {
     enable = true;
-    catppuccin.enable = false;
     settings = {
       main = {
-        font = "Ubuntu:size=22";
+        font = "sans-serif:size=22";
         terminal = "foot";
         icons-enabled = false;
       };

@@ -1,12 +1,15 @@
 {...}: {
   programs.helix.settings.keys = {
     normal = {
-      C-A-q = ":qa!";
+      left = "sh printf \"Use h\"";
+      down = "sh printf \"Use j\"";
+      up = "sh printf \"Use k\"";
+      right = "sh printf \"Use l\"";
+
       C-right = "move_next_word_start";
       C-left = "move_prev_word_end";
     };
     insert = {
-      C-A-q = ":qa!";
       C-right = "move_next_word_start";
       C-left = "move_prev_word_end";
       C-del = "delete_word_forward";
@@ -14,7 +17,11 @@
     };
 
     select = {
-      C-A-q = ":qa!";
+      left = "sh printf \"Use h\"";
+      down = "sh printf \"Use j\"";
+      up = "sh printf \"Use k\"";
+      right = "sh printf \"Use l\"";
+
       C-right = "extend_next_word_start";
       C-left = "extend_prev_word_end";
     };

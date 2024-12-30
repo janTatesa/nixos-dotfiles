@@ -30,7 +30,6 @@
       };
     };
     fzf = {
-      catppuccin.enable = true;
       enable = true;
       defaultCommand = "rg --files";
     };
