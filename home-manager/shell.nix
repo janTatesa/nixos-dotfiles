@@ -43,7 +43,7 @@
     zoxide.enable = true;
     carapace.enable = true;
   };
-
+  home.sessionVariables.SHELL = "nu";
   xdg.configFile."carapace/styles.json".text = builtins.toJSON {
     carapace = {
       Description = "#cba6f7";
