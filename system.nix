@@ -9,4 +9,9 @@
     tlp.enable = true;
   };
   security.rtkit.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+  services.blueman.enable = true;
 }

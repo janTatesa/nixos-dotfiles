@@ -67,6 +67,7 @@
         format = "<span color='#cba6f7'>{icon}</span> {percent}%";
         format-icons = ["" "" "" "" "" "" "" "" ""];
         disable-scroll = true;
+        tooltip = false;
       };
       pulseaudio = {
         format = "<span color='#cba6f7'>{icon}</span> {volume}%";
@@ -79,7 +80,7 @@
         tooltip = false;
         format = "<span color='#cba6f7'>{icon}</span>  {capacity}%";
         format-icons = ["" "" "" "" "" "" "" "" "" ""];
-        format-charging = "<span color='#cba6f7'>{icon} Charging</span> {capacity}%";
+        format-charging = "<span color='#cba6f7'>{icon}  Charging</span> {capacity}%";
       };
     };
   };
