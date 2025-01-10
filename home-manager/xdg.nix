@@ -1,6 +1,14 @@
 {config, ...}: {
   xdg = {
-    mimeApps.defaultApplications."inode/directory" = "kitty.desktop";
+    mimeApps.defaultApplications = {
+      "inode/directory" = "kitty.desktop";
+      "text/html" = "librewolf.desktop";
+      "x-scheme-handler/http" = "librewolf.desktop";
+      "x-scheme-handler/https" = "librewolf.desktop";
+      "x-scheme-handler/about" = "librewolf.desktop";
+      "x-scheme-handler/unknown" = "librewolf.desktop";
+    };
+
     userDirs = {
       enable = true;
 
