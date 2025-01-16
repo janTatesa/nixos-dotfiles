@@ -6,7 +6,9 @@
     ignores = [
       "*.lock"
       "*.o"
-      "!.gitignore"
+      "*.png"
+      "*.jpg"
+      "*.gif"
     ];
   };
 

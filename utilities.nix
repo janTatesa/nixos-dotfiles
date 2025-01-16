@@ -20,5 +20,6 @@
     mutt
     mtpfs
     hyfetch
+    comma
   ];
 }
