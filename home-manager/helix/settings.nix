@@ -5,7 +5,7 @@
     soft-wrap.enable = true;
     gutters.line-numbers.min-width = 2;
     auto-save.focus-lost = true;
-    auto-pairs.enable = false;
+    auto-pairs = false;
     lsp.display_inlay_hints = true;
     statusline = {
       left = [
