@@ -6,7 +6,7 @@
     gutters.line-numbers.min-width = 2;
     auto-save.focus-lost = true;
     auto-pairs = false;
-    lsp.display_inlay_hints = true;
+    lsp.display-inlay-hints = true;
     statusline = {
       left = [
         "mode"
