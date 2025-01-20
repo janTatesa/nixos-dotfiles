@@ -1,8 +1,5 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    bacon
-    cargo-make
-    cargo-nextest
     clang-tools
     commitizen
     gcc
@@ -15,7 +12,6 @@
     nil
     python3
     python311Packages.python-lsp-server
-    rustup
     devbox
     sass
   ];
