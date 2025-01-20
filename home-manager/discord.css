@@ -24,7 +24,7 @@
 
 [aria-label="Mute"],
 [aria-label="Deafen"] {
-  visibility: none !important;
+  visibility: hidden !important;
 }
 
 .divider_a6d69a {/*useless line in forum tags*/
