@@ -1,7 +1,6 @@
-.iconWrapper_fc4f04:not([aria-label="Pinned Messages"]),
+.hoverButtonGroup_d0395d, /*edit image with apps bs*/
 .divider_fc4f04, /* useless line in channell description*/
 .buttonContainer_f9f2ca, /*hover menu*/
-[aria-label="Show Member List"],
 .searchBar_f0963d, /*button that just activates quick switcher which is just ctrl k*/
 .separator_a0, /*usseless lines in settings*/
 .tagsDivider_c1668f, /*useless line in forum post creation*/
@@ -22,8 +21,7 @@
   display: none !important;
 } 
 
-[aria-label="Mute"],
-[aria-label="Deafen"] {
+.button_adca65[role="switch"] { /* mute and deafen buttons*/
   visibility: hidden !important;
 }
 
