@@ -8,7 +8,11 @@
       "org.freedesktop.impl.portal.Screenshot" = "wlr";
     };
   };
-  services.gnome.gnome-keyring.enable = true;
+  services = {
+    gnome.gnome-keyring.enable = true;
+    dbus.enable = true;
+  };
+
   programs = {
     seahorse.enable = true;
     dconf.enable = true;
