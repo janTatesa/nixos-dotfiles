@@ -40,7 +40,7 @@
   margin: 5px 5px 5px 5px !important;
 } 
 
-.baseLayer_d4b6c5 { 
+.base_c48ade { 
   background-color: var(--background-primary); 
 }
 
@@ -48,7 +48,7 @@
   --shadow-ledge: none !important;
 }
 
-.channelTextArea_f75fb0 { /* make the bar aling*/
-  right: 16px !important;
+.formWithLoadedChatInput_f75fb0 {
+  padding-left: 32px;
 }
 
