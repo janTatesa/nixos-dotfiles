@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: {
-  imports = [./sway/keybindings.nix];
   home.packages = with pkgs; [
     libnotify
     swaybg
@@ -45,7 +44,6 @@
         border = 5;
       };
       gaps.smartBorders = "on";
-      colors = import ./sway/colors.nix;
     };
   };
   services = {

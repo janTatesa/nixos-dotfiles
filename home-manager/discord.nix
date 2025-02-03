@@ -8,6 +8,6 @@
   ];
   xdg.configFile = {
     "vesktop/themes/catppuccin.css".source = catppuccin-discord;
-    "vesktop/themes/purecord.css".source = ./discord.css;
+    "vesktop/themes/purecord.css".source = ../assets/discord.css;
   };
 }

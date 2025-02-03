@@ -3,8 +3,8 @@
     tealdeer.enable = true;
     nushell = {
       enable = true;
-      configFile.source = ./nushell.nu;
-      envFile.source = ./env.nu;
+      configFile.source = ../assets/config.nu;
+      envFile.source = ../assets/env.nu;
       extraEnv = "$env.LS_COLORS = (${pkgs.vivid}/bin/vivid generate catppuccin-mocha)";
       shellAliases = {
         # Coreutils

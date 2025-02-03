@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  screenshot = pkgs.writeShellScriptBin "screenshot" ''${builtins.readFile ../../scripts/screenshot.sh}'' + /bin/screenshot;
+  screenshot = pkgs.writeShellScriptBin "screenshot" ''${builtins.readFile ../../assets/screenshot.sh}'' + /bin/screenshot;
 in {
   wayland.windowManager.sway.config.keybindings = {
     "Mod4+Print" = "exec ${screenshot} window";
@@ -24,7 +24,7 @@ in {
     "Mod4+Shift+c" = "reload";
     "Mod4+Shift+e" = "exit";
     "Mod4+Shift+s" = "exec sh -c \"systemctl suspend; swaylock\"";
-    "Mod4+Shift+i" = "exec systemctl hibernate";
+    "Mod4+Shift+i" = "exec sh -c \"notify-send \"Hibernating\"; systemctl hibernate\"";
     "Mod4+Shift+r" = "exec systemctl reboot";
     #librewolf
     "Mod4+1" = "workspace number 1";

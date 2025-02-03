@@ -13,13 +13,18 @@
     mpv
     thefuck
     trashy
-    (pkgs.writeShellScriptBin "nrb" ''${builtins.readFile ./scripts/update.sh}'')
-    (pkgs.writeShellScriptBin "school-notes" ''${builtins.readFile ./scripts/school-notes.sh}'')
+    (pkgs.writeShellScriptBin "nrb" ''${builtins.readFile ../assets/update.sh}'')
+    (pkgs.writeShellScriptBin "school-notes" ''${builtins.readFile ../assets/school-notes.sh}'')
     obsidian
     libsecret
     mutt
     mtpfs
     hyfetch
     comma
+    musikcube
+    eartag
+    spotdl
+    yt-dlp
+    tuba
   ];
 }

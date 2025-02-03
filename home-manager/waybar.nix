@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.waybar = {
     enable = true;
-    style = builtins.readFile ./waybar.css;
+    style = builtins.readFile ../assets/waybar.css;
     settings.mainBar = {
       layer = "top";
       position = "top";

@@ -1,3 +1,4 @@
+#!/bin/sh
 cd ~/nixos
 git add .
 nix flake update
