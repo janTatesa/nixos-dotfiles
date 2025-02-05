@@ -1,6 +1,6 @@
 [class^=friendsButtonContainer], /*friends button*/
 .hoverButtonGroup__06ab4, /*edit image with apps bs*/
-[class^=searchBar], /*button that just activates quick switcher which is just ctrl k*/
+[class^=searchBar]:has(button), /*button that just activates quick switcher which is just ctrl k*/
 .separator_b3f026, /*usseless lines in settings*/
 .divider_f369db, /*useless line in forum post creation*/
 .channel__972a0[aria-posinset="2"], /*nitro*/
