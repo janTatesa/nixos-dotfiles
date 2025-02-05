@@ -1,7 +1,6 @@
-.friendsButtonContainer__35e86, /*friends button*/
+[class^=friendsButtonContainer], /*friends button*/
 .hoverButtonGroup__06ab4, /*edit image with apps bs*/
-.divider__9293f, /* useless line in channell description*/
-.searchBar__35e86, /*button that just activates quick switcher which is just ctrl k*/
+[class^=searchBar], /*button that just activates quick switcher which is just ctrl k*/
 .separator_b3f026, /*usseless lines in settings*/
 .divider_f369db, /*useless line in forum post creation*/
 .channel__972a0[aria-posinset="2"], /*nitro*/
@@ -9,11 +8,11 @@
 .repliedMessageClickableSpine_f9f2ca, /*useless line on replied messages*/
 [role=separator], /*useless lines in right click menus*/
 [href="https://support.discord.com"], /*help icon*/
-.buttonContainer_e6e74f, /*apps icon*/
 .buttons__74017, /*message buttons (they all have keyboard shortcuts)*/
 .container_eff079, /* server boosts */
+[class^=sectionDivider]
 .search__97492:not(.open__97492), /*non focused search bar*/
-.ddrArrows_f061f6, /*annoying arrows*/
+[class^=ddrArrows], /*annoying arrows*/
 .guildIconV2Container__85d16, /*annoying button*/
 .wrapper_ef3116.guilds_c48ade /*server icons*/ {
   display: none !important;
@@ -21,10 +20,6 @@
 
 .button_adca65__67645[role="switch"] { /* mute and deafen buttons*/
   visibility: hidden !important;
-}
-
-.divider_a6d69a {/*useless line in forum tags*/
-  background-color: transparent !important;
 }
 
 * {
@@ -47,8 +42,3 @@
 :root {
   --shadow-ledge: none !important;
 }
-
-.formWithLoadedChatInput_f75fb0 {
-  padding-left: 32px;
-}
-
