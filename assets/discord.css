@@ -10,7 +10,7 @@
 [href="https://support.discord.com"], /*help icon*/
 .buttons__74017, /*message buttons (they all have keyboard shortcuts)*/
 .container_eff079, /* server boosts */
-[class^=sectionDivider]
+[class^=sectionDivider],
 .search__97492:not(.open__97492), /*non focused search bar*/
 [class^=ddrArrows], /*annoying arrows*/
 .guildIconV2Container__85d16, /*annoying button*/
