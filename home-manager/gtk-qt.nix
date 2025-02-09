@@ -42,4 +42,8 @@
     platformTheme.name = "kvantum";
     style.name = "kvantum";
   };
+
+  dconf.settings."org/gnome/desktop/wm/preferences" = {
+    button-layout = "";
+  };
 }
