@@ -23,12 +23,9 @@
     };
   };
 
-  home = {
-    sessionVariables.QT_SCALE_FACTOR = "2";
-    pointerCursor = {
-      size = 22;
-      gtk.enable = true;
-    };
+  home.pointerCursor = {
+    size = 22;
+    gtk.enable = true;
   };
   # For gtk4
   xdg.configFile = {
@@ -37,12 +34,7 @@
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "kvantum";
-    style.name = "kvantum";
-  };
-
+  catppuccin.kvantum.apply = false;
   dconf.settings."org/gnome/desktop/wm/preferences" = {
     button-layout = "";
   };

@@ -1,18 +1,11 @@
-{pkgs, ...}: {
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [xdg-desktop-portal-wlr xdg-desktop-portal-gtk];
-    config.sway = {
-      default = "gtk";
-      "org.freedesktop.impl.portal.ScreenCast" = "wlr";
-      "org.freedesktop.impl.portal.Screenshot" = "wlr";
+{personal_info, ...}: {
+  services = {
+    displayManager = {
+      autoLogin.user = personal_info.login;
+      sddm.wayland.enable = true;
     };
+    desktopManager.plasma6.enable = true;
   };
 
-  services.gnome.gnome-keyring.enable = true;
-
-  programs = {
-    seahorse.enable = true;
-    dconf.enable = true;
-  };
+  programs.dconf.enable = true;
 }

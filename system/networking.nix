@@ -1,4 +1,4 @@
-{...}: {
+{personal_info, ...}: {
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
@@ -17,12 +17,9 @@
       "2a0f:fc81::#dns0.eu"
     ];
   };
-
-  services = {
-    resolved = {
-      enable = true;
-      dnsovertls = "true";
-    };
-    # tailscale.enable = true;
+  users.extraGroups.networkmanager.members = [personal_info.login];
+  services.resolved = {
+    enable = true;
+    dnsovertls = "true";
   };
 }
