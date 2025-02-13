@@ -3,7 +3,7 @@
     enable = true;
     font = {
       name = "monospace";
-      size = 22;
+      size = 14;
     };
   };
 }

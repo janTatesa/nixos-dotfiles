@@ -18,13 +18,13 @@
       package = pkgs.papirus-icon-theme;
     };
     font = {
-      size = 22;
+      size = 14;
       name = "Ubuntu";
     };
   };
 
   home.pointerCursor = {
-    size = 22;
+    size = 14;
     gtk.enable = true;
   };
   # For gtk4
