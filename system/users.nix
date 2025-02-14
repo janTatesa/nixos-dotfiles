@@ -13,6 +13,21 @@
     };
   };
 
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.nushell}/bin/nu";
+        user = personal_info.login;
+      };
+
+      initial_session = {
+        command = "startplasma-wayland";
+        user = personal_info.login;
+      };
+    };
+  };
+
   security.sudo = {
     enable = true;
     extraRules = [
