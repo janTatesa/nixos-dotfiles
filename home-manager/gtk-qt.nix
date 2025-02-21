@@ -14,8 +14,8 @@
     };
     gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "Breeze Dark";
+      package = pkgs.breeze-icons;
     };
     font = {
       size = 14;
@@ -23,7 +23,10 @@
     };
   };
 
-  home.pointerCursor.gtk.enable = true;
+  home.pointerCursor = {
+    size = 18;
+    gtk.enable = true;
+  };
   # For gtk4
   xdg.configFile = {
     "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
