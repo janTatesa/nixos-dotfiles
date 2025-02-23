@@ -14,10 +14,10 @@
 
       # Disable bloatware
       publicShare = null;
-      desktop = null;
       templates = null;
       documents = null;
 
+      desktop = "${config.xdg.dataHome}/share/applications";
       # Small letters are easier to type
       download = "${config.home.homeDirectory}/downloads";
       music = "${config.home.homeDirectory}/music";
