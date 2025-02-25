@@ -1,5 +1,13 @@
-![image](https://github.com/user-attachments/assets/c91f97a6-f489-4292-92f0-9fe0bfd92df3)
-
 Before you install:
-  1. Update system/hardware-configuration.nix
-  2. Edit personal_info.nix
+  1. The installation has to have both swap and root partition encrypted
+  2. Copy the boot.initrd line from the original configuration.nix and put it in system/boot.nix
+  3. Generate system/hardware-configuration.nix
+  4. Make a personal.nix file filling these fields:
+```nix
+{
+  login = "";
+  name = "";
+  email = "";
+  email_smtp = "";
+}
+```
