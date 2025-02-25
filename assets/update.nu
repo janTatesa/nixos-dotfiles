@@ -6,5 +6,5 @@ try {sudo nixos-rebuild switch --upgrade}
 let successful = $env.LAST_EXIT_CODE
 mv .git.bak .git
 if $successful == 0 {
-  git commit --all -m (nixos-rebuild list-generations | grep current); git push
+  git add .; git commit -m (nixos-rebuild list-generations | grep current); git push
 }
