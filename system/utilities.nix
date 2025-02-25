@@ -13,7 +13,7 @@
     mpv
     thefuck
     trashy
-    (pkgs.writeShellScriptBin "nrb" ''${builtins.readFile ../assets/update.sh}'')
+    (pkgs.writeScriptBin "nrb" ''${builtins.readFile ../assets/update.nu}'')
     (pkgs.writeShellScriptBin "school-notes" ''${builtins.readFile ../assets/school-notes.sh}'')
     obsidian
     libsecret
