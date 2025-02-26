@@ -2,9 +2,13 @@
 cd ~/nixos
 mv .git .git.bak
 nix flake update
-try {sudo nixos-rebuild switch --upgrade}
-let successful = $env.LAST_EXIT_CODE
+let successful = try {
+  sudo nixos-rebuild switch --upgrade
+  true
+} catch {
+  false
+}
 mv .git.bak .git
-if $successful == 0 {
+if $successful {
   git add .; git commit -m (nixos-rebuild list-generations | grep current); git push
 }
