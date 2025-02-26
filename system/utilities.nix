@@ -26,5 +26,6 @@
     spotdl
     yt-dlp
     tuba
+    unstable.basilk
   ];
 }
