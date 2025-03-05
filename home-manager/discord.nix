@@ -1,11 +1,4 @@
-{
-  unstable,
-  catppuccin-discord,
-  ...
-}: {
-  home.packages = [
-    unstable.vesktop
-  ];
+{catppuccin-discord, ...}: {
   xdg.configFile = {
     "vesktop/themes/catppuccin.css".source = catppuccin-discord;
     "vesktop/themes/purecord.css".source = ../assets/discord.css;

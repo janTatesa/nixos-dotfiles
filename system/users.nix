@@ -22,7 +22,7 @@
       };
 
       initial_session = {
-        command = "startplasma-wayland";
+        command = "source; startplasma-wayland";
         user = personal_info.login;
       };
     };

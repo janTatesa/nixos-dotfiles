@@ -1,8 +1,6 @@
 {
   personal_info,
   catppuccin-discord,
-  unstable,
-  system,
   catppuccin,
   lib,
   plasma-manager,
@@ -12,9 +10,7 @@
     extraSpecialArgs = {
       inherit personal_info;
       inherit catppuccin-discord;
-      inherit unstable;
     };
-
     useGlobalPkgs = true;
     users.${personal_info.login}.imports =
       [
