@@ -11,7 +11,7 @@ in {
       theme = config.home.pointerCursor.name;
       size = config.home.pointerCursor.size;
     };
-    iconTheme = config.gtk.iconTheme.name;
+    iconTheme = "Breeze Dark";
     wallpaper = ../assets/wallpaper.svg;
     splashScreen.theme = "None";
   };

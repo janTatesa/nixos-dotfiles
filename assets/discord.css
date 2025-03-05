@@ -13,8 +13,8 @@
 [class^=sectionDivider],
 .search__97492:not(.open__97492), /*non focused search bar*/
 [class^=ddrArrows], /*annoying arrows*/
-.guildIconV2Container__85d16, /*annoying button*/
-.wrapper_ef3116.guilds_c48ade /*server icons*/ {
+[class^=guildIconV2Container], /*annoying button*/
+[class^=wrapper][class^=guilds] /*server icons*/ {
   display: none !important;
 } 
 
@@ -29,11 +29,6 @@
 *:before, {
   box-shadow: none !important;
 }
-
-.sidebar_c48ade {
-  border-radius: 8px !important; 
-  margin: 5px 5px 5px 5px !important;
-} 
 
 .base_c48ade { 
   background-color: var(--background-primary); 
