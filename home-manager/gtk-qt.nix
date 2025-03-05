@@ -8,8 +8,8 @@
     theme = {
       name = "catppuccin-mocha-mauve-standard";
       package = pkgs.catppuccin-gtk.override {
-        accents = ["mauve"];
-        variant = "mocha";
+        variant = config.catppuccin.flavor;
+        accents = [config.catppuccin.accent];
       };
     };
     gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
@@ -34,6 +34,15 @@
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
 
+  home.packages = [
+    (
+      pkgs.catppuccin-kde.override
+      {
+        flavour = [config.catppuccin.flavor];
+        accents = [config.catppuccin.accent];
+      }
+    )
+  ];
   catppuccin.kvantum.apply = false;
   dconf.settings."org/gnome/desktop/wm/preferences" = {
     button-layout = "";

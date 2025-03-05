@@ -12,8 +12,12 @@
       url = "https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css";
       flake = false;
     };
-
     catppuccin.url = "github:catppuccin/nix";
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs = {
@@ -22,6 +26,7 @@
     catppuccin-discord,
     catppuccin,
     pkgs-unstable,
+    plasma-manager,
     ...
   }: let
     personal_info = import ./personal.nix;
@@ -33,6 +38,7 @@
         inherit personal_info;
         inherit catppuccin-discord;
         inherit catppuccin;
+        inherit plasma-manager;
         unstable = import pkgs-unstable {
           inherit system;
         };

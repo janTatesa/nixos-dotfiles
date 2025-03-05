@@ -1,4 +1,5 @@
 {personal_info, ...}: {
+  systemd.network.wait-online.enable = false;
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;

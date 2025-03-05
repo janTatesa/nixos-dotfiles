@@ -5,6 +5,7 @@
   system,
   catppuccin,
   lib,
+  plasma-manager,
   ...
 }: {
   home-manager = {
@@ -23,8 +24,14 @@
           home.stateVersion = "24.11";
         }
         catppuccin.homeManagerModules.catppuccin
+        plasma-manager.homeManagerModules.plasma-manager
+        {
+          programs.plasma.enable = true;
+        }
       ]
       ++ lib.filesystem.listFilesRecursive
-      ./home-manager;
+      ./home-manager
+      ++ lib.filesystem.listFilesRecursive
+      ./plasma;
   };
 }
