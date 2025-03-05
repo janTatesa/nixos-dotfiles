@@ -1,10 +1,10 @@
 {
-  pkgs,
+  unstable,
   catppuccin-discord,
   ...
 }: {
   home.packages = [
-    pkgs.vesktop
+    unstable.vesktop
   ];
   xdg.configFile = {
     "vesktop/themes/catppuccin.css".source = catppuccin-discord;

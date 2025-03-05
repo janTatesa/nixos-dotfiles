@@ -2,7 +2,7 @@
   description = "TadoTheMiner's NixOS configuration";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    pkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +25,7 @@
     home-manager,
     catppuccin-discord,
     catppuccin,
-    pkgs-unstable,
+    unstable,
     plasma-manager,
     ...
   }: let
@@ -39,7 +39,7 @@
         inherit catppuccin-discord;
         inherit catppuccin;
         inherit plasma-manager;
-        unstable = import pkgs-unstable {
+        unstable = import unstable {
           inherit system;
         };
       };

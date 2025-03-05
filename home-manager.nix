@@ -1,7 +1,7 @@
 {
   personal_info,
   catppuccin-discord,
-  pkgs-unstable,
+  unstable,
   system,
   catppuccin,
   lib,
@@ -12,9 +12,7 @@
     extraSpecialArgs = {
       inherit personal_info;
       inherit catppuccin-discord;
-      unstable = import pkgs-unstable {
-        inherit system;
-      };
+      inherit unstable;
     };
 
     useGlobalPkgs = true;
