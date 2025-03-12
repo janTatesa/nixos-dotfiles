@@ -12,6 +12,7 @@
       inherit catppuccin-discord;
     };
     useGlobalPkgs = true;
+    backupFileExtension = "bak";
     users.${personal_info.login}.imports =
       [
         {
