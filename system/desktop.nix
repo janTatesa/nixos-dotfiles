@@ -4,9 +4,6 @@
     kate
     konsole
     oxygen
-    kwallet
-    kwallet-pam
-    kwalletmanager
     plasma-workspace-wallpapers
   ];
   programs = {
