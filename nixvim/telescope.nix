@@ -46,11 +46,11 @@
           desc = "[S]earch [K]eymaps";
         };
       };
-      "<leader>sf" = {
+      "<leader>f" = {
         mode = "n";
         action = "find_files";
         options = {
-          desc = "[S]earch [F]iles";
+          desc = "Open [F]ile";
         };
       };
       "<leader>ss" = {
@@ -74,11 +74,11 @@
           desc = "[S]earch by [G]rep";
         };
       };
-      "<leader>sd" = {
+      "<leader>d" = {
         mode = "n";
         action = "diagnostics";
         options = {
-          desc = "[S]earch [D]iagnostics";
+          desc = "Open [D]iagnostics picker";
         };
       };
       "<leader>sr" = {

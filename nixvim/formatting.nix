@@ -38,14 +38,14 @@
     keymaps = [
       {
         mode = "";
-        key = "<leader>f";
+        key = "<leader>m";
         action.__raw = ''
           function()
             require('conform').format { async = true, lsp_fallback = true }
           end
         '';
         options = {
-          desc = "[F]ormat buffer";
+          desc = "for[M]at buffer";
         };
       }
     ];
