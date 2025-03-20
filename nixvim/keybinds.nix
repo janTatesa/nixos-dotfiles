@@ -3,7 +3,7 @@
     {
       mode = "n";
       key = "<leader>l";
-      action = ":source ~/.config/nvim/init.lua<CR>";
+      action = "<cmd>source ~/.config/nvim/init.lua<CR>";
       options.desc = "Re[l]oad config";
     }
     {
