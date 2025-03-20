@@ -50,7 +50,7 @@
         mode = "n";
         action = "find_files";
         options = {
-          desc = "Open [F]ile";
+          desc = "Open [F]ile picker";
         };
       };
       "<leader>ss" = {

@@ -1,4 +1,5 @@
 {
+  config,
   personal_info,
   catppuccin-discord,
   catppuccin,
@@ -8,6 +9,7 @@
 }: {
   home-manager = {
     extraSpecialArgs = {
+      system_config = config;
       inherit personal_info;
       inherit catppuccin-discord;
     };

@@ -11,6 +11,13 @@
       providers.wl-copy.enable = true;
       register = "unnamedplus";
     };
+
+    plugins.web-devicons = {
+      enable = true;
+      defaultIcon.color = "#cba6f7";
+      settings.color_icons = false;
+    };
+
     opts = {
       # Show line numbers
       number = true;
