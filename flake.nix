@@ -7,7 +7,10 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     catppuccin-discord = {
       url = "https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css";
       flake = false;
@@ -21,6 +24,7 @@
   };
 
   outputs = {
+    nixvim,
     nixpkgs,
     home-manager,
     catppuccin-discord,
@@ -46,6 +50,7 @@
 
       modules =
         [
+          nixvim.nixosModules.nixvim
           catppuccin.nixosModules.catppuccin
           {
             catppuccin.enable = true;
@@ -54,7 +59,9 @@
           ./home-manager.nix
         ]
         ++ lib.filesystem.listFilesRecursive
-        ./system;
+        ./system
+        ++ lib.filesystem.listFilesRecursive
+        ./nixvim;
     };
   };
 }
