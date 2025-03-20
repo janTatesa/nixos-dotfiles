@@ -8,6 +8,8 @@
         servers = {
           rust_analyzer = {
             enable = true;
+            installRustc = false;
+            installCargo = false;
             extraOptions = {
               check.command = "clippy";
               completion.excludeTraits = ["color_eyre::owo_colors::OwoColorize" "crossterm::style::Stylize"];
@@ -99,7 +101,7 @@
             };
             # Execute a code action, usually your cursor needs to be on top of an error
             # or a suggestion from your LSP for this to activate.
-            "<leader>ca" = {
+            "<leader>a" = {
               #mode = "n";
               action = "code_action";
               desc = "LSP: [C]ode [A]ction";

@@ -5,6 +5,7 @@
   catppuccin,
   lib,
   plasma-manager,
+  nixvim,
   ...
 }: {
   home-manager = {
@@ -22,6 +23,7 @@
         }
         catppuccin.homeManagerModules.catppuccin
         plasma-manager.homeManagerModules.plasma-manager
+        nixvim.homeManagerModules.nixvim
         {
           programs.plasma.enable = true;
         }
@@ -29,6 +31,8 @@
       ++ lib.filesystem.listFilesRecursive
       ./home-manager
       ++ lib.filesystem.listFilesRecursive
-      ./plasma;
+      ./plasma
+      ++ lib.filesystem.listFilesRecursive
+      ./nixvim;
   };
 }

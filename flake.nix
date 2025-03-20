@@ -43,6 +43,7 @@
         inherit catppuccin-discord;
         inherit catppuccin;
         inherit plasma-manager;
+        inherit nixvim;
         unstable = import unstable {
           inherit system;
         };
@@ -59,9 +60,7 @@
           ./home-manager.nix
         ]
         ++ lib.filesystem.listFilesRecursive
-        ./system
-        ++ lib.filesystem.listFilesRecursive
-        ./nixvim;
+        ./system;
     };
   };
 }

@@ -22,10 +22,6 @@
           group = "[S]earch";
         }
         {
-          __unkeyed-1 = "<leader>w";
-          group = "[W]orkspace";
-        }
-        {
           __unkeyed-1 = "<leader>t";
           group = "[T]oggle";
         }

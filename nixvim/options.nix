@@ -1,4 +1,8 @@
-{...}: {
+{
+  lib,
+  config,
+  ...
+}: {
   programs.nixvim = {
     enable = true;
     globals = {
@@ -7,6 +11,7 @@
       mapleader = " ";
       maplocalleader = " ";
     };
+
     clipboard = {
       providers.wl-copy.enable = true;
       register = "unnamedplus";
@@ -14,7 +19,7 @@
 
     plugins.web-devicons = {
       enable = true;
-      defaultIcon.color = "#cba6f7";
+      defaultIcon.color = (lib.importJSON "${config.catppuccin.sources.palette}/palette.json").${config.catppuccin.flavor}.colors.${config.catppuccin.accent}.hex;
       settings.color_icons = false;
     };
 
@@ -45,10 +50,11 @@
       # Displays which-key popup sooner
       timeoutlen = 300;
 
+      whichwrap = "<,>,[,]";
+
       # Configure how new splits should be opened
       splitright = true;
-      splitbelow = true;
-
+      splitbelow = false;
       # Preview subsitutions live, as you type!
       inccommand = "split";
 
