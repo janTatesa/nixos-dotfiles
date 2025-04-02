@@ -1,6 +1,8 @@
 {
   pkgs,
   unstable,
+  kraban,
+  system,
   ...
 }: {
   environment.systemPackages = with pkgs; [
@@ -32,5 +34,6 @@
     yt-dlp
     tuba
     unstable.basilk
+    kraban.packages.${system}.default
   ];
 }
