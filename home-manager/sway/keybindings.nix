@@ -5,7 +5,7 @@ in {
     "Mod4+Print" = "exec ${screenshot} window";
     "Print" = "exec ${screenshot} region";
     "Shift+Print" = "exec ${screenshot} fullscreen";
-    "Mod4+p" = "exec cliphist list | fuzzel -d | ${pkgs.cliphist} decode | wl-copy";
+    "Mod4+p" = "exec cliphist list | fuzzel -d | cliphist decode | wl-copy";
     "Mod4+Return" = "exec kitty";
     "Mod4+Shift+q" = "kill";
     "Mod4+d" = "exec fuzzel | xargs swaymsg exec --";

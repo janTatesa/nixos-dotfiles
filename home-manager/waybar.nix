@@ -3,16 +3,13 @@
     enable = true;
     style = builtins.readFile ../assets/waybar.css;
     settings.mainBar = {
-      layer = "top";
-      position = "top";
-      output = ["eDP-1"];
       margin-bottom = 10;
       modules-left = ["sway/workspaces" "group/indicators"];
       modules-center = ["clock"];
       modules-right = ["sway/mode" "sway/language" "custom/waybar-mpris"];
       network = {
         interface = "wlp0s20f3";
-        format-wifi = "<span color='#cba6f7'>{icon}  {signalStrength}%</span> {essid}";
+        format-wifi = "<span color='#cba6f7'>{icon}</span> {essid}";
         format-icons = ["󰤟" "󰤢" "󰤥" "󰤨"];
 
         format-disconnected = "<span color='#f38ba8'>󰤮</span> No Network";

@@ -30,11 +30,11 @@
       assigns = {
         "2" = [{class = "vesktop";}];
         "4" = [{class = "obsidian";}];
-        "5" = [{class = "kraban";}];
+        "5" = [{title = "kraban";}];
       };
       startup = [
-        {command = "wl-paste --watch ${pkgs.cliphist} store";}
-        {command = "librewolf";}
+        {command = "wl-paste --watch cliphist store";}
+        {command = "firefox";}
         {command = "vesktop";}
         {command = "kitty -T kraban kraban";}
       ];
