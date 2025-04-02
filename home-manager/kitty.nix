@@ -1,9 +1,9 @@
-{...}: {
+{font_size, ...}: {
   programs.kitty = {
     enable = true;
     font = {
       name = "monospace";
-      size = 14;
+      size = font_size;
     };
     settings.confirm_os_window_close = 0;
   };

@@ -4,12 +4,13 @@
   catppuccin-discord,
   catppuccin,
   lib,
+  font_size,
   ...
 }: {
   home-manager = {
     extraSpecialArgs = {
       system_config = config;
-      inherit personal_info catppuccin-discord;
+      inherit personal_info catppuccin-discord font_size;
     };
     useGlobalPkgs = true;
     backupFileExtension = "bak";

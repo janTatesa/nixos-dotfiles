@@ -38,19 +38,21 @@
       ];
       floating = {
         titlebar = false;
-        border = 5;
+        border = 2;
       };
       window = {
         titlebar = false;
-        border = 5;
+        border = 2;
       };
-      gaps.smartBorders = "on";
+      gaps = {
+        smartBorders = "on";
+        inner = 2;
+      };
     };
   };
   services = {
     mako = {
       enable = true;
-      borderColor = lib.mkForce "#cba6f7";
       borderSize = 2;
       borderRadius = 8;
       width = 1000;
@@ -74,8 +76,6 @@
     settings = {
       font = "sans-serif";
       font-size = 22;
-      ring-color = lib.mkForce "cba6f7";
-      ring-ver-color = lib.mkForce "cba6f7";
       indicator-idle-visible = false;
       indicator-radius = 100;
       show-failed-attempts = true;

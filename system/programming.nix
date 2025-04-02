@@ -3,7 +3,6 @@
     commitizen
     gh
     nasm
-    nil
     nixd
   ];
 }
