@@ -22,7 +22,7 @@
       };
 
       initial_session = {
-        command = "source; startplasma-wayland";
+        command = "dbus-run-session sway";
         user = personal_info.login;
       };
     };
