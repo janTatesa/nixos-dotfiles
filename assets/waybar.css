@@ -1,8 +1,7 @@
-/* TODO: Make  it change by the variable*/
 * {
   border: none;
   font-family: 'sans-serif', 'monospace';
-  font-size: 15px;
+  font-size: 20px;
 }
 
 window#waybar {
@@ -34,7 +33,7 @@ window#waybar {
 
 #custom-waybar-mpris, #mode, #workspaces, #clock, #language, #indicators {
   border-radius: 8px;
-  background-color: rgba(17, 17, 27, 0.9);
+  background-color: rgba(17, 17, 27, 0.6);
   color: #cdd6f4;
   border: 2px solid #cba6f7;
   margin-top: 10px;
