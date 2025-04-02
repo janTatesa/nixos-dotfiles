@@ -1,7 +1,7 @@
 #!/bin/sh
 # TODO: switch to nu (or rust :3)
-mkdir -p $HOME/pictures
-FILENAME="$HOME/pictures/$(date +'%Y-%m-%d-%H%M%S_screenshot.png')"
+mkdir -p $HOME/pictures/screenshots
+FILENAME="$HOME/pictures/screenshots/$(date +'%Y-%m-%d-%H%M%S_screenshot.png')"
 if [ "$1" = fullscreen ]
 then
     grim $FILENAME || exit

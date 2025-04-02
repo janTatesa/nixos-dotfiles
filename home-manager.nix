@@ -4,13 +4,13 @@
   catppuccin-discord,
   catppuccin,
   lib,
-  font_size,
+  font-size,
   ...
 }: {
   home-manager = {
     extraSpecialArgs = {
       system_config = config;
-      inherit personal_info catppuccin-discord font_size;
+      inherit personal_info catppuccin-discord font-size;
     };
     useGlobalPkgs = true;
     backupFileExtension = "bak";
@@ -19,7 +19,7 @@
         {
           home.stateVersion = "24.11";
         }
-        catppuccin.homeManagerModules.catppuccin
+        catppuccin.homeModules.catppuccin
       ]
       ++ lib.filesystem.listFilesRecursive
       ./home-manager;

@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  font-size,
   ...
 }: {
   home.packages = with pkgs; [
@@ -29,11 +30,13 @@
       assigns = {
         "2" = [{class = "vesktop";}];
         "4" = [{class = "obsidian";}];
+        "5" = [{class = "kraban";}];
       };
       startup = [
         {command = "wl-paste --watch ${pkgs.cliphist} store";}
         {command = "librewolf";}
         {command = "vesktop";}
+        {command = "kitty -T kraban kraban";}
       ];
       floating = {
         titlebar = false;
@@ -56,7 +59,7 @@
       borderRadius = 8;
       width = 1000;
       height = 500;
-      font = "sans-serif 20";
+      font = "sans-serif ${builtins.toString font-size}";
       defaultTimeout = 10000;
     };
     swayidle = {
@@ -74,7 +77,7 @@
     enable = true;
     settings = {
       font = "sans-serif";
-      font-size = 22;
+      inherit font-size;
       indicator-idle-visible = false;
       indicator-radius = 100;
       show-failed-attempts = true;

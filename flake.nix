@@ -32,12 +32,12 @@
   }: let
     personal_info = import ./personal.nix;
     lib = nixpkgs.lib;
-    font_size = 15;
+    font-size = 15;
   in {
     nixosConfigurations.nixos = lib.nixosSystem rec {
       system = "x86_64-linux";
       specialArgs = {
-        inherit personal_info catppuccin-discord catppuccin plasma-manager kraban system font_size;
+        inherit personal_info catppuccin-discord catppuccin plasma-manager kraban system font-size;
         unstable = import unstable {
           inherit system;
         };

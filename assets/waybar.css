@@ -1,8 +1,10 @@
+/* TODO: Make  it change by the variable*/
 * {
   border: none;
   font-family: 'sans-serif', 'monospace';
-  font-size: 26px;
+  font-size: 15px;
 }
+
 window#waybar {
   background: transparent;
 }
@@ -17,19 +19,22 @@ window#waybar {
   background: none; /* Remove predefined background color (white) */
   transition: none; /* Disable predefined animations */
 }
+
 #workspaces button.hidden {
   color: #cdd6f4;
 }
+
 #workspaces button.visible {
   color: #cba6f7;
 }
+
 #workspaces button.urgent {
   color: #f38ba8;
 }
 
 #custom-waybar-mpris, #mode, #workspaces, #clock, #language, #indicators {
   border-radius: 8px;
-  background-color: #11111b;
+  background-color: #11111bee;
   color: #cdd6f4;
   border: 2px solid #cba6f7;
   margin-top: 10px;
