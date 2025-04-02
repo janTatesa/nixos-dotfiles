@@ -1,6 +1,5 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }: {
@@ -46,7 +45,7 @@
       };
       gaps = {
         smartBorders = "on";
-        inner = 2;
+        inner = 5;
       };
     };
   };

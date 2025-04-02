@@ -1,6 +1,9 @@
 {...}: {
   programs = {
-    sway.enable = true;
+    sway = {
+      enable = true;
+      extraPackages = [];
+    };
     dconf.enable = true;
     kdeconnect.enable = true;
   };
