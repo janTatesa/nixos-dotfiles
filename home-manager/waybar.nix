@@ -10,7 +10,7 @@
       modules-center = ["clock"];
       modules-right = ["sway/mode" "sway/language" "custom/waybar-mpris"];
       network = {
-        interface = "wlp0s20f3";
+        interface = "wlan0";
         format-wifi = "<span color='#cba6f7'>{icon}</span> {essid}";
         format-icons = ["󰤟" "󰤢" "󰤥" "󰤨"];
 
