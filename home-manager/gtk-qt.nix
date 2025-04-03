@@ -24,10 +24,11 @@
     };
   };
 
-  home.pointerCursor = {
-    size = 18;
-    gtk.enable = true;
+  home = {
+    pointerCursor.gtk.enable = true;
+    sessionVariables.QT_SCAlE_FACTOR = 2;
   };
+
   # For gtk4
   xdg.configFile = {
     "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";

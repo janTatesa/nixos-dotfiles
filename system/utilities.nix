@@ -34,6 +34,7 @@
     yt-dlp
     tuba
     unstable.basilk
+    impala
     kraban.packages.${system}.default
   ];
 }

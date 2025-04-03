@@ -4,6 +4,8 @@
     style = builtins.readFile ../assets/waybar.css;
     settings.mainBar = {
       margin-bottom = 10;
+      ipc = true;
+      id = "1";
       modules-left = ["sway/workspaces" "group/indicators"];
       modules-center = ["clock"];
       modules-right = ["sway/mode" "sway/language" "custom/waybar-mpris"];
@@ -36,12 +38,8 @@
           "9" = "9";
           "0" = "0";
         };
-        persistent-workspaces = {
-          "1" = [];
-          "2" = [];
-          "3" = [];
-        };
       };
+
       "sway/mode".tooltip = false;
       "custom/waybar-mpris" = {
         return-type = "json";
@@ -58,6 +56,7 @@
       clock = {
         interval = 60;
         format = "{:%a %d/%b %I:%M}";
+        tooltip = false;
       };
       backlight = {
         device = "intel_backlight";
@@ -65,13 +64,16 @@
         format-icons = ["" "" "" "" "" "" "" "" ""];
         disable-scroll = true;
         tooltip = false;
+        on-scroll-up = "";
+        on-scroll-down = "";
       };
       pulseaudio = {
         format = "<span color='#cba6f7'>{icon}</span> {volume}%";
         format-muted = "<span color='#f38ba8'>󰖁</span> {volume}%";
         tooltip = false;
         format-icons.default = ["󰕿" "󰕿" "󰖀" "󰖀" "󰖀" "󰕾" "󰕾" "󰕾"];
-        disable-scroll = true;
+        on-scroll-up = "";
+        on-scroll-down = "";
       };
       battery = {
         tooltip = false;

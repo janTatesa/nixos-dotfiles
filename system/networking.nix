@@ -1,8 +1,7 @@
 {personal_info, ...}: {
-  systemd.network.wait-online.enable = false;
   networking = {
     hostName = "nixos";
-    networkmanager.enable = true;
+    wireless.iwd.enable = true;
     firewall = {
       enable = true;
       allowedTCPPorts = [8080 25565];
@@ -18,7 +17,6 @@
       "2a0f:fc81::#dns0.eu"
     ];
   };
-  users.extraGroups.networkmanager.members = [personal_info.login];
   services.resolved = {
     enable = true;
     dnsovertls = "true";

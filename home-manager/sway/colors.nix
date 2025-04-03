@@ -1,33 +1,35 @@
-{...}: {
+{config, ...}: let
+  accent = "\$${config.catppuccin.accent}";
+in {
   wayland.windowManager.sway.config.colors = {
-    background = "1e1e2e";
+    background = "$base";
     focused = {
-      background = "1e1e2e";
-      border = "cba6f7";
-      childBorder = "cba6f7";
-      indicator = "cba6f7";
-      text = "cdd6f4";
+      background = "$base";
+      border = accent;
+      childBorder = accent;
+      indicator = accent;
+      text = "$text";
     };
     focusedInactive = {
-      background = "1e1e2e";
-      border = "cba6f7";
-      childBorder = "cba6f7";
-      indicator = "cba6f7";
-      text = "cdd6f4";
+      background = "$base";
+      border = accent;
+      childBorder = accent;
+      indicator = accent;
+      text = "$text";
     };
     unfocused = {
-      background = "1e1e2e";
-      border = "00000000";
-      childBorder = "1e1e2e";
-      indicator = "1e1e2e";
-      text = "cdd6f4";
+      background = "$base";
+      border = "$base";
+      childBorder = "$base";
+      indicator = "$base";
+      text = "$text";
     };
     urgent = {
-      background = "1e1e2e";
-      border = "f38ba8";
-      childBorder = "1e1e2e";
-      indicator = "1e1e2e";
-      text = "cdd6f4";
+      background = "$base";
+      border = "$red";
+      childBorder = "$base";
+      indicator = "$base";
+      text = "$text";
     };
   };
 }

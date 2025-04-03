@@ -37,6 +37,7 @@
         {command = "firefox";}
         {command = "vesktop";}
         {command = "kitty -T kraban kraban";}
+        {command = "obsidian";}
       ];
       floating = {
         titlebar = false;
@@ -49,6 +50,7 @@
       gaps = {
         smartBorders = "on";
         inner = 5;
+        outer = 0;
       };
     };
   };
