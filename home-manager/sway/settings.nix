@@ -53,7 +53,8 @@
         border = 2;
       };
       gaps = {
-        smartBorders = "no_gaps";
+        smartBorders = "on";
+        smartGaps = true;
         inner = 5;
       };
     };
