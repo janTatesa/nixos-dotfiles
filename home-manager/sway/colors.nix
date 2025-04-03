@@ -12,9 +12,9 @@ in {
     };
     focusedInactive = {
       background = "$base";
-      border = accent;
-      childBorder = accent;
-      indicator = accent;
+      border = "$base";
+      childBorder = "$base";
+      indicator = "$base";
       text = "$text";
     };
     unfocused = {
