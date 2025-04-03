@@ -2,7 +2,7 @@
   screenshot = pkgs.writeShellScriptBin "screenshot" ''${builtins.readFile ../../assets/screenshot.sh}'' + /bin/screenshot;
 in {
   wayland.windowManager.sway.config.keybindings = {
-    "Mod4+n" = "makoctl invoke; makoctl dismiss";
+    "Mod4+n" = "exec sh -c \"makoctl invoke; makoctl dismiss\"";
     "Mod4+Print" = "exec ${screenshot} window";
     "Print" = "exec ${screenshot} region";
     "Shift+Print" = "exec ${screenshot} fullscreen";
