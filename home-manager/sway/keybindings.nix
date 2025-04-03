@@ -2,6 +2,7 @@
   screenshot = pkgs.writeShellScriptBin "screenshot" ''${builtins.readFile ../../assets/screenshot.sh}'' + /bin/screenshot;
 in {
   wayland.windowManager.sway.config.keybindings = {
+    "Mod4+n" = "makoctl invoke; makoctl dismiss";
     "Mod4+Print" = "exec ${screenshot} window";
     "Print" = "exec ${screenshot} region";
     "Shift+Print" = "exec ${screenshot} fullscreen";
@@ -24,16 +25,17 @@ in {
     "Mod4+Shift+c" = "reload";
     "Mod4+Shift+e" = "exit";
     "Mod4+Shift+s" = "exec sh -c \"systemctl suspend; swaylock\"";
-    "Mod4+Shift+i" = "exec sh -c \"notify-send \"Hibernating\"; systemctl hibernate\"";
+    "Mod4+Shift+i" = "exec sh -c \"notify-send \"Hibernating\" System will hibernate; systemctl hibernate\"";
     "Mod4+Shift+r" = "exec systemctl reboot";
-    #librewolf
+    #direfox
     "Mod4+1" = "workspace number 1";
     #discord
     "Mod4+2" = "workspace number 2";
     #music
     "Mod4+3" = "workspace number 3";
-
+    #obsidian
     "Mod4+4" = "workspace number 4";
+    #kraban
     "Mod4+5" = "workspace number 5";
     "Mod4+6" = "workspace number 6";
     "Mod4+7" = "workspace number 7";

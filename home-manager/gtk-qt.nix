@@ -26,7 +26,7 @@
 
   home = {
     pointerCursor.gtk.enable = true;
-    sessionVariables.QT_SCAlE_FACTOR = 2;
+    sessionVariables.QT_SCALE_FACTOR = 2;
   };
 
   # For gtk4
