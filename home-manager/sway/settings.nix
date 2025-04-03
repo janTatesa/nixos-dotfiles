@@ -24,7 +24,12 @@
     '';
     config = {
       defaultWorkspace = "workspace number 1";
-      bars = [{command = "waybar";}];
+      bars = [
+        {
+          command = "waybar";
+          id = config.programs.waybar.settings.mainBar.id;
+        }
+      ];
       output."*".bg = "${../../assets/wallpaper.svg} fill";
       input."type:keyboard".xkb_layout = "us,sk(qwerty)";
       assigns = {
@@ -48,9 +53,8 @@
         border = 2;
       };
       gaps = {
-        smartBorders = "on";
+        smartBorders = "no_gaps";
         inner = 5;
-        outer = 0;
       };
     };
   };

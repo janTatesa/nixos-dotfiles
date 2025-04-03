@@ -5,7 +5,7 @@
     settings.mainBar = {
       margin-bottom = 10;
       ipc = true;
-      id = "1";
+      id = "waybar";
       modules-left = ["sway/workspaces" "group/indicators"];
       modules-center = ["clock"];
       modules-right = ["sway/mode" "sway/language" "custom/waybar-mpris"];
