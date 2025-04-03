@@ -27,7 +27,6 @@
       bars = [
         {
           command = "waybar";
-          mode = "hide";
           id = config.programs.waybar.settings.mainBar.id;
         }
       ];
@@ -59,6 +58,8 @@
         inner = 5;
       };
     };
+    # HACK: setting this in bar didn't work
+    extraConfig = "bar waybar mode hide";
   };
   services = {
     mako = {
