@@ -27,6 +27,7 @@
       bars = [
         {
           command = "waybar";
+          mode = "hide";
           id = config.programs.waybar.settings.mainBar.id;
         }
       ];
