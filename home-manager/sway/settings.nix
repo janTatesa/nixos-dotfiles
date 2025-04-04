@@ -33,8 +33,8 @@
       output."*".bg = "${../../assets/wallpaper.svg} fill";
       input."type:keyboard".xkb_layout = "us,sk(qwerty)";
       assigns = {
-        "2" = [{class = "vesktop";}];
-        "4" = [{class = "obsidian";}];
+        "2" = [{app_id = "vesktop";}];
+        "4" = [{app_id = "obsidian";}];
         "5" = [{title = "kraban";}];
       };
       startup = [
@@ -81,6 +81,7 @@
         }
       ];
     };
+    swayosd.enable = true;
   };
   programs.swaylock = {
     enable = true;
