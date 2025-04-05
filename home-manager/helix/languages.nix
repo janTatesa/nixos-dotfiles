@@ -12,15 +12,19 @@
         formatter.command = "${pkgs.astyle}/bin/astyle";
       }
       {
-        name = "ua";
+        name = "uiua";
         auto-format = true;
-        formatter.command = "${pkgs.uiua}/bin/uiua fmt";
-        lsp.command = "${pkgs.uiua}/bin/uiua lsp";
+        language-servers = ["uiua-lsp"];
       }
     ];
-    language-server.rust-analyzer.config = {
+    language-server = {
+    uiua-lsp = {
+        command = "${pkgs.uiua}/bin/uiua";
+        args = ["lsp"];
+    };
+    rust-analyzer.config = {
       check.command = "clippy";
       completion.excludeTraits = ["color_eyre::owo_colors::OwoColorize" "crossterm::style::Stylize"];
-    };
+    };};
   };
 }
