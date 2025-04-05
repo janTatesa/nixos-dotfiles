@@ -11,6 +11,12 @@
         auto-format = true;
         formatter.command = "${pkgs.astyle}/bin/astyle";
       }
+      {
+        name = "ua";
+        auto-format = true;
+        formatter.command = "${pkgs.uiua}/bin/uiua fmt";
+        lsp.command = "${pkgs.uiua}/bin/uiua lsp";
+      }
     ];
     language-server.rust-analyzer.config = {
       check.command = "clippy";
