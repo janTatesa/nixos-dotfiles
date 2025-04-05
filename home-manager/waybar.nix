@@ -18,7 +18,7 @@
         tooltip = false;
       };
       "group/indicators" = {
-        modules = ["network" "battery" "backlight" "pulseaudio"];
+        modules = ["network" "battery" "backlight" "pulseaudio" "memory"];
         orientation = "horizontal";
       };
       "sway/workspaces" = {
@@ -39,7 +39,7 @@
           "0" = "0";
         };
       };
-
+      "memory".tooltip = false;
       "sway/mode".tooltip = false;
       "custom/waybar-mpris" = {
         return-type = "json";
