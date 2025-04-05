@@ -13,6 +13,8 @@
       }
       {
         name = "uiua";
+        scope = "source.ua";
+        file-types = ["ua"];
         auto-format = true;
         language-servers = ["uiua-lsp"];
       }
