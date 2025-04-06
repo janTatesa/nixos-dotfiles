@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     libnotify
     swaybg
+    swayosd
     grim
     brightnessctl
     slurp
@@ -82,8 +83,8 @@
         }
       ];
     };
-    swayosd.enable = true;
   };
+
   programs.swaylock = {
     enable = true;
     settings = {
