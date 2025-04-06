@@ -20,13 +20,14 @@
       }
     ];
     language-server = {
-    uiua-lsp = {
+      uiua-lsp = {
         command = "${pkgs.uiua}/bin/uiua";
         args = ["lsp"];
+      };
+      rust-analyzer.config = {
+        check.command = "clippy";
+        completion.excludeTraits = ["color_eyre::owo_colors::OwoColorize" "crossterm::style::Stylize"];
+      };
     };
-    rust-analyzer.config = {
-      check.command = "clippy";
-      completion.excludeTraits = ["color_eyre::owo_colors::OwoColorize" "crossterm::style::Stylize"];
-    };};
   };
 }

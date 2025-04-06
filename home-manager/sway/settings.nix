@@ -39,6 +39,7 @@
       };
       startup = [
         {command = "wl-paste --watch cliphist store";}
+        {command = "swayosd-server";}
         {command = "firefox";}
         {command = "vesktop";}
         {command = "kitty -T kraban kraban";}
