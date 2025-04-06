@@ -66,14 +66,14 @@ in {
 
     "Mod4+r" = "mode resize";
 
-    "XF86MonBrightnessUp" = "exec swayosd --brightness=raise";
-    "XF86MonBrightnessDown" = "exec swayosd --brightness=lower";
+    "XF86MonBrightnessUp" = "exec swayosd-client --brightness=raise";
+    "XF86MonBrightnessDown" = "exec swayosd-client --brightness=lower";
 
     "Mod4+BackSpace" = ''input "type:keyboard" xkb_switch_layout next'';
 
-    "XF86AudioRaiseVolume" = "exec swayosd --output-volume=raise";
-    "XF86AudioLowerVolume" = "exec swayosd --output-volume=lower";
-    "XF86AudioMute" = "exec swayosd --output-volume=mute-toggle";
+    "XF86AudioRaiseVolume" = "exec swayosd-client --output-volume=raise";
+    "XF86AudioLowerVolume" = "exec swayosd-client --output-volume=lower";
+    "XF86AudioMute" = "exec swayosd-client --output-volume=mute-toggle";
 
     "XF86AudioStop" = "exec playerctl stop";
     "XF86AudioPlay" = "exec playerctl play-pause";
