@@ -1,6 +1,10 @@
 {pkgs, ...}: {
   programs = {
     tealdeer.enable = true;
+    direnv = {
+      enable = true;
+      silent = true;
+    };
     nushell = {
       enable = true;
       configFile.source = ../assets/config.nu;
