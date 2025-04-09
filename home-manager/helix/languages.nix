@@ -14,7 +14,7 @@
       {
         name = "nasm";
         auto-format = true;
-        formatter.command = "${pkgs.astyle}/bin/nasmfmt";
+        formatter.command = "${pkgs.nasmfmt}/bin/nasmfmt";
       }
       {
         name = "uiua";
