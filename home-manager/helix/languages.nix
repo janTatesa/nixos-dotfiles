@@ -12,11 +12,6 @@
         formatter.command = "${pkgs.astyle}/bin/astyle";
       }
       {
-        name = "nasm";
-        auto-format = true;
-        formatter.command = "${pkgs.nasmfmt}/bin/nasmfmt";
-      }
-      {
         name = "uiua";
         scope = "source.ua";
         file-types = ["ua"];
