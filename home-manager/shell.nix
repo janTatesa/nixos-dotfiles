@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   programs = {
+    btop.enable = true;
     tealdeer.enable = true;
     direnv = {
       enable = true;
