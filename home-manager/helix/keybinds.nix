@@ -6,7 +6,7 @@
       C-del = "delete_word_forward";
       C-backspace = "delete_word_backward";
       C-w = ":buffer_close";
-      C-t = "file-picker";
+      C-t = "file_picker";
       C-pageup = ":buffer-previous";
       C-pagedown = ":buffer-next";
     };
