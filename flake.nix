@@ -7,26 +7,15 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin-discord = {
-      url = "https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css";
-      flake = false;
-    };
     catppuccin.url = "github:catppuccin/nix";
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
     kraban.url = "github:TadoTheMiner/kraban";
   };
 
   outputs = {
     nixpkgs,
     home-manager,
-    catppuccin-discord,
     catppuccin,
     unstable,
-    plasma-manager,
     kraban,
     ...
   }: let
@@ -37,7 +26,7 @@
     nixosConfigurations.nixos = lib.nixosSystem rec {
       system = "x86_64-linux";
       specialArgs = {
-        inherit personal_info catppuccin-discord catppuccin plasma-manager kraban system font-size;
+        inherit personal_info catppuccin kraban system font-size;
         unstable = import unstable {
           inherit system;
         };

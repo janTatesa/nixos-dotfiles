@@ -1,14 +1,20 @@
-{catppuccin-discord, ...}: {
+{
+  lib,
+  config,
+  ...
+}: let
+  catpppuccin_flavor = (lib.importJSON "${config.catppuccin.sources.palette}/palette.json").${config.catppuccin.flavor}.colors;
+in {
   xdg.configFile = {
-    "vesktop/themes/catppuccin.css".source = catppuccin-discord;
+    "vesktop/themes/catppuccin.css".text = "@import url(\"https://catppuccin.github.io/discord/dist/catppuccin-${config.catppuccin.flavor}-${config.catppuccin.accent}.theme.css\")";
     "vesktop/themes/purecord.css".source = ../assets/discord.css;
     "vesktop/settings.json".text = builtins.toJSON {
       arRPC = true;
       discordBranch = "stable";
       minimizeToTray = false;
       spellCheckLanguages = ["en-US" "en"];
-      splashBackground = "rgb(30, 30, 46)";
-      splashColor = "rgb(205, 214, 244)";
+      splashBackground = catpppuccin_flavor.base.hex;
+      splashColor = catpppuccin_flavor.${config.catppuccin.accent}.hex;
       splashTheming = true;
       tray = false;
     };
@@ -84,7 +90,7 @@
           CustomIdle.enabled = false;
           CustomRPC.enabled = false;
           Dearrow = {
-            dearrowByDefault = false;
+            dearrowByDefault = true;
             enabled = true;
             hideButton = false;
             replaceElements = 0;
