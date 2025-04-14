@@ -45,11 +45,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1744120675,
-        "narHash": "sha256-GbRydVRBlicqGFfA0H4cfRyOUzfqbNgREzVzbMA/1rI=",
+        "lastModified": 1744646503,
+        "narHash": "sha256-/dWJaGx9xaxTH4h6LhkBbxEi/+CEB7B7HQj32QjppZk=",
         "owner": "TadoTheMiner",
         "repo": "kraban",
-        "rev": "a41c98a5931bf8730faf9f90d9cd9044a08f79df",
+        "rev": "c4bf1bf35a9e05a29dcf59e8917417100ddd84b4",
         "type": "github"
       },
       "original": {
