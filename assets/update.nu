@@ -3,7 +3,7 @@ cd ~/nixos
 mv .git .git.bak
 let successful = try {
   nix flake update
-  sudo nixos-rebuild switch --upgrade
+  sudo nixos-rebuild switch
   true
 } catch {
   false

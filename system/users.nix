@@ -13,6 +13,7 @@
     };
   };
 
+  nix.settings.trusted-users = [personal_info.login];
   services.greetd = {
     enable = true;
     settings = {
