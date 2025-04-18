@@ -20,6 +20,7 @@
     thefuck
     trashy
     (pkgs.writeScriptBin "nrb" ''${builtins.readFile ../assets/update.nu}'')
+    (pkgs.writeScriptBin "cfg" ''${builtins.readFile ../assets/configure.nu}'')
     (pkgs.writeShellScriptBin "school-notes" ''${builtins.readFile ../assets/school-notes.sh}'')
     obsidian
     unstable.vesktop
