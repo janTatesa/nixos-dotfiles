@@ -57,7 +57,6 @@
       gaps = {
         smartBorders = "on";
         smartGaps = true;
-        inner = 5;
       };
     };
     # HACK: setting this in bar didn't work
