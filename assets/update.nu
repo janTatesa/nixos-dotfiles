@@ -3,7 +3,7 @@ cd ~/nixos
 mv .git .git.bak
 let successful = try {
   nix flake update
-  nh os update
+  nh os switch .
   true
 } catch {
   false

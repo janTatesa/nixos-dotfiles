@@ -1,5 +1,5 @@
 #!/usr/bin/env nu
 # TODO: make the dir change automatically
 cd ~/nixos
-exec $env.EDITOR
+sh -c $env.EDITOR
 nrb
