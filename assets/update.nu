@@ -1,5 +1,4 @@
 #!/usr/bin/env nu
-cd ~/nixos
 let successful = try {
   nh os switch --update
   true
