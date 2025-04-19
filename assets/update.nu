@@ -1,4 +1,5 @@
 #!/usr/bin/env nu
+cd $env.FLAKE
 let successful = try {
   nh os switch --update
   true

@@ -31,7 +31,6 @@
         gf = "git fetch";
         gcl = "git clone";
         # Nix
-        ndv = "nix develop --command nu";
         nsh = "nix-shell --command nu -p";
       };
     };
@@ -39,12 +38,6 @@
       enable = true;
       defaultCommand = "rg --files";
     };
-    eza = {
-      enable = true;
-      icons = "auto";
-      extraOptions = ["--no-permissions" "--no-user"];
-    };
-
     bat.enable = true;
     zoxide.enable = true;
     carapace.enable = true;
