@@ -1,4 +1,5 @@
 {
+  home-files,
   config,
   personal_info,
   catppuccin,
@@ -21,6 +22,7 @@
         catppuccin.homeModules.catppuccin
       ]
       ++ lib.filesystem.listFilesRecursive
-      ./home-manager;
+      ./home-manager-shared
+      ++ lib.filesystem.listFilesRecursive home-files;
   };
 }

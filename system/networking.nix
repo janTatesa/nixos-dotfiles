@@ -1,4 +1,4 @@
-{personal_info, ...}: {
+{...}: {
   networking = {
     hostName = "nixos";
     wireless.iwd.enable = true;

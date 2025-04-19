@@ -23,27 +23,53 @@
     lib = nixpkgs.lib;
     font-size = 15;
   in {
-    nixosConfigurations.nixos = lib.nixosSystem rec {
-      system = "x86_64-linux";
-      specialArgs = {
-        inherit personal_info catppuccin kraban system font-size;
-        unstable = import unstable {
-          inherit system;
-          config.allowUnfree = true;
+    nixosConfigurations = {
+      nixos = lib.nixosSystem rec {
+        system = "x86_64-linux";
+        specialArgs = {
+          inherit personal_info catppuccin kraban system font-size;
+          unstable = import unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          home-files = ./home-manager;
         };
+
+        modules =
+          [
+            catppuccin.nixosModules.catppuccin
+            {
+              catppuccin.enable = true;
+            }
+            home-manager.nixosModules.home-manager
+            ./home-manager.nix
+          ]
+          ++ lib.filesystem.listFilesRecursive
+          ./system
+          ++ lib.filesystem.listFilesRecursive
+          ./system-shared;
       };
 
-      modules =
-        [
-          catppuccin.nixosModules.catppuccin
-          {
-            catppuccin.enable = true;
-          }
-          home-manager.nixosModules.home-manager
-          ./home-manager.nix
-        ]
-        ++ lib.filesystem.listFilesRecursive
-        ./system;
+      iso = lib.nixosSystem rec {
+        system = "x86_64-linux";
+        specialArgs = {
+          inherit catppuccin system font-size;
+          personal_info.login = "nixos";
+          home-files = ./home-manager-iso;
+        };
+
+        modules =
+          [
+            catppuccin.nixosModules.catppuccin
+            {
+              catppuccin.enable = true;
+            }
+            home-manager.nixosModules.home-manager
+            ./iso.nix
+          ]
+          ++ lib.filesystem.listFilesRecursive
+          ./system-shared;
+      };
     };
   };
 }
