@@ -29,6 +29,7 @@
         inherit personal_info catppuccin kraban system font-size;
         unstable = import unstable {
           inherit system;
+          config.allowUnfree = true;
         };
       };
 
