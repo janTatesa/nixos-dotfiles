@@ -32,7 +32,7 @@
             inherit system;
             config.allowUnfree = true;
           };
-          home-files = ./home-manager;
+          home-files = lib.filesystem.listFilesRecursive ./home-manager;
         };
 
         modules =
@@ -55,7 +55,7 @@
         specialArgs = {
           inherit catppuccin system font-size;
           personal_info.login = "nixos";
-          home-files = ./home-manager-iso;
+          home-files = [];
         };
 
         modules =
@@ -65,6 +65,7 @@
               catppuccin.enable = true;
             }
             home-manager.nixosModules.home-manager
+            ./home-manager.nix
             ./iso.nix
           ]
           ++ lib.filesystem.listFilesRecursive

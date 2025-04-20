@@ -23,6 +23,6 @@
       ]
       ++ lib.filesystem.listFilesRecursive
       ./home-manager-shared
-      ++ lib.filesystem.listFilesRecursive home-files;
+      ++ home-files;
   };
 }
