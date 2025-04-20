@@ -8,7 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
-    kraban.url = "github:TadoTheMiner/kraban";
+    kraban = {
+      url = "github:TadoTheMiner/kraban";
+      inputs.nixpkgs.follows = "unstable";
+    };
   };
 
   outputs = {
