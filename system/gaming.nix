@@ -4,6 +4,6 @@
     minecraft-server
     prismlauncher
     lutris
-    wine64
+    bottles
   ];
 }
