@@ -12,6 +12,10 @@
       url = "github:TadoTheMiner/kraban";
       inputs.nixpkgs.follows = "unstable";
     };
+    oxikcde = {
+      url = "github:TadoTheMiner/oxikcde";
+      inputs.nixpkgs.follows = "unstable";
+    };
   };
 
   outputs = {
@@ -20,6 +24,7 @@
     catppuccin,
     unstable,
     kraban,
+    oxikcde,
     ...
   }: let
     personal_info = import ./personal.nix;
@@ -30,7 +35,7 @@
       nixos = lib.nixosSystem rec {
         system = "x86_64-linux";
         specialArgs = {
-          inherit personal_info catppuccin kraban system font-size;
+          inherit personal_info catppuccin kraban oxikcde system font-size;
           unstable = import unstable {
             inherit system;
             config.allowUnfree = true;

@@ -19,7 +19,6 @@
         lt = "eza --tree";
         la = "eza  -a";
         ll = "eza -l";
-        rm = "trash put";
         cp = "cp -r";
         cd = "z";
         cat = "bat -p";

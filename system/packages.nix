@@ -2,6 +2,7 @@
   pkgs,
   unstable,
   kraban,
+  oxikcde,
   system,
   ...
 }: {
@@ -29,5 +30,6 @@
     tuba
     impala
     kraban.packages.${system}.default
+    oxikcde.packages.${system}.default
   ];
 }
