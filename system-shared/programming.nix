@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     commitizen
     gh
-    nasm
+    taplo
     nixd
   ];
 }
