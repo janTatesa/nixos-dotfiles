@@ -1,3 +1,3 @@
 {...}: {
-  xdg.configFile.".kraban/config.toml".source = ../assets/kraban.toml;
+  xdg.configFile."kraban/config.toml".source = ../assets/kraban.toml;
 }
