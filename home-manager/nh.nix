@@ -1,5 +1,5 @@
 {
-  system_config,
+  system-config,
   config,
   ...
 }: {
@@ -9,7 +9,7 @@
     flake = "${config.home.homeDirectory}/nixos";
     clean = {
       enable = true;
-      extraArgs = "--keep ${builtins.toString system_config.boot.loader.systemd-boot.configurationLimit}";
+      extraArgs = "--keep ${builtins.toString system-config.boot.loader.systemd-boot.configurationLimit}";
     };
   };
 }

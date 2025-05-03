@@ -1,7 +1,7 @@
 {
   home-files,
   config,
-  personal_info,
+  personal-info,
   catppuccin,
   lib,
   font-size,
@@ -9,12 +9,12 @@
 }: {
   home-manager = {
     extraSpecialArgs = {
-      system_config = config;
-      inherit personal_info font-size;
+      system-config = config;
+      inherit personal-info font-size;
     };
     useGlobalPkgs = true;
     backupFileExtension = "bak";
-    users.${personal_info.login}.imports =
+    users.${personal-info.login}.imports =
       [
         {
           home.stateVersion = "24.11";

@@ -1,7 +1,14 @@
-{pkgs, ...}: {
+{
+  font-size,
+  pkgs,
+  system-config,
+  ...
+}: {
   programs.waybar = {
     enable = true;
-    style = builtins.readFile ../assets/waybar.css;
+    style =
+      ":root{font-family: '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}', '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0}';font-size: ${builtins.toString font-size}px}"
+      + builtins.readFile ../assets/waybar.css;
     settings.mainBar = {
       margin-bottom = 10;
       ipc = true;

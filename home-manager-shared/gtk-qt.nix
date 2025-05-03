@@ -2,6 +2,7 @@
   config,
   pkgs,
   font-size,
+  system-config,
   ...
 }: {
   gtk = {
@@ -20,7 +21,7 @@
     };
     font = {
       size = font-size;
-      name = "Ubuntu";
+      name = builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0;
     };
   };
 

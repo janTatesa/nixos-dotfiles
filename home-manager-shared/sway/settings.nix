@@ -2,6 +2,7 @@
   config,
   pkgs,
   font-size,
+  system-config,
   ...
 }: {
   home.packages = with pkgs; [
@@ -69,7 +70,7 @@
       borderRadius = 8;
       width = 1000;
       height = 500;
-      font = "sans-serif ${builtins.toString font-size}";
+      font = "${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0} ${builtins.toString font-size}";
       defaultTimeout = 10000;
     };
     swayidle = {
@@ -87,7 +88,7 @@
   programs.swaylock = {
     enable = true;
     settings = {
-      font = "sans-serif";
+      font = "${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}";
       inherit font-size;
       indicator-idle-visible = false;
       indicator-radius = 100;

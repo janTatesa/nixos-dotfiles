@@ -47,11 +47,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1746184021,
-        "narHash": "sha256-SrgKgqrua3vt+AVh5SxdvRdtm4Lc9ePs+NNqyp/kfAY=",
+        "lastModified": 1746203319,
+        "narHash": "sha256-yOABJCuz/+3lCLcN0eCL36K/u+R0oZQG6IUAmVr8P5s=",
         "owner": "TadoTheMiner",
         "repo": "kraban",
-        "rev": "55b907da070ac936f3ea2be158b7e4064597016b",
+        "rev": "e8383722d5a98a1f88376374768594ff99e5cae6",
         "type": "github"
       },
       "original": {
@@ -78,11 +78,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1746055187,
-        "narHash": "sha256-3dqArYSMP9hM7Qpy5YWhnSjiqniSaT2uc5h2Po7tmg0=",
+        "lastModified": 1746183838,
+        "narHash": "sha256-kwaaguGkAqTZ1oK0yXeQ3ayYjs8u/W7eEfrFpFfIDFA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3e362ce63e16b9572d8c2297c04f7c19ab6725a5",
+        "rev": "bf3287dac860542719fe7554e21e686108716879",
         "type": "github"
       },
       "original": {
@@ -167,11 +167,11 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1746123514,
-        "narHash": "sha256-UNO+MbVHLl4AkVWYqekk72/gqFNSLYNkBgto7h+7P3U=",
+        "lastModified": 1746188796,
+        "narHash": "sha256-ZZ38C6Wy11lqVNKV/N5DOM4hnVyJNwS0cb03yD3ZTqk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b5dd9efc912ecabeafa4f082d31e19cb1c74266c",
+        "rev": "4be4d7a7758d92d60a092a503c93a381f95c71b1",
         "type": "github"
       },
       "original": {

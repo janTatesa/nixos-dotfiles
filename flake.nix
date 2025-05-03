@@ -27,7 +27,7 @@
     oxikcde,
     ...
   }: let
-    personal_info = import ./personal.nix;
+    personal-info = import ./personal.nix;
     lib = nixpkgs.lib;
     font-size = 15;
   in {
@@ -35,7 +35,7 @@
       nixos = lib.nixosSystem rec {
         system = "x86_64-linux";
         specialArgs = {
-          inherit personal_info catppuccin kraban oxikcde system font-size;
+          inherit personal-info catppuccin kraban oxikcde system font-size;
           unstable = import unstable {
             inherit system;
             config.allowUnfree = true;

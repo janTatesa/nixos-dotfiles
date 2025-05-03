@@ -1,30 +1,30 @@
 {
-  personal_info,
+  personal-info,
   pkgs,
   ...
 }: {
   users = {
     defaultUserShell = pkgs.nushell;
     groups.plugdev = {};
-    users.${personal_info.login} = {
+    users.${personal-info.login} = {
       isNormalUser = true;
-      description = personal_info.name;
+      description = personal-info.name;
       extraGroups = ["wheel" "input" "video" "dialout" "plugdev"];
     };
   };
 
-  nix.settings.trusted-users = [personal_info.login];
+  nix.settings.trusted-users = [personal-info.login];
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
         command = "${pkgs.nushell}/bin/nu";
-        user = personal_info.login;
+        user = personal-info.login;
       };
 
       initial_session = {
         command = "dbus-run-session sway";
-        user = personal_info.login;
+        user = personal-info.login;
       };
     };
   };

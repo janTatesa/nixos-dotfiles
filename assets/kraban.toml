@@ -1,0 +1,42 @@
+app_color = "#cba6f7"
+collapse_unfocused_tabs = false
+show_key_hints = true
+# Whether to open priority prompt upon project/task creation. False by default as this might be annoying
+always_open_priority_prompt = true
+
+# When set to true, the due date will be automatically set based on priority (the numbers indicate how many days after today the task is due)
+# This will not override the due date you set manually
+[default_due_dates]
+enable = true
+high = 2
+medium = 7
+low = 30
+
+[[column]]
+name = "Idea"
+color = "#cba6f7"
+tab = 0
+
+[[column]]
+name = "Doing"
+color = "green"
+tab = 0
+
+[[column]]
+name = "Waiting"
+color = "yellow"
+tab = 1
+
+[[column]]
+name = "Done"
+color = "blue"
+tab = 1
+# Whether to prevent tasks being added deleted or modified in the column (they can still be moved to a different column)
+done_column = true
+
+[[column]]
+name = "Won't do"
+color = "red"
+tab = 1
+# Whether to prevent tasks being added deleted or modified in the column (they can still be moved to a different column)
+done_column = true

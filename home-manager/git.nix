@@ -1,8 +1,8 @@
-{personal_info, ...}: {
+{personal-info, ...}: {
   programs.git = {
     enable = true;
-    userName = personal_info.name;
-    userEmail = personal_info.email;
+    userName = personal-info.name;
+    userEmail = personal-info.email;
     extraConfig = {
       push.autoSetupRemote = true;
       pull.rebase = false;
