@@ -7,7 +7,7 @@
   programs.waybar = {
     enable = true;
     style =
-      "*{font-family: '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}', '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0}';font-size: ${builtins.toString font-size}px}"
+      "*{font-family: '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}', '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0}';font-size: ${builtins.toString (font-size + 5)}px}"
       + builtins.readFile ../assets/waybar.css;
     settings.mainBar = {
       margin-bottom = 10;
