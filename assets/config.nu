@@ -375,13 +375,6 @@ $env.config = {
             }
         }
         {
-            name: escape
-            modifier: none
-            keycode: escape
-            mode: [emacs, vi_normal, vi_insert]
-            event: { send: esc }    # NOTE: does not appear to work
-        }
-        {
             name: cancel_command
             modifier: control
             keycode: char_c
@@ -389,25 +382,11 @@ $env.config = {
             event: { send: ctrlc }
         }
         {
-            name: quit_shell
-            modifier: control
-            keycode: char_d
-            mode: [emacs, vi_normal, vi_insert]
-            event: { send: ctrld }
-        }
-        {
             name: clear_screen
             modifier: control
             keycode: char_l
             mode: [emacs, vi_normal, vi_insert]
             event: { send: clearscreen }
-        }
-        {
-            name: search_history
-            modifier: control
-            keycode: char_q
-            mode: [emacs, vi_normal, vi_insert]
-            event: { send: searchhistory }
         }
         {
             name: open_command_editor
@@ -588,8 +567,6 @@ $env.config = {
             mode: [emacs, vi_insert]
             event: { edit: delete }
         }
-        
-        
         {
             name: redo_change
             modifier: control
@@ -633,61 +610,25 @@ $env.config = {
             event: { edit: cutfromstart }
         }
         {
-            name: swap_graphemes
-            modifier: control
-            keycode: char_t
-            mode: emacs
-            event: { edit: swapgraphemes }
-        }
-        
-        {
-            name: upper_case_word
-            modifier: alt
-            keycode: char_u
-            mode: emacs
-            event: { edit: uppercaseword }
-        }
-        {
-            name: lower_case_word
-            modifier: alt
-            keycode: char_l
-            mode: emacs
-            event: { edit: lowercaseword }
-        }
-        {
-            name: capitalize_char
-            modifier: alt
-            keycode: char_c
-            mode: emacs
-            event: { edit: capitalizechar }
-        }
-        # The following bindings with `*system` events require that Nushell has
-        # been compiled with the `system-clipboard` feature.
-        # This should be the case for Windows, macOS, and most Linux distributions
-        # Not available for example on Android (termux)
-        # If you want to use the system clipboard for visual selection or to
-        # paste directly, uncomment the respective lines and replace the version
-        # using the internal clipboard.
-        {
             name: copy_selection
             modifier: control_shift
             keycode: char_c
             mode: emacs
-            event: { edit: copyselection }
+            event: { edit: copyselectionsystem }
         }
         {
             name: cut_selection
             modifier: control_shift
             keycode: char_x
             mode: emacs
-            event: { edit: cutselection }
+            event: { edit: cutselectionsystem }
         }
         {
             name: paste
             modifier: control_shift
             keycode: char_v
             mode: emacs
-            event: { edit: paste }
+            event: { edit: pastesystem }
         }
         {
             name: select_all

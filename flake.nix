@@ -62,7 +62,7 @@
         system = "x86_64-linux";
         specialArgs = {
           inherit catppuccin system font-size;
-          personal_info.login = "nixos";
+          personal-info.login = "nixos";
           home-files = [];
         };
 
