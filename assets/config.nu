@@ -374,14 +374,7 @@ $env.config = {
                 ]
             }
         }
-        {
-            name: cancel_command
-            modifier: control
-            keycode: char_c
-            mode: [emacs, vi_normal, vi_insert]
-            event: { send: ctrlc }
-        }
-        {
+       {
             name: clear_screen
             modifier: control
             keycode: char_l
@@ -611,7 +604,7 @@ $env.config = {
         }
         {
             name: copy_selection
-            modifier: control_shift
+            modifier: control
             keycode: char_c
             mode: emacs
             event: { edit: copyselectionsystem }

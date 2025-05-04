@@ -10,6 +10,5 @@
       size = font-size;
     };
     settings.confirm_os_window_close = 0;
-    keybindings."ctrl+c" = "";
   };
 }
