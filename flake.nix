@@ -30,12 +30,13 @@
     personal-info = import ./personal.nix;
     lib = nixpkgs.lib;
     font-size = 15;
+    nushell = pkgs: pkgs.nushell.override {additionalFeatures = _: ["system-clipboard"];};
   in {
     nixosConfigurations = {
       nixos = lib.nixosSystem rec {
         system = "x86_64-linux";
         specialArgs = {
-          inherit personal-info catppuccin kraban oxikcde system font-size;
+          inherit personal-info catppuccin kraban oxikcde system font-size nushell;
           unstable = import unstable {
             inherit system;
             config.allowUnfree = true;

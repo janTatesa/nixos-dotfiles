@@ -21,7 +21,7 @@
     };
     font = {
       size = font-size;
-      name = builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0;
+      name = builtins.elemAt system-config.fonts.fontconfig.defaultFonts.serif 0;
     };
   };
 

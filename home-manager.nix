@@ -5,12 +5,13 @@
   catppuccin,
   lib,
   font-size,
+  nushell,
   ...
 }: {
   home-manager = {
     extraSpecialArgs = {
       system-config = config;
-      inherit personal-info font-size;
+      inherit personal-info font-size nushell;
     };
     useGlobalPkgs = true;
     backupFileExtension = "bak";
