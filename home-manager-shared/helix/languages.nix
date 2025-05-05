@@ -4,12 +4,7 @@
       {
         name = "nix";
         auto-format = true;
-        formatter.command = "${pkgs.alejandra}/bin/alejandra";
-      }
-      {
-        name = "c";
-        auto-format = true;
-        formatter.command = "${pkgs.astyle}/bin/astyle";
+        formatter.command = "nix fmt";
       }
       {
         name = "uiua";
