@@ -7,6 +7,8 @@
     dconf.enable = true;
     kdeconnect.enable = true;
   };
+
+  gtk.iconCache.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   services.keyd = {
     enable = true;
