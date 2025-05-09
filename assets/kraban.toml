@@ -8,8 +8,8 @@ always_open_priority_prompt = true
 # This will not override the due date you set manually
 [default_due_dates]
 enable = true
-high = 2
-medium = 7
+high = 4
+medium = 10
 low = 30
 
 [[column]]
