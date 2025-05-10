@@ -382,13 +382,6 @@ $env.config = {
             event: { send: clearscreen }
         }
         {
-            name: open_command_editor
-            modifier: control
-            keycode: char_o
-            mode: [emacs, vi_normal, vi_insert]
-            event: { send: openeditor }
-        }
-        {
             name: move_up
             modifier: none
             keycode: up
@@ -618,14 +611,14 @@ $env.config = {
         }
         {
             name: paste
-            modifier: control_shift
+            modifier: control
             keycode: char_v
             mode: emacs
             event: { edit: pastesystem }
         }
         {
             name: select_all
-            modifier: control_shift
+            modifier: control
             keycode: char_a
             mode: emacs
             event: { edit: selectall }
