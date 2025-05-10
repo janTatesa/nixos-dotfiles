@@ -26,7 +26,7 @@
   };
 
   home = {
-    pointerCursor.gtk.enable = true;
+    pointerCursor = {gtk.enable = true; size = 32;};
     sessionVariables.QT_SCALE_FACTOR = 2;
   };
 
@@ -43,5 +43,5 @@
     platformTheme.name = "kvantum";
   };
 
-  dconf.settings."org/gnome/desktop/wm/preferences".button-layout = "";
+  dconf.settings = {"org/gnome/desktop/wm/preferences".button-layout = ""; "org/gnome/desktop/interface".cursor-size = config.home.pointerCursor.size; };
 }
