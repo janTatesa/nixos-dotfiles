@@ -1,2 +1,2 @@
 #!/bin/sh
-sed -e 's/\x1b\[[0-9;]*m//g' | hx
+| perl -pe 's/\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)//g' | hx
