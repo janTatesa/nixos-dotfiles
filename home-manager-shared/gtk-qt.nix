@@ -26,7 +26,7 @@
   };
 
   home = {
-    pointerCursor = {gtk.enable = true; size = 40;};
+    pointerCursor = {gtk.enable = true; size = 20;};
     sessionVariables.QT_SCALE_FACTOR = 2;
   };
 
