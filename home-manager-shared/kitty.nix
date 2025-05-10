@@ -1,5 +1,4 @@
 {
-  pkgs,
   font-size,
   system-config,
   ...
@@ -10,6 +9,6 @@
       name = builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0;
       size = font-size;
     };
-    settings = {confirm_os_window_close =0; scrollback-pager = "scrollback";};
+    settings = {confirm_os_window_close =0; scrollback_pager = "scrollback";};
   };
 }
