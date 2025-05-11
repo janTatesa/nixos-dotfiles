@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   xdg.configFile."musikcube/themes/catppuccin.json".text = builtins.toJSON {
     colors = {
       background = {

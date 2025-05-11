@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.helix.settings.keys = rec {
     normal = {
       C-right = "move_next_word_start";

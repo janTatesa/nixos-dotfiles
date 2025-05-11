@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   xdg = {
     mimeApps.defaultApplications = {
       "inode/directory" = "kitty.desktop";

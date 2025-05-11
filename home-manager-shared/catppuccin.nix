@@ -1,4 +1,5 @@
-{system-config, ...}: {
+{ system-config, ... }:
+{
   catppuccin = {
     enable = true;
     flavor = system-config.catppuccin.flavor;

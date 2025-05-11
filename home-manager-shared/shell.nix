@@ -2,7 +2,8 @@
   pkgs,
   nushell,
   ...
-}: {
+}:
+{
   programs = {
     btop.enable = true;
     tealdeer.enable = true;
@@ -13,7 +14,7 @@
     };
     nushell = {
       enable = true;
-      package = nushell pkgs;
+      package = nushell;
       configFile.source = ../assets/config.nu;
       envFile.source = ../assets/env.nu;
       extraEnv = "$env.LS_COLORS = (${pkgs.vivid}/bin/vivid generate catppuccin-mocha)";

@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs = {
     adb.enable = true;
     nix-ld.enable = true;

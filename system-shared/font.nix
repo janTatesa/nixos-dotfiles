@@ -2,17 +2,18 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   fonts = {
     packages = with pkgs; [
       rubik
-      (nerdfonts.override {fonts = ["JetBrainsMono"];})
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
     fontconfig.defaultFonts = lib.mkForce {
-      serif = ["Rubik"];
-      sansSerif = ["Rubik"];
-      monospace = ["JetBrainsMono Nerd Font"];
-      emoji = ["Noto Color Emoji"];
+      serif = [ "Rubik" ];
+      sansSerif = [ "Rubik" ];
+      monospace = [ "JetBrainsMono Nerd Font" ];
+      emoji = [ "Noto Color Emoji" ];
     };
   };
 }

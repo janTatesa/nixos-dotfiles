@@ -3,18 +3,25 @@
   pkgs,
   nushell,
   ...
-}: {
+}:
+{
   users = {
-    defaultUserShell = nushell pkgs;
-    groups.plugdev = {};
+    defaultUserShell = nushell;
+    groups.plugdev = { };
     users.${personal-info.login} = {
       isNormalUser = true;
       description = personal-info.name;
-      extraGroups = ["wheel" "input" "video" "dialout" "plugdev"];
+      extraGroups = [
+        "wheel"
+        "input"
+        "video"
+        "dialout"
+        "plugdev"
+      ];
     };
   };
 
-  nix.settings.trusted-users = [personal-info.login];
+  nix.settings.trusted-users = [ personal-info.login ];
   services.greetd = {
     enable = true;
     settings = {

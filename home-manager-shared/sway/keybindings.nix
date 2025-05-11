@@ -1,6 +1,10 @@
-{pkgs, ...}: let
-  screenshot = pkgs.writeShellScriptBin "screenshot" ''${builtins.readFile ../../assets/screenshot.sh}'' + /bin/screenshot;
-in {
+{ pkgs, ... }:
+let
+  screenshot =
+    pkgs.writeShellScriptBin "screenshot" ''${builtins.readFile ../../assets/screenshot.sh}''
+    + /bin/screenshot;
+in
+{
   wayland.windowManager.sway.config.keybindings = {
     "Mod4+n" = "exec sh -c \"makoctl invoke; makoctl dismiss\"";
     "Mod4+Print" = "exec ${screenshot} window";
@@ -25,7 +29,8 @@ in {
     "Mod4+Shift+c" = "reload";
     "Mod4+Shift+e" = "exit";
     "Mod4+Shift+s" = "exec sh -c \"systemctl suspend; swaylock\"";
-    "Mod4+Shift+i" = "exec sh -c \"notify-send \"Hibernating\" System will hibernate; systemctl hibernate\"";
+    "Mod4+Shift+i" =
+      "exec sh -c \"notify-send \"Hibernating\" System will hibernate; systemctl hibernate\"";
     "Mod4+Shift+r" = "exec systemctl reboot";
     #direfox
     "Mod4+1" = "workspace number 1";

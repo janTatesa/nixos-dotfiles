@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   xdg.configFile."musikcube/hotkeys.json".text = builtins.toJSON {
     browse_category_filter = "^F";
     browse_playlists_delete = "KEY_DC";

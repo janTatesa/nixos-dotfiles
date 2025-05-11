@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.helix.languages = {
     language = [
       {
@@ -9,20 +10,23 @@
       {
         name = "uiua";
         scope = "source.ua";
-        file-types = ["ua"];
+        file-types = [ "ua" ];
         auto-format = true;
-        language-servers = ["uiua-lsp"];
+        language-servers = [ "uiua-lsp" ];
       }
     ];
     language-server = {
       uiua-lsp = {
         command = "${pkgs.uiua}/bin/uiua";
-        args = ["lsp"];
+        args = [ "lsp" ];
       };
       rust-analyzer.config = {
         check.command = "clippy";
-        completion.excludeTraits = ["color_eyre::owo_colors::OwoColorize" "crossterm::style::Stylize"];
-        completion.exclude = ["clap::error::Result"];
+        completion.excludeTraits = [
+          "color_eyre::owo_colors::OwoColorize"
+          "crossterm::style::Stylize"
+        ];
+        completion.exclude = [ "clap::error::Result" ];
       };
     };
   };

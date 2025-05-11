@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
@@ -7,7 +8,10 @@
   };
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
   nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     warn-dirty = false;
   };
 

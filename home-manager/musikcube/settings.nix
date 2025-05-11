@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   xdg.configFile."musikcube/settings.json".text = builtins.toJSON {
     AppQuitKey = "^D";
     AsyncTrackListQueries = true;

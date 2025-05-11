@@ -7,7 +7,8 @@
   font-size,
   nushell,
   ...
-}: {
+}:
+{
   home-manager = {
     extraSpecialArgs = {
       system-config = config;
@@ -22,8 +23,7 @@
         }
         catppuccin.homeModules.catppuccin
       ]
-      ++ lib.filesystem.listFilesRecursive
-      ./home-manager-shared
+      ++ lib.filesystem.listFilesRecursive ./home-manager-shared
       ++ home-files;
   };
 }

@@ -1,8 +1,9 @@
-{...}: {
+{ ... }:
+{
   programs = {
     sway = {
       enable = true;
-      extraPackages = [];
+      extraPackages = [ ];
     };
     dconf.enable = true;
     kdeconnect.enable = true;
@@ -13,7 +14,7 @@
   services.keyd = {
     enable = true;
     keyboards.default = {
-      ids = ["*"];
+      ids = [ "*" ];
       settings.main.capslock = "overload(control, esc)";
     };
   };

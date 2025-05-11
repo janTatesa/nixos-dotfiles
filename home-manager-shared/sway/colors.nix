@@ -1,6 +1,8 @@
-{config, ...}: let
+{ config, ... }:
+let
   accent = "\$${config.catppuccin.accent}";
-in {
+in
+{
   wayland.windowManager.sway.config.colors = {
     background = "$base";
     focused = {

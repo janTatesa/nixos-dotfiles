@@ -4,7 +4,8 @@
   font-size,
   system-config,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     libnotify
     swaybg
@@ -35,17 +36,17 @@
       output."*".bg = "${../../assets/wallpaper.svg} fill";
       input."type:keyboard".xkb_layout = "us,sk(qwerty)";
       assigns = {
-        "2" = [{app_id = "vesktop";}];
-        "4" = [{app_id = "obsidian";}];
-        "5" = [{title = "kraban";}];
+        "2" = [ { app_id = "vesktop"; } ];
+        "4" = [ { app_id = "obsidian"; } ];
+        "5" = [ { title = "kraban"; } ];
       };
       startup = [
-        {command = "wl-paste --watch cliphist store";}
-        {command = "swayosd-server";}
-        {command = "firefox";}
-        {command = "vesktop";}
-        {command = "kitty -T kraban kraban";}
-        {command = "obsidian";}
+        { command = "wl-paste --watch cliphist store"; }
+        { command = "swayosd-server"; }
+        { command = "firefox"; }
+        { command = "vesktop"; }
+        { command = "kitty -T kraban kraban"; }
+        { command = "obsidian"; }
       ];
       floating = {
         titlebar = false;

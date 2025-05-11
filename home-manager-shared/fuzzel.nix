@@ -1,4 +1,5 @@
-{system-config, ...}: {
+{ system-config, ... }:
+{
   programs.fuzzel = {
     enable = true;
     settings = {

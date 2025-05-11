@@ -5,7 +5,8 @@
   oxikcde,
   system,
   ...
-}: {
+}:
+{
   environment.systemPackages = with pkgs; [
     ripgrep
     ouch

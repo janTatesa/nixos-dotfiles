@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.helix = {
     enable = true;
     defaultEditor = true;
@@ -23,8 +24,11 @@
           "mode"
           "file-modification-indicator"
         ];
-        center = ["file-name"];
-        right = ["spinner" "diagnostics"];
+        center = [ "file-name" ];
+        right = [
+          "spinner"
+          "diagnostics"
+        ];
         mode = {
           normal = "Normal";
           insert = "Insert";

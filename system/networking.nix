@@ -1,10 +1,14 @@
-{...}: {
+{ ... }:
+{
   networking = {
     hostName = "nixos";
     wireless.iwd.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [8080 25565];
+      allowedTCPPorts = [
+        8080
+        25565
+      ];
       allowedUDPPorts = [
         8080
         25565
