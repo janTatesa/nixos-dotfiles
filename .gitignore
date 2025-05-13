@@ -1,2 +1,3 @@
 system/hardware-configuration.nix
+system/hardware-configuration-not-generated.nix
 result
