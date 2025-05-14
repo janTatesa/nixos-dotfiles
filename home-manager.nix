@@ -6,13 +6,14 @@
   lib,
   font-size,
   nushell,
+  unstable,
   ...
 }:
 {
   home-manager = {
     extraSpecialArgs = {
       system-config = config;
-      inherit personal-info font-size nushell;
+      inherit personal-info font-size nushell unstable;
     };
     useGlobalPkgs = true;
     backupFileExtension = "bak";

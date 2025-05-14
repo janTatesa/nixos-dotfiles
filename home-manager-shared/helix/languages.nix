@@ -5,7 +5,7 @@
       {
         name = "nix";
         auto-format = true;
-        formatter.command = "nix fmt";
+        formatter.command = "nix-fmt";
       }
       {
         name = "uiua";

@@ -30,7 +30,7 @@
       bars = [
         {
           command = "waybar";
-          id = config.programs.waybar.settings.mainBar.id;
+          id = "waybar";
         }
       ];
       output."*".bg = "${../../assets/wallpaper.svg} fill";
@@ -73,7 +73,9 @@
       height = 500;
       font = "${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0} ${builtins.toString font-size}";
       defaultTimeout = 10000;
+      layer = "overlay";
     };
+
     swayidle = {
       enable = true;
       timeouts = [
