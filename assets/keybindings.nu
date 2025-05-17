@@ -326,27 +326,6 @@ $env.config.keybindings ++= [
             event: { edit: cutfromstart }
         }
         {
-            name: copy_selection
-            modifier: control
-            keycode: char_c
-            mode: emacs
-            event: { edit: copyselectionsystem }
-        }
-        {
-            name: cut_selection
-            modifier: control_shift
-            keycode: char_x
-            mode: emacs
-            event: { edit: cutselectionsystem }
-        }
-        {
-            name: paste
-            modifier: control
-            keycode: char_v
-            mode: emacs
-            event: { edit: pastesystem }
-        }
-        {
             name: select_all
             modifier: control
             keycode: char_a

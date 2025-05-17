@@ -26,7 +26,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.nushell}/bin/nu";
+        command = "${pkgs.nushell}/bin/nu -l";
         user = personal-info.login;
       };
 
