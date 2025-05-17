@@ -76,7 +76,7 @@
         iso = lib.nixosSystem rec {
           inherit system;
           specialArgs = {
-            inherit catppuccin system font-size unstable;
+            inherit catppuccin system font-size unstable nushell;
             personal-info.login = "nixos";
             home-files = [ ];
           };
