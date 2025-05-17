@@ -17,14 +17,11 @@
       package = nushell;
       configFile.source = ../assets/config.nu;
       envFile.source = ../assets/env.nu;
+      extraConfig = builtins.readFile ../assets/keybindings.nu;
       extraEnv = "$env.LS_COLORS = (${pkgs.vivid}/bin/vivid generate catppuccin-mocha)";
       shellAliases = {
         # Coreutils
         ln = "ln -s";
-        l = "eza";
-        lt = "eza --tree";
-        la = "eza  -a";
-        ll = "eza -l";
         cp = "cp -r";
         cd = "z";
         cat = "bat -p";
