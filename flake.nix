@@ -36,8 +36,8 @@
       pkgs = nixpkgs.legacyPackages.${system};
       nushell = pkgs.nushell.override { additionalFeatures = _: [ "system-clipboard" ]; };
       unstable = import nixos-unstable {
-              inherit system;
-              config.allowUnfree = true;
+        inherit system;
+        config.allowUnfree = true;
       };
     in
     {
@@ -56,7 +56,7 @@
               nushell
               unstable
               ;
-            
+
             home-files = lib.filesystem.listFilesRecursive ./home-manager;
           };
 
@@ -76,7 +76,13 @@
         iso = lib.nixosSystem rec {
           inherit system;
           specialArgs = {
-            inherit catppuccin system font-size unstable nushell;
+            inherit
+              catppuccin
+              system
+              font-size
+              unstable
+              nushell
+              ;
             personal-info.login = "nixos";
             home-files = [ ];
           };

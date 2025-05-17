@@ -16,6 +16,7 @@
       };
     };
     gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
@@ -52,6 +53,9 @@
 
   dconf.settings = {
     "org/gnome/desktop/wm/preferences".button-layout = "";
-    "org/gnome/desktop/interface".cursor-size = config.home.pointerCursor.size;
+    "org/gnome/desktop/interface" = {
+      cursor-size = config.home.pointerCursor.size;
+      gtk-theme = config.gtk.theme.name;
+    };
   };
 }

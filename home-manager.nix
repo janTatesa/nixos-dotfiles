@@ -13,7 +13,12 @@
   home-manager = {
     extraSpecialArgs = {
       system-config = config;
-      inherit personal-info font-size nushell unstable;
+      inherit
+        personal-info
+        font-size
+        nushell
+        unstable
+        ;
     };
     useGlobalPkgs = true;
     backupFileExtension = "bak";
