@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   ...
 }:
 {
@@ -9,7 +8,7 @@
       rubik
       (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
-    fontconfig.defaultFonts = lib.mkForce {
+    fontconfig.defaultFonts = {
       serif = [ "Rubik" ];
       sansSerif = [ "Rubik" ];
       monospace = [ "JetBrainsMono Nerd Font" ];

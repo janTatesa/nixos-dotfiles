@@ -6,6 +6,8 @@
       RUSTC_WRAPPER = "${pkgs.sccache}/bin/sccache";
     };
     systemPackages = with pkgs; [
+      nixfmt-rfc-style
+      treefmt
       commitizen
       gh
       taplo
