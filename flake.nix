@@ -16,6 +16,10 @@
       url = "github:TadoTheMiner/oxikcde";
       inputs.nixpkgs.follows = "nixos-unstable";
     };
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -26,6 +30,7 @@
       nixos-unstable,
       kraban,
       oxikcde,
+      lix-module,
       ...
     }:
     let
@@ -39,6 +44,16 @@
         inherit system;
         config.allowUnfree = true;
       };
+      default_modules = [
+        catppuccin.nixosModules.catppuccin
+        {
+          catppuccin.enable = true;
+        }
+        home-manager.nixosModules.home-manager
+        ./home-manager.nix
+        lix-module.nixosModules.default
+      ] ++ lib.filesystem.listFilesRecursive ./system-shared;
+
     in
     {
       formatter.${system} = pkgs.nixfmt-rfc-style;
@@ -60,17 +75,7 @@
             home-files = lib.filesystem.listFilesRecursive ./home-manager;
           };
 
-          modules =
-            [
-              catppuccin.nixosModules.catppuccin
-              {
-                catppuccin.enable = true;
-              }
-              home-manager.nixosModules.home-manager
-              ./home-manager.nix
-            ]
-            ++ lib.filesystem.listFilesRecursive ./system
-            ++ lib.filesystem.listFilesRecursive ./system-shared;
+          modules = default_modules ++ lib.filesystem.listFilesRecursive ./system;
         };
 
         iso = lib.nixosSystem rec {
@@ -87,15 +92,7 @@
             home-files = [ ];
           };
 
-          modules = [
-            catppuccin.nixosModules.catppuccin
-            {
-              catppuccin.enable = true;
-            }
-            home-manager.nixosModules.home-manager
-            ./home-manager.nix
-            ./iso.nix
-          ] ++ lib.filesystem.listFilesRecursive ./system-shared;
+          modules = default_modules + ./iso.nix;
         };
       };
     };
