@@ -10,4 +10,5 @@
   ];
   services.xserver.displayManager.lightdm.enable = lib.mkForce false;
   users.defaultUserShell = pkgs.nushell;
+  nix.package = pkgs.lix;
 }

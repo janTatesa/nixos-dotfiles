@@ -1,5 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  nix.package = pkgs.lix;
   programs = {
     adb.enable = true;
     nix-ld.enable = true;
