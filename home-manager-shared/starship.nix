@@ -4,10 +4,10 @@
     enable = true;
     settings = {
       add_newline = false;
-      format = "$directory $git_branch$git_commit$git_state$git_metrics$git_status $line_break $battery$nix_shell$character";
+      format = "$directory$git_branch$git_commit$git_state$git_metrics$git_status$line_break$battery$nix_shell$character";
       right_format = "$cmd_duration";
       nix_shell = {
-        style = "blue";
+        style = "lavender";
         format = "[$state(($name))]($style)";
       };
 
