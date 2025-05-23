@@ -21,6 +21,7 @@
     };
   };
 
+  security.sudo.wheelNeedsPassword = false;
   nix.settings.trusted-users = [ personal-info.login ];
   services.greetd = {
     enable = true;
