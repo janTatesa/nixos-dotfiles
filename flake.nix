@@ -53,7 +53,11 @@
       default_modules = [
         catppuccin.nixosModules.catppuccin
         {
-          catppuccin.enable = true;
+          catppuccin = {
+            enable = true;
+            accent = "green";
+            flavor = "frappe";
+          };
           nixpkgs.overlays = [
             overlay
           ];
