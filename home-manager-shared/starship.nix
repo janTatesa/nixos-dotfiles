@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   programs.starship = {
     enable = true;
@@ -18,7 +18,7 @@
         read_only = " rdonly";
       };
       character = {
-        success_symbol = "[>](mauve)";
+        success_symbol = "[>](${config.catppuccin.accent})";
         error_symbol = "[>](red)";
       };
     };
