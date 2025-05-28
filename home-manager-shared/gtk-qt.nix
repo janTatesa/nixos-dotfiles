@@ -9,7 +9,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Adwaita-dark";
+      name = "catppuccin-${config.catppuccin.flavor}-${config.catppuccin.accent}-dark"; # Electron appps apparently check whether the name contains dark
       package = pkgs.catppuccin-gtk.override {
         variant = config.catppuccin.flavor;
         accents = [ config.catppuccin.accent ];
