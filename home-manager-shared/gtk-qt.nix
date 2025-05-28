@@ -9,7 +9,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "catppuccin-mocha-mauve-standard";
+      name = "Adwaita-dark";
       package = pkgs.catppuccin-gtk.override {
         variant = config.catppuccin.flavor;
         accents = [ config.catppuccin.accent ];
