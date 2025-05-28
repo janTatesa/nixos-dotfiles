@@ -11,7 +11,7 @@
         format = "[$state(($name))]($style)";
       };
 
-      git_branch.format = "[on $branch(:$remote_branch)]($style)";
+      git_branch.format = "[on $branch(:$remote_branch)](blue)";
       directory = {
         style = "${config.catppuccin.accent}";
         truncation_length = 4;
