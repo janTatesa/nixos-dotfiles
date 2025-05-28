@@ -9,12 +9,12 @@
 }:
 let
   theme = generateTheme config;
-  colors = ":root {
-    --text:${theme.text};
-    --background:${theme.crust};
-    --accent:${theme.accent};
-    --urgent:${theme.red}
-  }";
+  colors = "
+    @define-color text ${theme.text};
+    @define-color background ${theme.crust};
+    @define-color accent ${theme.accent};
+    @define-color urgent ${theme.red}
+  ";
   font = "*{
     font-family: '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}', '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0}';
     font-size: ${
