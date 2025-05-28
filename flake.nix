@@ -55,7 +55,7 @@
         {
           catppuccin = {
             enable = true;
-            accent = "maroon";
+            accent = "teal";
             flavor = "macchiato";
           };
           nixpkgs.overlays = [
