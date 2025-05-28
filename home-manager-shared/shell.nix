@@ -1,6 +1,5 @@
 {
   pkgs,
-  nushell,
   ...
 }:
 {
@@ -14,7 +13,6 @@
     };
     nushell = {
       enable = true;
-      package = nushell;
       configFile.source = ../assets/config.nu;
       envFile.source = ../assets/env.nu;
       extraConfig = builtins.readFile ../assets/keybindings.nu;

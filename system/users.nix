@@ -1,12 +1,11 @@
 {
   personal-info,
   pkgs,
-  nushell,
   ...
 }:
 {
   users = {
-    defaultUserShell = nushell;
+    defaultUserShell = pkgs.nushell;
     groups.plugdev = { };
     users.${personal-info.login} = {
       isNormalUser = true;

@@ -1,9 +1,6 @@
 {
   pkgs,
   unstable,
-  kraban,
-  oxikcde,
-  system,
   ...
 }:
 {
@@ -32,7 +29,7 @@
     yt-dlp
     tuba
     impala
-    kraban.packages.${system}.default
-    oxikcde.packages.${system}.default
+    kraban
+    oxikcde
   ];
 }

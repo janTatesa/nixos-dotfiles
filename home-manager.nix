@@ -5,7 +5,6 @@
   catppuccin,
   lib,
   font-size,
-  nushell,
   unstable,
   ...
 }:
@@ -16,7 +15,6 @@
       inherit
         personal-info
         font-size
-        nushell
         unstable
         ;
     };

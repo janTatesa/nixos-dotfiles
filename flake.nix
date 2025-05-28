@@ -28,9 +28,9 @@
       home-manager,
       catppuccin,
       nixos-unstable,
+      lix-module,
       kraban,
       oxikcde,
-      lix-module,
       ...
     }:
     let
@@ -39,15 +39,24 @@
       font-size = 15;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      nushell = pkgs.nushell.override { additionalFeatures = _: [ "system-clipboard" ]; };
       unstable = import nixos-unstable {
         inherit system;
         config.allowUnfree = true;
       };
+
+      overlay = final: prev: {
+        nushell = prev.nushell.override { additionalFeatures = _: [ "system-clipboard" ]; };
+        kraban = kraban.packages.${system}.default;
+        oxikcde = oxikcde.packages.${system}.default;
+      };
+
       default_modules = [
         catppuccin.nixosModules.catppuccin
         {
           catppuccin.enable = true;
+          nixpkgs.overlays = [
+            overlay
+          ];
         }
         home-manager.nixosModules.home-manager
         ./home-manager.nix
@@ -64,11 +73,8 @@
             inherit
               personal-info
               catppuccin
-              kraban
-              oxikcde
               system
               font-size
-              nushell
               unstable
               ;
 
@@ -86,7 +92,6 @@
               system
               font-size
               unstable
-              nushell
               ;
             personal-info.login = "nixos";
             home-files = [ ];
