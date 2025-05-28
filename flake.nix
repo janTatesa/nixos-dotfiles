@@ -63,6 +63,17 @@
         lix-module.nixosModules.default
       ] ++ lib.filesystem.listFilesRecursive ./system-shared;
 
+      generateTheme =
+        config:
+        let
+          colors =
+            (builtins.fromJSON (builtins.readFile "${config.catppuccin.sources.palette}/palette.json"))
+            .${config.catppuccin.flavor}.colors;
+        in
+        builtins.mapAttrs (_: value: value.hex) colors
+        // {
+          accent = colors.${config.catppuccin.accent}.hex;
+        };
     in
     {
       formatter.${system} = pkgs.nixfmt-rfc-style;
@@ -76,6 +87,7 @@
               system
               font-size
               unstable
+              generateTheme
               ;
 
             home-files = lib.filesystem.listFilesRecursive ./home-manager;
@@ -92,9 +104,9 @@
               system
               font-size
               unstable
+              generateTheme
               ;
             personal-info.login = "nixos";
-            home-files = [ ];
           };
 
           modules = default_modules + ./iso.nix;

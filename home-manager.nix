@@ -1,11 +1,12 @@
 {
-  home-files,
+  home-files ? [ ],
   config,
   personal-info,
   catppuccin,
   lib,
   font-size,
   unstable,
+  generateTheme,
   ...
 }:
 {
@@ -16,6 +17,7 @@
         personal-info
         font-size
         unstable
+        generateTheme
         ;
     };
     useGlobalPkgs = true;

@@ -3,14 +3,19 @@
   pkgs,
   unstable,
   system-config,
+  generateTheme,
+  config,
   ...
 }:
+let
+  theme = generateTheme config;
+in
 {
   programs.waybar = {
     package = unstable.waybar;
     enable = true;
     style =
-      "*{font-family: '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}', '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0}';font-size: ${
+      ":root{--text:${theme.text};--background:${theme.crust};--accent:${theme.accent};--urgent:${theme.red}} *{font-family: '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}', '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0}';font-size: ${
         builtins.toString (font-size + 5)
       }px}"
       + builtins.readFile ../assets/waybar.css;
@@ -33,7 +38,7 @@
     ];
     network = {
       interface = "wlan0";
-      format-wifi = "<span color='#cba6f7'>{icon}</span> {essid}";
+      format-wifi = "<span color='${theme.accent}'>{icon}</span> {essid}";
       format-icons = [
         "󰤟"
         "󰤢"
@@ -41,7 +46,7 @@
         "󰤨"
       ];
 
-      format-disconnected = "<span color='#f38ba8'>󰤮</span> No Network";
+      format-disconnected = "<span color='${theme.red}'>󰤮</span> No Network";
       tooltip = false;
     };
     "group/indicators" = {
@@ -111,8 +116,8 @@
       on-scroll-down = "";
     };
     pulseaudio = {
-      format = "<span color='#cba6f7'>{icon}</span> {volume}%";
-      format-muted = "<span color='#f38ba8'>󰖁</span> {volume}%";
+      format = "<span color='${theme.accent}'>{icon}</span> {volume}%";
+      format-muted = "<span color='${theme.accent}'>󰖁</span> {volume}%";
       tooltip = false;
       format-icons.default = [
         "󰕿"
@@ -129,7 +134,7 @@
     };
     battery = {
       tooltip = false;
-      format = "<span color='#cba6f7'>{icon}</span>  {capacity}%";
+      format = "<span color='${theme.accent}'>{icon}</span>  {capacity}%";
       format-icons = [
         ""
         ""
@@ -142,7 +147,7 @@
         ""
         ""
       ];
-      format-charging = "<span color='#cba6f7'>{icon}  Charging</span> {capacity}%";
+      format-charging = "<span color='${theme.accent}'>{icon}  Charging</span> {capacity}%";
     };
   };
 

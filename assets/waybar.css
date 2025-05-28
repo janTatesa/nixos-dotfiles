@@ -10,7 +10,7 @@ window#waybar {
   padding-left: 4px;
   padding-right: 4px;
 
-  color: #cdd6f4;
+  color: var(--text);
   box-shadow: none; /* Remove predefined box-shadow */
   text-shadow: none; /* Remove predefined text-shadow */
   background: none; /* Remove predefined background color (white) */
@@ -18,22 +18,22 @@ window#waybar {
 }
 
 #workspaces button.hidden {
-  color: #cdd6f4;
+  color: var(--text);
 }
 
 #workspaces button.visible {
-  color: #cba6f7;
+  color: var(--accent);
 }
 
 #workspaces button.urgent {
-  color: #f38ba8;
+  color: var(--urgent);
 }
 
 #custom-waybar-mpris, #mode, #workspaces, #clock, #language, #indicators {
   border-radius: 8px;
-  background-color: #11111b;
-  color: #cdd6f4;
-  border: 2px solid #cba6f7;
+  background-color: var(--background);
+  color: var(--text);
+  border: 2px solid var(--accent);
   margin-top: 10px;
   margin-right: 5px;
   margin-left: 5px;
