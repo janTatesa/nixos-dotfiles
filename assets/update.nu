@@ -2,7 +2,7 @@
 cd $env.FLAKE
 git add .
 let successful = try {
-  nh os switch --update --verbose
+  nh os switch --update
   true
 } catch {
   false

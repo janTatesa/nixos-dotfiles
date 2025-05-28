@@ -106,7 +106,7 @@ in
     };
     backlight = {
       device = "intel_backlight";
-      format = "<span color='#cba6f7'>{icon}</span> {percent}%";
+      format = "<span color='${config.catppuccin.accent}'>{icon}</span> {percent}%";
       format-icons = [
         ""
         ""
