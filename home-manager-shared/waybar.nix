@@ -9,16 +9,24 @@
 }:
 let
   theme = generateTheme config;
+  colors = ":root {
+    --text:${theme.text};
+    --background:${theme.crust};
+    --accent:${theme.accent};
+    --urgent:${theme.red}
+  }";
+  font = "*{
+    font-family: '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}', '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0}';
+    font-size: ${
+        builtins.toString (font-size + 5)
+      }px
+  }";
 in
 {
   programs.waybar = {
     package = unstable.waybar;
     enable = true;
-    style =
-      ":root{--text:${theme.text};--background:${theme.crust};--accent:${theme.accent};--urgent:${theme.red}} *{font-family: '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}', '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0}';font-size: ${
-        builtins.toString (font-size + 5)
-      }px}"
-      + builtins.readFile ../assets/waybar.css;
+    style = colors + font + builtins.readFile ../assets/waybar.css;
   };
 
   xdg.configFile."waybar/config".text = builtins.toJSON {
