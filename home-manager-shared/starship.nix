@@ -13,7 +13,7 @@
 
       git_branch.format = "[on $branch(:$remote_branch)]($style)";
       directory = {
-        style = "mauve";
+        style = "${config.catppuccin.accent}";
         truncation_length = 4;
         read_only = " rdonly";
       };
