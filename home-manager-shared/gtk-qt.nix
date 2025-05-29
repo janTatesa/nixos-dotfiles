@@ -56,6 +56,7 @@
     "org/gnome/desktop/interface" = {
       cursor-size = config.home.pointerCursor.size;
       gtk-theme = config.gtk.theme.name;
+      colorscheme = "prefer-dark";
     };
   };
 }
