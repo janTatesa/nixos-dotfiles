@@ -16,7 +16,7 @@ let
   ";
   font = "*{
     font-family: '${fonts.sans-serif}', '${fonts.monospace}';
-    font-size: ${builtins.toString fonts.size}px
+    font-size: ${builtins.toString fonts.size}pt
   }";
 in
 {
