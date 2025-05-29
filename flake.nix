@@ -36,7 +36,7 @@
     let
       personal-info = import ./personal.nix;
       lib = nixpkgs.lib;
-      font-size = 15;
+      font-size = 18;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       unstable = import nixos-unstable {

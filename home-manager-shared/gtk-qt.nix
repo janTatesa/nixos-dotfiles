@@ -1,10 +1,12 @@
 {
   config,
   pkgs,
-  font-size,
-  system-config,
+  fonts,
   ...
 }:
+let
+  gtk_theme_location = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0";
+in
 {
   gtk = {
     enable = true;
@@ -22,8 +24,8 @@
       package = pkgs.papirus-icon-theme;
     };
     font = {
-      size = font-size;
-      name = builtins.elemAt system-config.fonts.fontconfig.defaultFonts.serif 0;
+      size = fonts.size;
+      name = fonts.sans-serif;
     };
   };
 
@@ -37,12 +39,9 @@
 
   # For gtk4
   xdg.configFile = {
-    "gtk-4.0/assets".source =
-      "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
-    "gtk-4.0/gtk.css".source =
-      "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
-    "gtk-4.0/gtk-dark.css".source =
-      "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
+    "gtk-4.0/assets".source = "${gtk_theme_location}/assets";
+    "gtk-4.0/gtk.css".source = "${gtk_theme_location}/gtk.css";
+    "gtk-4.0/gtk-dark.css".source = "${gtk_theme_location}/gtk-4.0/gtk-dark.css";
   };
 
   qt = {

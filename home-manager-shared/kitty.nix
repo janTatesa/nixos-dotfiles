@@ -1,14 +1,13 @@
 {
-  font-size,
-  system-config,
+  fonts,
   ...
 }:
 {
   programs.kitty = {
     enable = true;
     font = {
-      name = builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0;
-      size = font-size;
+      name = fonts.monospace;
+      size = fonts.size;
     };
     settings = {
       confirm_os_window_close = 0;

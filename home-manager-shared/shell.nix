@@ -30,8 +30,10 @@
         gl = "git pull";
         gf = "git fetch";
         gcl = "git clone";
+
         # Nix
         nsh = "nix-shell --command nu -p";
+        nrbu = "UPDATE_FLAKE=1 nrb";
       };
     };
     fzf = {

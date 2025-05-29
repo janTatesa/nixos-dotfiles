@@ -1,12 +1,13 @@
 #!/usr/bin/env nu
 cd $env.FLAKE
 git add .
-let successful = try {
-  nh os switch --update
-  true
-} catch {
-  false
+
+if $env.UPDATE_FLAKE == "1" {
+    nh os switch --update
+} else {
+    nh os switch
 }
-if $successful {
-  git commit -am (nixos-rebuild list-generations | grep current); git push
-}
+
+let commit = (nixos-rebuild list-generations | grep current | split row " " | select 0 6 8 | str join ' ')
+git commit -am $commit; git push
+

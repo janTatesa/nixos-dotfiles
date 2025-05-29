@@ -1,10 +1,10 @@
-{ system-config, ... }:
+{ fonts, ... }:
 {
   programs.fuzzel = {
     enable = true;
     settings = {
       main = {
-        font = "${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}:size=22";
+        font = "${fonts.sans-serif}:size=${builtins.toString fonts.size}";
         terminal = "kitty";
         icons-enabled = true;
       };

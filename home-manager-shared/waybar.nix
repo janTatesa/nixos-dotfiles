@@ -1,8 +1,7 @@
 {
-  font-size,
+  fonts,
   pkgs,
   unstable,
-  system-config,
   generateTheme,
   config,
   ...
@@ -16,10 +15,8 @@ let
     @define-color urgent ${theme.red};
   ";
   font = "*{
-    font-family: '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}', '${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.monospace 0}';
-    font-size: ${
-        builtins.toString (font-size + 5)
-      }px
+    font-family: '${fonts.sans-serif}', '${fonts.monospace}';
+    font-size: ${builtins.toString fonts.size}px
   }";
 in
 {

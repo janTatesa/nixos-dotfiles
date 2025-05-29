@@ -13,9 +13,14 @@
   home-manager = {
     extraSpecialArgs = {
       system-config = config;
+      fonts = {
+        monospace = builtins.elemAt config.fonts.fontconfig.defaultFonts.monospace 0;
+        sans-serif = builtins.elemAt config.fonts.fontconfig.defaultFonts.sansSerif 0;
+        size = font-size;
+      };
+
       inherit
         personal-info
-        font-size
         unstable
         generateTheme
         ;
@@ -25,7 +30,7 @@
     users.${personal-info.login}.imports =
       [
         {
-          home.stateVersion = "24.11";
+          home.stateVersion = config.system.stateVersion;
         }
         catppuccin.homeModules.catppuccin
       ]

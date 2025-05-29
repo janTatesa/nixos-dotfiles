@@ -1,8 +1,7 @@
 {
   config,
   pkgs,
-  font-size,
-  system-config,
+  fonts,
   ...
 }:
 {
@@ -71,8 +70,7 @@
       borderRadius = 8;
       width = 1000;
       height = 500;
-      font = "${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0} ${builtins.toString font-size}";
-      defaultTimeout = 10000;
+      font = "${fonts.sans-serif} ${builtins.toString fonts.size}";
       layer = "overlay";
     };
 
@@ -91,8 +89,8 @@
   programs.swaylock = {
     enable = true;
     settings = {
-      font = "${builtins.elemAt system-config.fonts.fontconfig.defaultFonts.sansSerif 0}";
-      inherit font-size;
+      font = fonts.sans-serif;
+      font-size = fonts.size;
       indicator-idle-visible = false;
       indicator-radius = 100;
       show-failed-attempts = true;
