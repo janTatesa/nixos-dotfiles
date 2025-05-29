@@ -2,7 +2,7 @@
 cd $env.FLAKE
 git add .
 
-if $env.UPDATE_FLAKE == "1" {
+if "UPDATE_FLAKE" in $env  {
     nh os switch --update
 } else {
     nh os switch

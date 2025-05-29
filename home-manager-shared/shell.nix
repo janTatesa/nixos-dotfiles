@@ -33,7 +33,7 @@
 
         # Nix
         nsh = "nix-shell --command nu -p";
-        nrbu = "UPDATE_FLAKE=1 nrb";
+        nrbu = "with-env {UPDATE_FLAKE=1} {nrb}";
       };
     };
     fzf = {
