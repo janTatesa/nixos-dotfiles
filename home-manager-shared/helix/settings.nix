@@ -1,7 +1,8 @@
-{ ... }:
+{ unstable, ... }:
 {
   programs.helix = {
     enable = true;
+    package = unstable.helix;
     defaultEditor = true;
     ignores = [
       "!.gitignore"
