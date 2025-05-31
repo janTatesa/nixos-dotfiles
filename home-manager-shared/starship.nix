@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 {
   programs.starship = {
     enable = true;
@@ -7,7 +7,7 @@
       format = "$directory$git_branch$git_commit$git_state$git_metrics$git_status$line_break$battery$nix_shell$character";
       right_format = "$custom $cmd_duration";
       custom.mommy = {
-        command = "mommy -1 -s $env.LAST_EXIT_CODE";
+        command = "${pkgs.mommy} -1 -s $env.LAST_EXIT_CODE";
         when = "true";
       };
 
