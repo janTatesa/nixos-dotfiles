@@ -1,16 +1,17 @@
 { ... }:
 {
   services.flatpak = {
+    remotes.flathub = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+
+    enable = true;
     packages = [
-      "dev.vencord.Vesktop"
-      "md.obsidian.Obsidian"
+      "flathub:app/dev.vencord.Vesktop//stable"
+      "flathub:app/md.obsidian.Obsidian//stable"
     ];
 
     overrides.global = {
-      Environment.NIXOS_OZONE_WL = "1";
-      filesystems = "~/.config/dconf:ro";
+      environment.NIXOS_OZONE_WL = "1";
+      filesystems = [ "~/.config/dconf:ro" ];
     };
-
-    update.onActivation = true;
   };
 }
