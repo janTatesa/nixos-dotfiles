@@ -34,7 +34,11 @@ in
       gtk.enable = true;
       size = 24;
     };
-    sessionVariables.QT_SCALE_FACTOR = 2;
+    sessionVariables = {
+      QT_SCALE_FACTOR = 2;
+      GTK_THEME = config.gtk.theme.name;
+      GTK_THEME_VARIANT = "dark";
+    };
   };
 
   # For gtk4
