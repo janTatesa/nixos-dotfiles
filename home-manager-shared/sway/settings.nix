@@ -66,12 +66,14 @@
   services = {
     mako = {
       enable = true;
-      borderSize = 2;
-      borderRadius = 8;
-      width = 1000;
-      height = 500;
-      font = "${fonts.sans-serif} ${builtins.toString fonts.size}";
-      layer = "overlay";
+      settings = {
+        borderSize = 2;
+        borderRadius = 8;
+        width = 1000;
+        height = 500;
+        font = "${fonts.sans-serif} ${builtins.toString fonts.size}";
+        layer = "overlay";
+      };
     };
 
     swayidle = {

@@ -6,7 +6,7 @@
   fonts = {
     packages = with pkgs; [
       rubik
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      nerd-fonts.jetbrains-mono
     ];
     fontconfig.defaultFonts = {
       serif = [ "Rubik" ];
