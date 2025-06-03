@@ -122,7 +122,7 @@ in
     };
     pulseaudio = {
       format = "<span color='${theme.accent}'>{icon}</span> {volume}%";
-      format-muted = "<span color='${theme.accent}'>󰖁</span> {volume}%";
+      format-muted = "<span color='${theme.red}'>󰖁</span> {volume}%";
       tooltip = false;
       format-icons.default = [
         "󰕿"

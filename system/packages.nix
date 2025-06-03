@@ -25,7 +25,6 @@
     unstable.vesktop
 
     hyfetch
-    comma
     musikcube
     eartag
     spotdl
