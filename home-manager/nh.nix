@@ -8,4 +8,5 @@
     # TODO: figure out how to do this automatically
     flake = "${config.home.homeDirectory}/nixos";
   };
+  home.sessionVariables.FLAKE = config.programs.nh.flake;
 }
