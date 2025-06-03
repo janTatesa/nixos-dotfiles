@@ -11,6 +11,6 @@
       filesystems = "~/.config/dconf:ro";
     };
 
-    update.auto.enable = true;
+    update.onActivation = true;
   };
 }
