@@ -1,7 +1,7 @@
 {
   pkgs,
   unstable,
-  old,
+
   ...
 }:
 {
@@ -21,9 +21,9 @@
     (pkgs.writeScriptBin "nrb" ''${builtins.readFile ../assets/update.nu}'')
     (pkgs.writeScriptBin "cfg" ''${builtins.readFile ../assets/configure.nu}'')
 
-    old.obsidian
-    old.signal-desktop
-    old.vesktop
+    unstable.obsidian
+    signal-desktop
+    vesktop
 
     kraban
     oxikcde

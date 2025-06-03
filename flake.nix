@@ -2,7 +2,6 @@
   description = "TadoTheMiner's NixOS configuration";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixos-old.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixos-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
@@ -29,7 +28,6 @@
       home-manager,
       catppuccin,
       nixos-unstable,
-      nixos-old,
       lix-module,
       kraban,
       oxikcde,
@@ -42,11 +40,6 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       unstable = import nixos-unstable {
-        inherit system;
-        config.allowUnfree = true;
-      };
-
-      old = import nixos-old {
         inherit system;
         config.allowUnfree = true;
       };
@@ -94,7 +87,6 @@
               font-size
               unstable
               generateTheme
-              old
               ;
 
             home-files = lib.filesystem.listFilesRecursive ./home-manager;
