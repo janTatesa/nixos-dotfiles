@@ -21,11 +21,9 @@
     (pkgs.writeScriptBin "nrb" ''${builtins.readFile ../assets/update.nu}'')
     (pkgs.writeScriptBin "cfg" ''${builtins.readFile ../assets/configure.nu}'')
 
-    unstable.obsidian
-    signal-desktop
-    vesktop
-
     kraban
     oxikcde
   ];
+
+  services.flatpak.enable = true;
 }
