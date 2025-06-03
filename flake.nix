@@ -20,6 +20,7 @@
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs =
@@ -31,6 +32,7 @@
       lix-module,
       kraban,
       oxikcde,
+      nix-flatpak,
       ...
     }:
     let
@@ -60,6 +62,7 @@
         home-manager.nixosModules.home-manager
         ./home-manager.nix
         lix-module.nixosModules.default
+        nix-flatpak.nixosModules.nix-flatpak
       ] ++ lib.filesystem.listFilesRecursive ./system-shared;
 
       generateTheme =

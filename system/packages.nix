@@ -24,6 +24,4 @@
     kraban
     oxikcde
   ];
-
-  services.flatpak.enable = true;
 }
