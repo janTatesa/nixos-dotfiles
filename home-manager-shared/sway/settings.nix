@@ -18,8 +18,8 @@
     wl-clipboard
   ];
   wayland.windowManager.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
+    # enable = true;
+    # wrapperFeatures.gtk = true;
     checkConfig = false;
     extraSessionCommands = ''
       . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"
