@@ -1,17 +1,15 @@
 { config, ... }:
 {
   services.flatpak = {
-    remotes.flathub = "https://dl.flathub.org/repo/flathub.flatpakrepo";
-
     enable = true;
     packages = [
-      "flathub:app/dev.vencord.Vesktop//stable"
-      "flathub:app/belmoussaoui.ashpd.demo//stable"
+      "dev.vencord.Vesktop"
+      "belmoussaoui.ashpd.demo"
     ];
-    forceRunOnActivation = true;
+    update.onActivation = true;
     overrides.global = {
-      filesystems = [ "host" ];
-      sockets = [
+      Context.filesystems = [ "host" ];
+      Context.sockets = [
         "org.freedesktop.Notifications"
         "!x11"
         "!fallback-x11"
