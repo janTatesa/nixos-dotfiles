@@ -1,5 +1,6 @@
 {
   pkgs,
+  unstable,
   ...
 }:
 {
@@ -14,6 +15,9 @@
     mdbook
     mpv
     trash-cli
+
+    unstable.obsidian
+    unstable.vesktop
 
     (pkgs.writeScriptBin "scrollback" ''${builtins.readFile ../assets/scrollback.sh}'')
     (pkgs.writeScriptBin "nrb" ''${builtins.readFile ../assets/update.nu}'')

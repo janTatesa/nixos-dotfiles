@@ -2,7 +2,9 @@
   description = "TadoTheMiner's NixOS configuration";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixos-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -10,11 +12,11 @@
     catppuccin.url = "github:catppuccin/nix";
     kraban = {
       url = "github:TadoTheMiner/kraban";
-      inputs.nixpkgs.follows = "nixos-unstable";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     oxikcde = {
       url = "github:TadoTheMiner/oxikcde";
-      inputs.nixpkgs.follows = "nixos-unstable";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     lix-module = {
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
@@ -27,7 +29,8 @@
       nixpkgs,
       home-manager,
       catppuccin,
-      nixos-unstable,
+      nixpkgs-unstable,
+      # nixpkgs-old,
       lix-module,
       kraban,
       oxikcde,
@@ -39,7 +42,7 @@
       font-size = 18;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      unstable = import nixos-unstable {
+      unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
       };
