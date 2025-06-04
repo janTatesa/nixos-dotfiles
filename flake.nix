@@ -3,6 +3,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixos-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flatpak.url = "github:in-a-dil-emma/declarative-flatpak/stable-v3";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,6 +32,7 @@
       lix-module,
       kraban,
       oxikcde,
+      flatpak,
       ...
     }:
     let
@@ -60,6 +62,7 @@
         home-manager.nixosModules.home-manager
         ./home-manager.nix
         lix-module.nixosModules.default
+        flatpak.nixosModule
       ] ++ lib.filesystem.listFilesRecursive ./system-shared;
 
       generateTheme =

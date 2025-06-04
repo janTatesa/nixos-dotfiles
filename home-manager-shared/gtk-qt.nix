@@ -30,10 +30,7 @@ in
   };
 
   home = {
-    pointerCursor = {
-      gtk.enable = true;
-      size = 24;
-    };
+    pointerCursor.gtk.enable = true;
     sessionVariables = {
       QT_SCALE_FACTOR = 2;
       GTK_THEME = config.gtk.theme.name;
@@ -57,7 +54,6 @@ in
   dconf.settings = {
     "org/gnome/desktop/wm/preferences".button-layout = "";
     "org/gnome/desktop/interface" = {
-      cursor-size = config.home.pointerCursor.size;
       gtk-theme = config.gtk.theme.name;
       color-scheme = "prefer-dark";
     };
