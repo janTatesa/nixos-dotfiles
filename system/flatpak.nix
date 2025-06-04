@@ -7,6 +7,7 @@
     packages = [
       "flathub:app/dev.vencord.Vesktop//stable"
       "flathub:app/md.obsidian.Obsidian//stable"
+      "flathub:app/belmoussaoui.ashpd.demo//stable"
     ];
     forceRunOnActivation = true;
     overrides.global = {
