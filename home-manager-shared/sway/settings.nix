@@ -19,6 +19,7 @@
   ];
   wayland.windowManager.sway = {
     enable = true;
+    package = pkgs.swayfx;
     checkConfig = false;
     extraSessionCommands = ''
       . "${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh"

@@ -3,7 +3,7 @@
   programs = {
     sway = {
       enable = true;
-      wrapperFeatures.gtk = true;
+      package = null;
       extraPackages = [ ];
     };
     dconf.enable = true;
