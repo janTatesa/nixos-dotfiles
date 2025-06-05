@@ -24,6 +24,7 @@
   nix.settings.trusted-users = [ personal-info.login ];
   services.greetd = {
     enable = true;
+    restart = true;
     settings = {
       default_session = {
         command = "${pkgs.nushell}/bin/nu -l";
