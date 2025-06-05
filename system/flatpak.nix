@@ -14,6 +14,8 @@
         "!x11"
         "!fallback-x11"
         "wayland"
+        "system-bus"
+        "session-bus"
       ];
       environment = {
         NIXOS_OZONE_WL = "1";
