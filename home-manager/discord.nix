@@ -5,14 +5,13 @@
 }:
 let
   theme = generateTheme config;
-  vesktop_config = ".var/app/dev.vencord.Vesktop/config/vesktop";
 in
 {
-  home.file = {
-    "${vesktop_config}themes/catppuccin.css".text =
+  xdg.configFile = {
+    "vesktop/themes/catppuccin.css".text =
       "@import url(\"https://catppuccin.github.io/discord/dist/catppuccin-${config.catppuccin.flavor}-${config.catppuccin.accent}.theme.css\")";
-    "${vesktop_config}vesktop/themes/purecord.css".source = ../assets/discord.css;
-    "${vesktop_config}vesktop/settings.json".text = builtins.toJSON {
+    "$vesktop/themes/purecord.css".source = ../assets/discord.css;
+    "$vesktop/settings.json".text = builtins.toJSON {
       arRPC = true;
       discordBranch = "stable";
       minimizeToTray = false;
@@ -25,7 +24,7 @@ in
       splashTheming = true;
       tray = false;
     };
-    "${vesktop_config}vesktop/settings/settings.json".text = builtins.toJSON {
+    "vesktop/settings/settings.json".text = builtins.toJSON {
       autoUpdate = true;
       autoUpdateNotification = true;
       cloud = {
