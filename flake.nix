@@ -3,7 +3,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
@@ -35,7 +34,6 @@
       kraban,
       oxikcde,
       nixos-hardware,
-      nix-flatpak,
       ...
     }:
     let
@@ -66,7 +64,6 @@
         ./home-manager.nix
         lix-module.nixosModules.default
         nixos-hardware.nixosModules.common-gpu-intel
-        nix-flatpak.nixosModules.nix-flatpak
       ] ++ lib.filesystem.listFilesRecursive ./system-shared;
 
       generateTheme =
