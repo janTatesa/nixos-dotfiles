@@ -63,7 +63,7 @@
         home-manager.nixosModules.home-manager
         ./home-manager.nix
         lix-module.nixosModules.default
-        nixos-hardware.nixosModules.common-gpu-intel
+        "${nixos-hardware}/common/gpu/intel/alder-lake"
       ] ++ lib.filesystem.listFilesRecursive ./system-shared;
 
       generateTheme =
