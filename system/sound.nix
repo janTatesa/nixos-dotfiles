@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   services.pipewire = {
     enable = true;
@@ -8,4 +8,6 @@
     };
     pulse.enable = true;
   };
+
+  hardware.firmware = [ pkgs.sof-firmware ];
 }

@@ -8,7 +8,9 @@
   services = {
     power-profiles-daemon.enable = false;
     tlp.enable = true;
+    thermald.enable = true;
   };
+
   security.rtkit.enable = true;
   hardware.bluetooth = {
     enable = true;

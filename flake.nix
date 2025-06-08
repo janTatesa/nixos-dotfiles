@@ -3,6 +3,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixos-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,6 +29,7 @@
       home-manager,
       catppuccin,
       nixos-unstable,
+      nixos-hardware,
       lix-module,
       kraban,
       oxikcde,
@@ -60,6 +62,7 @@
         home-manager.nixosModules.home-manager
         ./home-manager.nix
         lix-module.nixosModules.default
+        "${nixos-hardware}/common/gpu/intel/alder-lake"
       ] ++ lib.filesystem.listFilesRecursive ./system-shared;
 
       generateTheme =
