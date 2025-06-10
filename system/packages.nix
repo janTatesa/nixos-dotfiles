@@ -1,6 +1,5 @@
 {
   pkgs,
-  unstable,
   ...
 }:
 {
@@ -19,8 +18,8 @@
     (pkgs.writeScriptBin "nrb" ''${builtins.readFile ../assets/update.nu}'')
     (pkgs.writeScriptBin "cfg" ''${builtins.readFile ../assets/configure.nu}'')
 
-    unstable.vesktop
-    unstable.obsidian
+    vesktop
+    obsidian
 
     kraban
     oxikcde

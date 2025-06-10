@@ -5,7 +5,6 @@
   catppuccin,
   lib,
   font-size,
-  unstable,
   generateTheme,
   ...
 }:
@@ -21,7 +20,6 @@
 
       inherit
         personal-info
-        unstable
         generateTheme
         ;
     };
