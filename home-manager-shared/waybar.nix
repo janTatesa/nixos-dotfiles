@@ -60,7 +60,6 @@ in
         "battery"
         "backlight"
         "pulseaudio"
-        "memory"
       ];
       orientation = "horizontal";
     };
