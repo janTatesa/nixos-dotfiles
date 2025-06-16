@@ -22,6 +22,7 @@
       };
       rust-analyzer.config = {
         check.command = "clippy";
+        cargo.features = "all";
         completion.excludeTraits = [
           "color_eyre::owo_colors::OwoColorize"
           "crossterm::style::Stylize"
