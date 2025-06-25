@@ -80,11 +80,24 @@ let fish_completer = {|spans|
   }
 }
 
-let carapace_completer = {|spans|
-  carapace $spans.0 nushell ...$spans | from json
+let carapace_completer = {|spans: list<string>|
+    carapace $spans.0 nushell ...$spans
+    | from json
+    | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }
 }
 
 let custom_completer = {|spans|
+    let expanded_alias = scope aliases
+    | where name == $spans.0
+    | get -i 0.expansion
+
+    let spans = if $expanded_alias != null {
+        $spans
+        | skip 1
+        | prepend ($expanded_alias | split row ' ' | take 1)
+    } else {
+        $spans
+    }
   do $carapace_completer $spans
   | if ($in | is-empty) { do $fish_completer $spans } else { $in }
 }
