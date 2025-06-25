@@ -8,5 +8,6 @@
     };
     pulse.enable = true;
   };
+
   hardware.firmware = [ pkgs.sof-firmware ];
 }

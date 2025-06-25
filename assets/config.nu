@@ -71,10 +71,37 @@ let dark_theme = {
     shape_vardecl: purple
 }
 
-# External completer example
-# let carapace_completer = {|spans|
-#     carapace $spans.0 nushell ...$spans | from json
-# }
+let fish_completer = {|spans|
+  fish --command $"complete '--do-complete=($spans | str join ' ')'"
+  | from tsv --flexible --noheaders --no-infer
+  | rename value description
+  | update value {
+    if ($in | path exists) {$'"($in | str replace "\"" "\\\"" )"'} else {$in}
+  }
+}
+
+let carapace_completer = {|spans: list<string>|
+    carapace $spans.0 nushell ...$spans
+    | from json
+    | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }
+}
+
+let custom_completer = {|spans|
+    let expanded_alias = scope aliases
+    | where name == $spans.0
+    | get -i 0.expansion
+
+    let spans = if $expanded_alias != null {
+        $spans
+        | skip 1
+        | prepend ($expanded_alias | split row ' ' | take 1)
+    } else {
+        $spans
+    }
+  do $carapace_completer $spans
+  | if ($in | is-empty) { do $fish_completer $spans } else { $in }
+}
+
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
@@ -144,7 +171,7 @@ $env.config = {
         external: {
             enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up may be very slow
             max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
-            completer: null # check 'carapace_completer' above as an example
+            completer: $custom_completer # check 'carapace_completer' above as an example
         }
         use_ls_colors: true # set this to true to enable file/path/directory completions using LS_COLORS
     }

@@ -19,6 +19,7 @@ let
   }";
 in
 {
+  catppuccin.waybar.enable = false;
   programs.waybar = {
     enable = true;
     style = colors + font + builtins.readFile ../assets/waybar.css;
@@ -56,7 +57,6 @@ in
           "battery"
           "backlight"
           "pulseaudio"
-          "memory"
         ];
         orientation = "horizontal";
       };
@@ -151,5 +151,6 @@ in
         format-charging = "<span color='${theme.accent}'>{icon}  Charging</span> {capacity}%";
       };
     };
+
   };
 }

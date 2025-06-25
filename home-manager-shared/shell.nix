@@ -4,8 +4,8 @@
 }:
 {
   programs = {
+    fish.enable = true; # For completions
     btop.enable = true;
-    tealdeer.enable = true;
     direnv = {
       enable = true;
       silent = true;
@@ -35,6 +35,7 @@
         # Nix
         nsh = "nix-shell --command nu -p";
         nrbu = "with-env {UPDATE_FLAKE: 1} {nrb}";
+        cfgu = "with-env {UPDATE_FLAKE: 1} {cfg}";
       };
     };
     fzf = {
@@ -43,7 +44,11 @@
     };
     bat.enable = true;
     zoxide.enable = true;
-    carapace.enable = true;
+    carapace = {
+      enable = true;
+      enableNushellIntegration = false;
+      enableFishIntegration = false;
+    };
   };
   home.sessionVariables.SHELL = "nu";
   xdg.configFile."carapace/styles.json".text = builtins.toJSON {
