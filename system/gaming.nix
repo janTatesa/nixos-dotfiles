@@ -6,6 +6,5 @@
     prismlauncher
     appimage-run
     lutris
-    bottles
   ];
 }

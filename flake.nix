@@ -17,10 +17,6 @@
       url = "github:TadoTheMiner/oxikcde";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -30,7 +26,6 @@
       home-manager,
       catppuccin,
       nixos-hardware,
-      lix-module,
       kraban,
       oxikcde,
       ...
@@ -62,7 +57,6 @@
         }
         home-manager.nixosModules.home-manager
         ./home-manager.nix
-        lix-module.nixosModules.default
         "${nixos-hardware}/common/gpu/intel/alder-lake"
       ] ++ lib.filesystem.listFilesRecursive ./system-shared;
 

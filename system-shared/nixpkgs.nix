@@ -1,5 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  nix.package = pkgs.lix;
   nixpkgs.config.allowUnfree = true;
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
   nix.settings = {

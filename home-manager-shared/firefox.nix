@@ -1,5 +1,6 @@
-{ lib, ... }:
+{ ... }:
 {
+  catppuccin.firefox.profiles.default.enable = false;
   programs.firefox = {
     enable = true;
     profiles.default = {
