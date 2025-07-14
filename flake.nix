@@ -1,28 +1,26 @@
 {
   description = "TadoTheMiner's NixOS configuration";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
     kraban = {
       url = "github:TadoTheMiner/kraban";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     oxikcde = {
       url = "github:TadoTheMiner/oxikcde";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs =
     {
       nixpkgs,
-      nixpkgs-unstable,
       home-manager,
       catppuccin,
       nixos-hardware,
@@ -41,11 +39,6 @@
         nushell = prev.nushell.override { additionalFeatures = _: [ "system-clipboard" ]; };
         kraban = kraban.packages.${system}.default;
         oxikcde = oxikcde.packages.${system}.default;
-      };
-
-      unstable = import nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
       };
 
       default_modules = [
@@ -84,7 +77,6 @@
               system
               font-size
               generateTheme
-              unstable
               ;
 
             home-files = lib.filesystem.listFilesRecursive ./home-manager;

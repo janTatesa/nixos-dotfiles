@@ -6,7 +6,6 @@
   lib,
   font-size,
   generateTheme,
-  unstable,
   ...
 }:
 {
@@ -22,7 +21,6 @@
       inherit
         personal-info
         generateTheme
-        unstable
         ;
     };
     useGlobalPkgs = true;
