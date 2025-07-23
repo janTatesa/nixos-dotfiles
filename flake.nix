@@ -2,7 +2,6 @@
   description = "TadoTheMiner's NixOS configuration";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +22,6 @@
       nixpkgs,
       home-manager,
       catppuccin,
-      nixos-hardware,
       kraban,
       oxikcde,
       ...
@@ -50,8 +48,8 @@
         }
         home-manager.nixosModules.home-manager
         ./home-manager.nix
-        "${nixos-hardware}/common/gpu/intel/alder-lake"
-      ] ++ lib.filesystem.listFilesRecursive ./system-shared;
+      ]
+      ++ lib.filesystem.listFilesRecursive ./system-shared;
 
       generateTheme =
         config:
