@@ -34,18 +34,16 @@
       output."*".bg = "${../../assets/wallpaper.svg} fill";
       input."type:keyboard".xkb_layout = "us,sk(qwerty)";
       assigns = {
-        "2" = [ { app_id = "vesktop"; } ];
-        "4" = [ { app_id = "obsidian"; } ];
-        "5" = [ { title = "kraban"; } ];
+        "2" = [ { title = "kraban"; } ];
       };
-      startup = [
-        { command = "wl-paste --watch cliphist store"; }
-        { command = "swayosd-server"; }
-        { command = "firefox"; }
-        { command = "vesktop"; }
-        { command = "kitty -T kraban kraban"; }
-        { command = "obsidian"; }
+
+      startup = builtins.map (x: { command = x; }) [
+        "wl-paste --watch cliphist store"
+        "swayosd-server"
+        "firefox"
+        "kitty -T kraban kraban"
       ];
+
       floating = {
         titlebar = false;
         border = 2;
@@ -59,9 +57,11 @@
         smartGaps = true;
       };
     };
+
     # HACK: setting this in bar didn't work
     extraConfig = "bar waybar mode hide";
   };
+
   services = {
     mako = {
       enable = true;
