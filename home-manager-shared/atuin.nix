@@ -8,5 +8,7 @@
       dialect = "uk";
       enter_accept = true;
     };
+
+    enableFishIntegration = true;
   };
 }
