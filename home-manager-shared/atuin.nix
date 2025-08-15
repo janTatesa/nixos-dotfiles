@@ -7,6 +7,7 @@
       update_check = false;
       dialect = "uk";
       enter_accept = true;
+      inline_height = 0;
     };
 
     enableFishIntegration = true;
