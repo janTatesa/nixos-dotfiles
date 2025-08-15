@@ -26,9 +26,15 @@
   services.greetd = {
     enable = true;
     restart = true;
-    settings.initial_session = {
-      command = "dbus-run-session sway";
-      user = personal-info.login;
+    settings = {
+      initial_session = {
+        command = "dbus-run-session sway";
+        user = personal-info.login;
+      };
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --greeting 'Welcome To NixOS' --asterisks --remember --remember-user-session --time";
+        user = "greeter";
+      };
     };
   };
 }
