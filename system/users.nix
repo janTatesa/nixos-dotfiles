@@ -32,7 +32,7 @@
         user = personal-info.login;
       };
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --greeting 'Welcome To NixOS' --asterisks --remember --remember-user-session --time";
+        command = "${pkgs.tuigreet}/bin/tuigreet --greeting 'Welcome To NixOS' --asterisks --remember --remember-user-session --time";
         user = "greeter";
       };
     };

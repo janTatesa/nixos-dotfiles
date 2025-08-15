@@ -1,5 +1,5 @@
 #!/usr/bin/env fish
-pushd $FLAKE
+pushd ~/nixos
 /usr/bin/env $EDITOR
 nrb
 popd
