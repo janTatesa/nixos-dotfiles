@@ -1,23 +1,8 @@
-{
-  pkgs,
-  ...
-}:
+{ ... }:
 {
   programs = {
-    fish.enable = true; # For completions
-    btop.enable = true;
-    direnv = {
+    fish = {
       enable = true;
-      silent = true;
-      nix-direnv.enable = true;
-      config.global.warn_timeout = "0";
-    };
-    nushell = {
-      enable = true;
-      configFile.source = ../assets/config.nu;
-      envFile.source = ../assets/env.nu;
-      extraConfig = builtins.readFile ../assets/keybindings.nu;
-      extraEnv = "$env.LS_COLORS = (${pkgs.vivid}/bin/vivid generate catppuccin-mocha)";
       shellAliases = {
         # Coreutils
         ln = "ln -s";
@@ -33,24 +18,31 @@
         gcl = "git clone";
 
         # Nix
-        nsh = "nix-shell --command nu -p";
-        nrbu = "with-env {UPDATE_FLAKE: 1} {nrb}";
-        cfgu = "with-env {UPDATE_FLAKE: 1} {cfg}";
+        nsh = "nix-shell --command fish -p";
+        nrbu = "UPDATE_FLAKE=1 nrb";
+        cfgu = "UPDATE_FLAKE=1 cfg";
       };
     };
+
+    btop.enable = true;
+    direnv = {
+      enable = true;
+      silent = true;
+      nix-direnv.enable = true;
+      config.global.warn_timeout = "0";
+    };
+
     fzf = {
       enable = true;
       defaultCommand = "rg --files";
     };
+
     bat.enable = true;
     zoxide.enable = true;
-    carapace = {
-      enable = true;
-      enableNushellIntegration = false;
-      enableFishIntegration = false;
-    };
+    carapace.enable = true;
   };
-  home.sessionVariables.SHELL = "nu";
+
+  home.sessionVariables.SHELL = "fish";
   xdg.configFile."carapace/styles.json".text = builtins.toJSON {
     carapace = {
       Description = "#cba6f7";

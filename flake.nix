@@ -34,7 +34,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
 
       overlay = final: prev: {
-        nushell = prev.nushell.override { additionalFeatures = _: [ "system-clipboard" ]; };
         kraban = kraban.packages.${system}.default;
         oxikcde = oxikcde.packages.${system}.default;
       };

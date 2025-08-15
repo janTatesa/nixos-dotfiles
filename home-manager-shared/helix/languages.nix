@@ -20,6 +20,7 @@
         command = "${pkgs.uiua}/bin/uiua";
         args = [ "lsp" ];
       };
+
       rust-analyzer.config = {
         check.command = "clippy";
         # cargo.features = "all";

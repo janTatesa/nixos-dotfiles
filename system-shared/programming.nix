@@ -8,7 +8,7 @@
     systemPackages = with pkgs; [
       nixfmt-rfc-style
       treefmt
-      commitizen
+      nushell
       gh
       taplo
       nixd

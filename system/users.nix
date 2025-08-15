@@ -4,8 +4,9 @@
   ...
 }:
 {
+  programs.fish.enable = true;
   users = {
-    defaultUserShell = pkgs.nushell;
+    defaultUserShell = pkgs.fish;
     groups.plugdev = { };
     users.${personal-info.login} = {
       isNormalUser = true;
@@ -25,16 +26,9 @@
   services.greetd = {
     enable = true;
     restart = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.nushell}/bin/nu -l";
-        user = personal-info.login;
-      };
-
-      initial_session = {
-        command = "dbus-run-session sway";
-        user = personal-info.login;
-      };
+    settings.initial_session = {
+      command = "dbus-run-session sway";
+      user = personal-info.login;
     };
   };
 }
