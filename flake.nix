@@ -7,10 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
-    kraban = {
-      url = "github:TadoTheMiner/kraban";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
     oxikcde = {
       url = "github:TadoTheMiner/oxikcde";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +19,6 @@
       nixpkgs,
       home-manager,
       catppuccin,
-      kraban,
       oxikcde,
       ...
     }:
@@ -34,7 +30,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
 
       overlay = final: prev: {
-        kraban = kraban.packages.${system}.default;
         oxikcde = oxikcde.packages.${system}.default;
       };
 

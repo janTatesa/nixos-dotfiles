@@ -37,6 +37,19 @@
       defaultCommand = "rg --files";
     };
 
+    atuin = {
+      enable = true;
+      settings = {
+        style = "compact";
+        update_check = false;
+        dialect = "uk";
+        enter_accept = true;
+        inline_height = 0;
+      };
+
+      enableFishIntegration = true;
+    };
+
     bat.enable = true;
     zoxide.enable = true;
     carapace.enable = true;
