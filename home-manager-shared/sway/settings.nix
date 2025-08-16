@@ -33,15 +33,11 @@
       ];
       output."*".bg = "${../../assets/wallpaper.svg} fill";
       input."type:keyboard".xkb_layout = "us,sk(qwerty)";
-      assigns = {
-        "2" = [ { title = "kraban"; } ];
-      };
 
       startup = builtins.map (x: { command = x; }) [
         "wl-paste --watch cliphist store"
         "swayosd-server"
         "firefox"
-        "kitty -T kraban kraban"
       ];
 
       floating = {
