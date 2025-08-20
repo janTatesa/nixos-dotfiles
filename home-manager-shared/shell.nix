@@ -9,7 +9,7 @@
         cp = "cp -r";
         cd = "z";
         cat = "bat -p";
-        mdr = "mkdir";
+        mdr = "mkdir -p";
         # Git
         g = "git";
         gp = "git push";
