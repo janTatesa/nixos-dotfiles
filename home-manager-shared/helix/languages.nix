@@ -24,7 +24,7 @@
       rust-analyzer.config = {
         check = {
           command = "clippy";
-          extraArgs = "--no-deps";
+          extraArgs = [ "--no-deps" ];
         };
 
         # cargo.features = "all";
