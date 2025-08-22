@@ -22,7 +22,11 @@
       };
 
       rust-analyzer.config = {
-        check.command = "clippy --no-deps";
+        check = {
+          command = "clippy";
+          extraArgs = "--no-deps";
+        };
+
         # cargo.features = "all";
         completion.excludeTraits = [
           "color_eyre::owo_colors::OwoColorize"
