@@ -97,6 +97,7 @@ in
         format = "{:%a %d/%b %I:%M}";
         tooltip = false;
       };
+
       backlight = {
         device = "intel_backlight";
         format = "<span color='${theme.accent}'>{icon}</span> {percent}%";

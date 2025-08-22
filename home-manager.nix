@@ -25,14 +25,13 @@
     };
     useGlobalPkgs = true;
     backupFileExtension = "bak";
-    users.${personal-info.login}.imports =
-      [
-        {
-          home.stateVersion = config.system.stateVersion;
-        }
-        catppuccin.homeModules.catppuccin
-      ]
-      ++ lib.filesystem.listFilesRecursive ./home-manager-shared
-      ++ home-files;
+    users.${personal-info.login}.imports = [
+      {
+        home.stateVersion = config.system.stateVersion;
+      }
+      catppuccin.homeModules.catppuccin
+    ]
+    ++ lib.filesystem.listFilesRecursive ./home-manager-shared
+    ++ home-files;
   };
 }

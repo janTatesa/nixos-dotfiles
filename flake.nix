@@ -26,6 +26,7 @@
       personal-info = import ./personal.nix;
       lib = nixpkgs.lib;
       font-size = 18;
+      font-size-desktop = 12;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
 
@@ -58,9 +59,10 @@
         };
     in
     {
-      formatter.${system} = pkgs.nixfmt-rfc-style;
-      nixosConfigurations = {
-        nixos = lib.nixosSystem rec {
+      formatter.${system} = pkgs.nixfmt-tree;
+      nixosConfigurations = rec {
+        nixos = desktop;
+        laptop = lib.nixosSystem rec {
           inherit system;
           specialArgs = {
             inherit
@@ -74,7 +76,32 @@
             home-files = lib.filesystem.listFilesRecursive ./home-manager;
           };
 
-          modules = default_modules ++ lib.filesystem.listFilesRecursive ./system;
+          modules =
+            default_modules
+            ++ lib.filesystem.listFilesRecursive ./system
+            ++ [ ./hardware-configuration-laptop.nix ];
+        };
+
+        desktop = lib.nixosSystem rec {
+          inherit system;
+          specialArgs = {
+            inherit
+              personal-info
+              catppuccin
+              system
+
+              generateTheme
+              ;
+
+            font-size = font-size-desktop;
+
+            home-files = lib.filesystem.listFilesRecursive ./home-manager;
+          };
+
+          modules =
+            default_modules
+            ++ lib.filesystem.listFilesRecursive ./system
+            ++ [ ./hardware-configuration-desktop.nix ];
         };
 
         iso = lib.nixosSystem rec {

@@ -16,27 +16,26 @@
 
   boot.initrd.availableKernelModules = [
     "xhci_pci"
-    "thunderbolt"
-    "nvme"
+    "ehci_pci"
+    "ahci"
     "usb_storage"
     "usbhid"
     "sd_mod"
-    "sdhci_pci"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/9ef0abb6-58ef-48ac-90f5-bd36a4a38fbd";
+    device = "/dev/disk/by-uuid/577bd939-8a42-4ec1-8424-c573c7835c65";
     fsType = "ext4";
   };
 
-  boot.initrd.luks.devices."luks-fdb500e1-6de2-417a-9f46-dbc8fe9dd918".device =
-    "/dev/disk/by-uuid/fdb500e1-6de2-417a-9f46-dbc8fe9dd918";
-
+  boot.initrd.luks.devices."luks-a6be9488-a6c8-46c5-a8ec-778b93a3c5b4".device =
+    "/dev/disk/by-uuid/a6be9488-a6c8-46c5-a8ec-778b93a3c5b4";
+  boot.loader.systemd-boot.configurationLimit = 1;
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/4EB5-44E0";
+    device = "/dev/disk/by-uuid/E645-B0C1";
     fsType = "vfat";
     options = [
       "fmask=0077"
@@ -44,16 +43,16 @@
     ];
   };
 
-  swapDevices = [
-    { device = "/dev/disk/by-uuid/3ce2c80a-c6d9-4df4-a2f7-b2b7f82517b3"; }
-  ];
+  swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
+  # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp0s20u13.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp0s20u6.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
