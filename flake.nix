@@ -61,7 +61,6 @@
     {
       formatter.${system} = pkgs.nixfmt-tree;
       nixosConfigurations = rec {
-        nixos = desktop;
         laptop = lib.nixosSystem rec {
           inherit system;
           specialArgs = {
@@ -79,7 +78,10 @@
           modules =
             default_modules
             ++ lib.filesystem.listFilesRecursive ./system
-            ++ [ ./hardware-configuration-laptop.nix ];
+            ++ [
+              ./hardware-configuration-laptop.nix
+              { environment.sessionVariables.DEVICE = "laptop"; }
+            ];
         };
 
         desktop = lib.nixosSystem rec {
@@ -101,7 +103,10 @@
           modules =
             default_modules
             ++ lib.filesystem.listFilesRecursive ./system
-            ++ [ ./hardware-configuration-desktop.nix ];
+            ++ [
+              ./hardware-configuration-desktop.nix
+              { environment.sessionVariables.DEVICE = "desktop"; }
+            ];
         };
 
         iso = lib.nixosSystem rec {
