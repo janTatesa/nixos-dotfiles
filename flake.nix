@@ -1,6 +1,7 @@
 {
   description = "TadoTheMiner's NixOS configuration";
   inputs = {
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -20,6 +21,7 @@
       home-manager,
       catppuccin,
       oxikcde,
+      nixos-hardware,
       ...
     }:
     let
@@ -60,7 +62,7 @@
     in
     {
       formatter.${system} = pkgs.nixfmt-tree;
-      nixosConfigurations = rec {
+      nixosConfigurations = {
         laptop = lib.nixosSystem rec {
           inherit system;
           specialArgs = {
@@ -81,6 +83,7 @@
             ++ [
               ./hardware-configuration-laptop.nix
               { environment.sessionVariables.DEVICE = "laptop"; }
+              "${nixos-hardware}/lenovo/ideapad/16iah8"
             ];
         };
 
