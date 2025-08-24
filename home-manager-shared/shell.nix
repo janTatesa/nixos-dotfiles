@@ -10,6 +10,8 @@
         cd = "z";
         cat = "bat -p";
         mdr = "mkdir -p";
+        rm = "trash-put";
+
         # Git
         g = "git";
         gp = "git push";

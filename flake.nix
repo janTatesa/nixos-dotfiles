@@ -3,6 +3,7 @@
   inputs = {
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    annoyodoro.url = "github:janTatesa/annoyodoro";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -10,7 +11,7 @@
     catppuccin.url = "github:catppuccin/nix";
 
     oxikcde = {
-      url = "github:TadoTheMiner/oxikcde";
+      url = "github:janTatesa/oxikcde";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -22,6 +23,7 @@
       catppuccin,
       oxikcde,
       nixos-hardware,
+      annoyodoro,
       ...
     }:
     let
@@ -34,6 +36,7 @@
 
       overlay = final: prev: {
         oxikcde = oxikcde.packages.${system}.default;
+        annoyodoro = annoyodoro.packages.${system}.annoyodoro;
       };
 
       default_modules = [
