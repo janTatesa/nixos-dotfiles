@@ -44,13 +44,16 @@
         titlebar = false;
         border = 2;
       };
+
       window = {
         titlebar = false;
         border = 2;
       };
+
       gaps = {
         smartBorders = "on";
-        outer = 2;
+        outer = 4;
+        inner = 4;
       };
     };
 
