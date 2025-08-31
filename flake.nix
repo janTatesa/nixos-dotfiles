@@ -3,7 +3,7 @@
   inputs = {
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    annoyodoro.url = "github:janTatesa/annoyodoro";
+    # annoyodoro.url = "github:janTatesa/annoyodoro";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +23,6 @@
       catppuccin,
       oxikcde,
       nixos-hardware,
-      annoyodoro,
       ...
     }:
     let
@@ -33,7 +32,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       overlay = final: prev: {
         oxikcde = oxikcde.packages.${system}.default;
-        annoyodoro = annoyodoro.packages.${system}.annoyodoro;
+        # annoyodoro = annoyodoro.packages.${system}.annoyodoro;
       };
 
       generateTheme =

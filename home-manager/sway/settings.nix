@@ -50,7 +50,7 @@
       };
       gaps = {
         smartBorders = "on";
-        smartGaps = true;
+        outer = 2;
       };
     };
 
