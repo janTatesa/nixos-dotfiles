@@ -3,16 +3,32 @@
   inputs = {
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # annoyodoro.url = "github:janTatesa/annoyodoro";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    annoyodoro = {
+      url = "github:janTatesa/annoyodoro";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        rust-overlay.follows = "rust-overlay";
+      };
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     catppuccin.url = "github:catppuccin/nix";
 
     oxikcde = {
       url = "github:janTatesa/oxikcde";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        rust-overlay.follows = "rust-overlay";
+      };
     };
   };
 
@@ -23,6 +39,7 @@
       catppuccin,
       oxikcde,
       nixos-hardware,
+      annoyodoro,
       ...
     }:
     let
@@ -32,7 +49,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       overlay = final: prev: {
         oxikcde = oxikcde.packages.${system}.default;
-        # annoyodoro = annoyodoro.packages.${system}.annoyodoro;
+        annoyodoro = annoyodoro.packages.${system}.annoyodoro;
       };
 
       generateTheme =
