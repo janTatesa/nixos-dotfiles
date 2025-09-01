@@ -82,7 +82,7 @@
       nixosConfigurations = {
         laptop = mkConfig "laptop" [
           ./hardware-configuration-laptop.nix
-          "${nixos-hardware}/lenovo/ideapad/16iah8"
+          nixos-hardware.nixosModules.lenovo-ideapad-s5-16iah8
         ] 18;
 
         desktop = mkConfig "desktop" [
