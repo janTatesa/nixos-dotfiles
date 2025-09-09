@@ -173,11 +173,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1757422022,
-        "narHash": "sha256-vC+YDml0VHxn0pAFBb7jDb5IteuWtCIdSS3GQRdDrWY=",
+        "lastModified": 1757430159,
+        "narHash": "sha256-Uw4cj9kB+YRoXCXi0hIfBbFwt26uibIwbFtCzUwbmeU=",
         "owner": "janTatesa",
         "repo": "scripts",
-        "rev": "d34da63ef96f7c2c4a399b4ef0f92014419c4ee7",
+        "rev": "48288ae9f6403e50e647688ed5e3473d17011e18",
         "type": "github"
       },
       "original": {

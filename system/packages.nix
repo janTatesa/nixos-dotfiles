@@ -19,5 +19,6 @@
     prismlauncher
     lutris
     scripts
+    obsidian
   ];
 }
