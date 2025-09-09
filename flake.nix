@@ -16,6 +16,14 @@
       };
     };
 
+    scripts = {
+      url = "github:janTatesa/scripts";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        rust-overlay.follows = "rust-overlay";
+      };
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,6 +42,7 @@
 
   outputs =
     {
+      scripts,
       nixpkgs,
       home-manager,
       catppuccin,
@@ -49,7 +58,8 @@
       pkgs = nixpkgs.legacyPackages.${system};
       overlay = final: prev: {
         oxikcde = oxikcde.packages.${system}.default;
-        annoyodoro = annoyodoro.packages.${system}.annoyodoro;
+        annoyodoro = annoyodoro.packages.${system}.default;
+        scripts = scripts.packages.${system}.default;
       };
 
       generateTheme =

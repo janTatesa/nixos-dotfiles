@@ -1,15 +1,17 @@
-{ pkgs, ... }:
+{
+  config,
+  generateTheme,
+  ...
+}:
 let
-  screenshot =
-    pkgs.writeShellScriptBin "screenshot" ''${builtins.readFile ../../assets/screenshot.sh}''
-    + /bin/screenshot;
+  theme = generateTheme config;
 in
 {
   wayland.windowManager.sway.config.keybindings = {
     "Mod4+n" = "exec sh -c \"makoctl invoke; makoctl dismiss\"";
-    "Mod4+Print" = "exec ${screenshot} window";
-    "Print" = "exec ${screenshot} region";
-    "Shift+Print" = "exec ${screenshot} fullscreen";
+    "Mod4+Print" = "exec scripts screenshot window";
+    "Print" = "exec scripts screenshot region --slurp_fg ${theme.accent} --slurp_bg ${theme.crust}80";
+    "Shift+Print" = "exec scripts fullscreen";
     "Mod4+p" = "exec cliphist list | fuzzel -d | cliphist decode | wl-copy";
     "Mod4+Return" = "exec kitty";
     "Mod4+Shift+q" = "kill";

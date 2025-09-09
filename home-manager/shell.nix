@@ -22,8 +22,9 @@
 
         # Nix
         nsh = "nix-shell --command fish -p";
-        nrbu = "UPDATE_FLAKE=1 nrb";
-        cfgu = "UPDATE_FLAKE=1 cfg";
+        nrbu = "scripts nixos --update";
+        cfgu = "scripts nixos --update --open-editor";
+        cfg = "scripts nixos --open-editor";
       };
     };
 

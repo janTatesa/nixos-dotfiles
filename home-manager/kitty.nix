@@ -11,7 +11,7 @@
     };
     settings = {
       confirm_os_window_close = 0;
-      scrollback_pager = "scrollback";
+      scrollback_pager = "scripts scrollback";
     };
   };
 }
