@@ -10,8 +10,10 @@ in
   wayland.windowManager.sway.config.keybindings = {
     "Mod4+n" = "exec sh -c \"makoctl invoke; makoctl dismiss\"";
     "Mod4+Print" = "exec scripts screenshot window";
-    "Print" = "exec scripts screenshot region --slurp_fg ${theme.accent} --slurp_bg ${theme.crust}80";
-    "Shift+Print" = "exec scripts fullscreen";
+    "Print" = "exec scripts screenshot region --slurp-fg ${
+      builtins.substring 1 (-1) theme.accent
+    } --slurp-bg ${builtins.substring 1 (-1) theme.crust}80";
+    "Shift+Print" = "exec scripts screenshot fullscreen";
     "Mod4+p" = "exec cliphist list | fuzzel -d | cliphist decode | wl-copy";
     "Mod4+Return" = "exec kitty";
     "Mod4+Shift+q" = "kill";
@@ -34,15 +36,10 @@ in
     "Mod4+Shift+i" =
       "exec sh -c \"notify-send \"Hibernating\" System will hibernate; systemctl hibernate\"";
     "Mod4+Shift+r" = "exec systemctl reboot";
-    #direfox
     "Mod4+1" = "workspace number 1";
-    #discord
     "Mod4+2" = "workspace number 2";
-    #music
     "Mod4+3" = "workspace number 3";
-    #obsidian
     "Mod4+4" = "workspace number 4";
-    #kraban
     "Mod4+5" = "workspace number 5";
     "Mod4+6" = "workspace number 6";
     "Mod4+7" = "workspace number 7";
