@@ -30,6 +30,7 @@
         "toolkit.telemetry.unified" = false;
         "toolkit.telemetry.unifiedIsOptIn" = false;
         "toolkit.telemetry.updatePing.enabled" = false;
+        "extensions.openPopupWithoutUserGesture.enabled" = true;
       };
     };
   };
