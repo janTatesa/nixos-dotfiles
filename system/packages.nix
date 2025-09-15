@@ -15,7 +15,7 @@
     mpv
     trash-cli
     annoyodoro
-    oxikcde
+    # oxikcde
     prismlauncher
     lutris
     scripts
