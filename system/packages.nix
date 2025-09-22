@@ -5,7 +5,7 @@
 {
   environment.systemPackages = with pkgs; [
     ripgrep
-    ouch
+    (ouch.override { enableUnfree = true; })
     jq
     killall
     file
