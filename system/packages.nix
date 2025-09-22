@@ -18,7 +18,7 @@
     # oxikcde
     prismlauncher
     lutris
-    wine64
+    (pkgs.writeShellScriptBin "wine" "${pkgs.wine64} $@")
     scripts
     obsidian
   ];
