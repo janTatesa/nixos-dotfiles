@@ -18,6 +18,10 @@
     # oxikcde
     prismlauncher
     lutris
+    (pkgs.symlinkJoin {
+      name = "wine";
+      paths = [ pkgs.wine64 ];
+    })
     scripts
     obsidian
   ];
