@@ -22,9 +22,9 @@
 
         # Nix
         nsh = "nix-shell --command fish -p";
-        nrbu = "scripts nixos --update";
-        cfgu = "scripts nixos --update --open-editor";
-        cfg = "scripts nixos --open-editor";
+        nrbu = "scripts nixos update";
+        cfgu = "scripts nixos configure --update";
+        cfg = "scripts nixos configure";
       };
     };
 
