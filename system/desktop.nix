@@ -7,7 +7,6 @@
       extraPackages = [ ];
     };
     dconf.enable = true;
-    kdeconnect.enable = true;
   };
 
   gtk.iconCache.enable = true;
