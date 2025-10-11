@@ -75,7 +75,7 @@
         };
 
       mkConfig =
-        device: extra_modules: font-size:
+        device: extra_modules:
         lib.nixosSystem {
           inherit system;
           specialArgs = {
@@ -84,7 +84,6 @@
               catppuccin
               system
               generateTheme
-              font-size
               ;
           };
 
@@ -111,11 +110,11 @@
           ./hardware-configuration-laptop.nix
           ./hardware-configuration-laptop-manual.nix
           nixos-hardware.nixosModules.lenovo-ideapad-s5-16iah8
-        ] 18;
+        ];
 
         desktop = mkConfig "desktop" [
           ./hardware-configuration-desktop.nix
-        ] 12;
+        ];
       };
     };
 }

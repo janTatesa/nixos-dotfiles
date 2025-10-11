@@ -19,10 +19,7 @@ in
     };
     gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
     gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
-    font = {
-      size = fonts.size;
-      name = fonts.sans-serif;
-    };
+    font.name = fonts.sans-serif;
   };
 
   home = {
@@ -39,7 +36,6 @@ in
     "gtk-4.0/gtk.css".source = "${gtk_theme_location}/gtk.css";
     "gtk-4.0/gtk-dark.css".source = "${gtk_theme_location}/gtk-4.0/gtk-dark.css";
   };
-
 
   dconf.settings = {
     "org/gnome/desktop/wm/preferences".button-layout = "";
