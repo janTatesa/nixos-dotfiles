@@ -14,6 +14,7 @@
     mdbook
     mpv
     trash-cli
+    gnupg
     # annoyodoro
     # oxikcde
     prismlauncher

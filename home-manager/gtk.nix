@@ -28,7 +28,6 @@ in
   home = {
     pointerCursor.gtk.enable = true;
     sessionVariables = {
-      QT_SCALE_FACTOR = 2;
       GTK_THEME = config.gtk.theme.name;
       GTK_THEME_VARIANT = "dark";
     };
@@ -41,11 +40,6 @@ in
     "gtk-4.0/gtk-dark.css".source = "${gtk_theme_location}/gtk-4.0/gtk-dark.css";
   };
 
-  qt = {
-    enable = true;
-    style.name = "kvantum";
-    platformTheme.name = "kvantum";
-  };
 
   dconf.settings = {
     "org/gnome/desktop/wm/preferences".button-layout = "";

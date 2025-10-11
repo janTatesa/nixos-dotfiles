@@ -8,13 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    annoyodoro = {
-      url = "github:janTatesa/annoyodoro";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        rust-overlay.follows = "rust-overlay";
-      };
-    };
+    # annoyodoro = {
+    #   url = "github:janTatesa/annoyodoro";
+    #   inputs = {
+    #     nixpkgs.follows = "nixpkgs";
+    #     rust-overlay.follows = "rust-overlay";
+    #   };
+    # };
 
     scripts = {
       url = "github:janTatesa/scripts";
@@ -48,7 +48,7 @@
       catppuccin,
       oxikcde,
       nixos-hardware,
-      annoyodoro,
+      # annoyodoro,
       ...
     }:
     let
@@ -58,7 +58,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       overlay = final: prev: {
         oxikcde = oxikcde.packages.${system}.default;
-        annoyodoro = annoyodoro.packages.${system}.default;
+        # annoyodoro = annoyodoro.packages.${system}.default;
         scripts = scripts.packages.${system}.default;
       };
 
@@ -109,6 +109,7 @@
       nixosConfigurations = {
         laptop = mkConfig "laptop" [
           ./hardware-configuration-laptop.nix
+          ./hardware-configuration-laptop-manual.nix
           nixos-hardware.nixosModules.lenovo-ideapad-s5-16iah8
         ] 18;
 
