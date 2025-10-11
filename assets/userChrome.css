@@ -1,12 +1,9 @@
-.chromeclass-extrachrome.sidebar-splitter,
-#TabsToolbar, 
 #back-button,
 #forward-button  {
   display: none !important;
 }
 
 * {
-  box-shadow: none !important;
   border-width: 2px !important;
 }
 
