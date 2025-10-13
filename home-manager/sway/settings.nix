@@ -40,19 +40,14 @@
         "firefox"
       ];
 
-      floating = {
-        titlebar = false;
-        border = 2;
-      };
+      floating.border = 2;
 
-      window = {
-        titlebar = false;
-        border = 2;
-      };
+      window.border = 2;
 
       gaps = {
-        outer = 4;
-        inner = 4;
+        smartBorders = "on";
+        outer = 0;
+        inner = 0;
       };
     };
 

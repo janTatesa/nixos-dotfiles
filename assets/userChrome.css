@@ -3,14 +3,3 @@
   display: none !important;
 }
 
-* {
-  box-shadow: none !important;
-  border-width: 2px !important;
-}
-
-:root {
-  --toolbarbutton-border-radius: 8px !important;
-  --tab-border-radius: 8px !important;
-  --arrowpanel-border-radius: 8px !important;
-  --tabs-navbar-separator-color: transparent !important;
-}
