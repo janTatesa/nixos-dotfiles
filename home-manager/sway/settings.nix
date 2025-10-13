@@ -33,6 +33,10 @@
       ];
       output."*".bg = "${../../assets/wallpaper.svg} fill";
       input."type:keyboard".xkb_layout = "us,sk(qwerty)";
+      fonts = {
+        names = [ fonts.sans-serif ];
+        size = fonts.size + 0.0;
+      };
 
       startup = builtins.map (x: { command = x; }) [
         "wl-paste --watch cliphist store"
