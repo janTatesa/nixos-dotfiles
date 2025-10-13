@@ -5,6 +5,7 @@
     nix-ld.enable = true;
     ssh.startAgent = true;
   };
+
   services = {
     power-profiles-daemon.enable = false;
     tlp.enable = true;
@@ -16,4 +17,6 @@
     enable = true;
     powerOnBoot = true;
   };
+
+  hardware.enableAllFirmware = true;
 }
