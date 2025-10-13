@@ -109,6 +109,7 @@
       nixosConfigurations = {
         laptop = mkConfig "laptop" [
           ./hardware-configuration-laptop.nix
+          ./hardware-configuration-laptop-manual.nix
           nixos-hardware.nixosModules.lenovo-ideapad-s5-16iah8
         ] 18;
 

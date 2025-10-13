@@ -1,9 +1,5 @@
-.chromeclass-extrachrome.sidebar-splitter,
-#TabsToolbar, 
 #back-button,
-#pageActionButton,
-#forward-button, #sidebar-header, #page-action-buttons > :not(#urlbar-zoom-button), 
-#urlbar-go-button {
+#forward-button  {
   display: none !important;
 }
 
