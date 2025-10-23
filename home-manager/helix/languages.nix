@@ -18,6 +18,10 @@
         name = "pest";
         auto-format = true;
       }
+      {
+        name = "toml";
+        auto-format = true;
+      }
     ];
     language-server = {
       uiua-lsp = {

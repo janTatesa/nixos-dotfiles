@@ -44,10 +44,6 @@
         "firefox"
       ];
 
-      floating.border = 2;
-
-      window.border = 2;
-
       gaps = {
         smartBorders = "on";
         outer = 0;

@@ -14,7 +14,7 @@ in
     };
     focusedInactive = unfocused;
     unfocused = {
-      background = "$base";
+      background = "$crust";
       border = "$crust";
       childBorder = "$crust";
       indicator = "$crust";
