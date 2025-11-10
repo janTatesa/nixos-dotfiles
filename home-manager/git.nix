@@ -2,9 +2,9 @@
 {
   programs.git = {
     enable = true;
-    userName = personal-info.name;
-    userEmail = personal-info.email;
     settings = {
+      user.name = personal-info.name;
+      user.email = personal-info.email;
       push.autoSetupRemote = true;
       pull.rebase = false;
       gpg.format = "ssh";
