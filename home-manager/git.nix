@@ -4,7 +4,7 @@
     enable = true;
     userName = personal-info.name;
     userEmail = personal-info.email;
-    extraConfig = {
+    settings = {
       push.autoSetupRemote = true;
       pull.rebase = false;
       gpg.format = "ssh";
