@@ -34,7 +34,7 @@ in
     "Mod4+Shift+e" = "exit";
     "Mod4+Shift+s" = "exec sh -c \"sudo systemctl suspend; swaylock\"";
     "Mod4+Shift+i" =
-      "exec sh -c \"notify-send \"Hibernating\" System will hibernate && sudo systemctl hibernate\"";
+      "exec sh -c \"notify-send Hibernating \\\"System will hibernate\\\" && sudo systemctl hibernate\"";
     "Mod4+Shift+r" = "exec systemctl reboot";
     "Mod4+1" = "workspace number 1";
     "Mod4+2" = "workspace number 2";
