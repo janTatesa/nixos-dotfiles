@@ -5,7 +5,7 @@
     defaultEditor = true;
     ignores = [
       "!.gitignore"
-      "!test.md"
+      "!.github"
       "*.lock"
       "*.o"
       "*.png"
