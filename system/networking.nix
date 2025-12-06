@@ -14,15 +14,23 @@
         25565
       ];
     };
-    nameservers = [
-      "193.110.81.0#dns0.eu"
-      "2a0f:fc80::#dns0.eu"
-      "185.253.5.0#dns0.eu"
-      "2a0f:fc81::#dns0.eu"
-    ];
+
+    # # cloudflare's dns
+    # nameservers = [
+    #   "1.1.1.1#one.one.one.one"
+    #   "1.0.0.1#one.one.one.one"
+    #   "2606:4700:4700::1111#one.one.one.one"
+    #   "2606:4700:4700::1001#one.one.one.one"
+    # ];
   };
-  services.resolved = {
-    enable = true;
-    dnsovertls = "true";
-  };
+
+  # # use resolved for mDNS
+  # services.resolved = {
+  #   enable = true;
+
+  #   # make dns requests more secure
+  #   dnsovertls = "true";
+  #   dnssec = "true";
+  # };
+
 }
