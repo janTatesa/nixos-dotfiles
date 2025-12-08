@@ -16,6 +16,9 @@
     trash-cli
     # annoyodoro
     # oxikcde
+    bottles
+    prismlauncher
+    rustToolchain
     scripts
     obsidian
   ];

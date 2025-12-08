@@ -38,10 +38,12 @@
         rust-overlay.follows = "rust-overlay";
       };
     };
+
   };
 
   outputs =
     {
+      rust-overlay,
       scripts,
       nixpkgs,
       home-manager,
@@ -56,11 +58,6 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      overlay = final: prev: {
-        oxikcde = oxikcde.packages.${system}.default;
-        annoyodoro = annoyodoro.packages.${system}.default;
-        scripts = scripts.packages.${system}.default;
-      };
 
       generateTheme =
         config:
@@ -78,28 +75,42 @@
     {
       formatter.${system} = pkgs.nixfmt-tree;
       nixosConfigurations.nixos = lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit
-              personal-info
-              catppuccin
-              system
-              generateTheme
-              ;
-            font-size = 18;
-          };
-
-          modules = [
-            catppuccin.nixosModules.catppuccin
-            {
-              nixpkgs.overlays = [
-                overlay
-              ];
-            }
-            home-manager.nixosModules.home-manager
-            ./home-manager.nix
-          ]
-          ++ (lib.filesystem.listFilesRecursive ./system);
+        inherit system;
+        specialArgs = {
+          inherit
+            personal-info
+            catppuccin
+            system
+            generateTheme
+            ;
+          font-size = 18;
         };
+
+        modules = [
+          catppuccin.nixosModules.catppuccin
+          nixos-hardware.nixosModules.lenovo-ideapad-s5-16iah8
+          {
+            nixpkgs.overlays = [
+              rust-overlay.overlays.default
+              (final: prev: {
+                oxikcde = oxikcde.packages.${system}.default;
+                annoyodoro = annoyodoro.packages.${system}.default;
+                scripts = scripts.packages.${system}.default;
+                rustToolchain = (
+                  prev.rust-bin.stable.latest.default.override {
+                    extensions = [
+                      "rust-analyzer"
+                      "rust-src"
+                    ];
+                  }
+                );
+              })
+            ];
+          }
+          home-manager.nixosModules.home-manager
+          ./home-manager.nix
+        ]
+        ++ (lib.filesystem.listFilesRecursive ./system);
+      };
     };
 }
