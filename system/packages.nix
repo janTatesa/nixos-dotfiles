@@ -3,6 +3,7 @@
   ...
 }:
 {
+  services.flatpak.enable = true;
   environment.systemPackages = with pkgs; [
     ripgrep
     (ouch.override { enableUnfree = true; })
@@ -21,5 +22,11 @@
     rustToolchain
     scripts
     obsidian
+    nixfmt-rfc-style
+    treefmt
+    nushell
+    gh
+    taplo
+    nixd
   ];
 }
