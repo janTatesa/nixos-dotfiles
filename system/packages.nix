@@ -3,7 +3,6 @@
   ...
 }:
 {
-  services.flatpak.enable = true;
   environment.systemPackages = with pkgs; [
     ripgrep
     (ouch.override { enableUnfree = true; })
