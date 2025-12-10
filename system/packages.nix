@@ -16,6 +16,7 @@
     trash-cli
     # annoyodoro
     # oxikcde
+    clang
     bottles
     prismlauncher
     rustToolchain
