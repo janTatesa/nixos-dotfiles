@@ -19,6 +19,7 @@
     clang
     bottles
     prismlauncher
+    rustAnalyzerNightly
     rustToolchain
     scripts
     obsidian

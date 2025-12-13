@@ -96,7 +96,7 @@
                 oxikcde = oxikcde.packages.${system}.default;
                 annoyodoro = annoyodoro.packages.${system}.default;
                 scripts = scripts.packages.${system}.default;
-                rustAnalyzerNightly = prev.rust-bin.nightly.rust-analyzer;
+                rustAnalyzerNightly = prev.rust-bin.nightly.latest.rust-analyzer;
                 rustToolchain = (
                   prev.rust-bin.stable.latest.default.override {
                     extensions = [
