@@ -17,7 +17,6 @@
     # annoyodoro
     # oxikcde
     clang
-    bottles
     prismlauncher
     rustAnalyzerNightly
     rustToolchain
@@ -29,5 +28,8 @@
     gh
     taplo
     nixd
+    lutris
+    vulkan-tools
+    wine
   ];
 }
