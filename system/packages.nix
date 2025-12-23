@@ -14,6 +14,7 @@
     mdbook
     mpv
     trash-cli
+    vesktop
     # annoyodoro
     # oxikcde
     clang
@@ -28,8 +29,6 @@
     gh
     taplo
     nixd
-    lutris
     vulkan-tools
-    wine
   ];
 }
