@@ -2,7 +2,18 @@
 {
   programs.lutris = {
     enable = true;
-    winePackages = [ pkgs.wine64Packages.stableFull ];
-    defaultWinePackage = pkgs.wine64Packages.stableFull;
+    defaultWinePackage = pkgs.proton-ge-bin;
+    protonPackages = [ pkgs.proton-ge-bin ];
+    winePackages = with pkgs; [
+      wineWow64Packages.full
+      wineWowPackages.stagingFull
+    ];
+    extraPackages = with pkgs; [
+      winetricks
+      gamescope
+      gamemode
+      mangohud
+      umu-launcher
+    ];
   };
 }
