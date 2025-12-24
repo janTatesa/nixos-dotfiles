@@ -10,6 +10,7 @@
     power-profiles-daemon.enable = false;
     tlp.enable = true;
     thermald.enable = true;
+    blueman.enable = true;
   };
 
   security.rtkit.enable = true;
