@@ -11,6 +11,7 @@
     tlp.enable = true;
     thermald.enable = true;
     blueman.enable = true;
+    xserver.videoDrivers = [ "modesetting" ];
   };
 
   security.rtkit.enable = true;
