@@ -18,5 +18,6 @@
     powerOnBoot = true;
   };
 
+  hardware.graphics.enable = true;
   hardware.enableAllFirmware = true;
 }
