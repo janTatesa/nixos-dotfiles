@@ -3,6 +3,7 @@
   ...
 }:
 {
+  programs.steam.enable = true;
   environment.systemPackages = with pkgs; [
     ripgrep
     (ouch.override { enableUnfree = true; })
