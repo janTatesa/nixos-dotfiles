@@ -1,10 +1,6 @@
 { ... }:
 {
-  programs = {
-    adb.enable = true;
-    nix-ld.enable = true;
-    ssh.startAgent = true;
-  };
+  programs.ssh.startAgent = true;
 
   services = {
     power-profiles-daemon.enable = false;

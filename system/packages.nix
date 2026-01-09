@@ -13,7 +13,7 @@
     usbutils
     evtest
     mdbook
-    mpv
+    # mpv
     trash-cli
     vesktop
     # annoyodoro
