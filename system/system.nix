@@ -3,8 +3,7 @@
   programs.ssh.startAgent = true;
 
   services = {
-    power-profiles-daemon.enable = false;
-    tlp.enable = true;
+    power-profiles-daemon.enable = true;
     thermald.enable = true;
     blueman.enable = true;
     xserver.videoDrivers = [ "modesetting" ];
