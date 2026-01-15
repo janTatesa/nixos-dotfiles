@@ -4,6 +4,6 @@
     enable = true;
     defaultWinePackage = pkgs.proton-ge-bin;
     protonPackages = [ pkgs.proton-ge-bin ];
-    winePackages = [ pkgs.wineWow64Packages.full ];
+    winePackages = [ pkgs.wine64Packages.wayland ];
   };
 }

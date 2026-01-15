@@ -31,5 +31,6 @@
     taplo
     nixd
     vulkan-tools
+    pkgs.wine64Packages.wayland
   ];
 }
