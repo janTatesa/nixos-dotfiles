@@ -38,10 +38,11 @@
         size = fonts.size + 0.0;
       };
 
-      startup = builtins.map (x: { command = x; }) [
+      startup = map (x: { command = x; }) [
         "wl-paste --watch cliphist store"
         "swayosd-server"
         "firefox"
+        "${pkgs.lspmux}/bin/lspmux server"
       ];
 
       gaps = {
@@ -63,7 +64,7 @@
         border-radius = 8;
         width = 1000;
         height = 500;
-        font = "${fonts.sans-serif} ${builtins.toString fonts.size}";
+        font = "${fonts.sans-serif} ${toString fonts.size}";
         layer = "overlay";
       };
     };
