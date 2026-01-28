@@ -20,6 +20,7 @@
     # oxikcde
     clang
     prismlauncher
+    greenfoot
     rustAnalyzerNightly
     rustToolchain
     scripts

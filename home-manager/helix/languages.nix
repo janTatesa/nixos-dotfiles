@@ -29,7 +29,6 @@
         args = [ "lsp" ];
       };
 
-      rust-analyzer.command = "${pkgs.lspmux}/bin/lspmux";
       rust-analyzer.config = {
         check = {
           command = "clippy";

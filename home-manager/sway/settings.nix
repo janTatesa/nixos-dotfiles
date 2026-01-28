@@ -42,7 +42,6 @@
         "wl-paste --watch cliphist store"
         "swayosd-server"
         "firefox"
-        "${pkgs.lspmux}/bin/lspmux server"
       ];
 
       gaps = {
