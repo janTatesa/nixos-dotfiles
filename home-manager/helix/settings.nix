@@ -16,7 +16,7 @@
     settings = {
       theme = "catppuccin_mocha";
       editor = {
-        mouse = false;
+        bufferline = "auto";
         color-modes = true;
         soft-wrap.enable = true;
         gutters.line-numbers.min-width = 2;
